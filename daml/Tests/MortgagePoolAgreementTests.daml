@@ -1,0 +1,57 @@
+
+{-# LANGUAGE PartialTypeSignatures #-}
+
+daml 1.2
+module Tests.MortgagePoolAgreementTests where
+
+import Main.MortgagePoolAgreement
+
+import DA.List
+import Tests.Factories
+
+-- test:
+readyAgreementForIssuanceFailsIfCusipsDontMatch =
+  do
+    poolAgreementResult <- buildMortgagePoolAgreement
+    firstUnrelatedPool <- buildPoolDef123
+    secondUnrelatedPool <- buildPoolDef456
+    operator <- getOperator
+    operator `submitMustFail` do
+      exercise poolAgreementResult.mortgagePoolAgreement ReadyAgreementForIssuance with
+          underlyingPools=[firstUnrelatedPool, secondUnrelatedPool]
+
+-- test:
+readyAgreementForIssuanceFailsIfAlreadyReadyForIssuance =
+  do
+    poolAgreementResult <- buildMortgagePoolAgreement
+    let firstPool = poolAgreementResult.underlyingPools!!0
+    let secondPool = poolAgreementResult.underlyingPools!!1
+
+    operator <- getOperator
+    poolAgreement <- operator `submit` do
+                        exercise poolAgreementResult.mortgagePoolAgreement ReadyAgreementForIssuance with
+                            underlyingPools=[firstPool, secondPool]
+
+    operator `submitMustFail` do
+      exercise poolAgreement ReadyAgreementForIssuance with underlyingPools=[firstPool, secondPool]
+
+-- test:
+readyAgreementForIssuanceArchivesAllUnderlyingPools =
+  do
+    poolAgreementResult <- buildMortgagePoolAgreement
+    let firstPool = poolAgreementResult.underlyingPools!!0
+    let secondPool = poolAgreementResult.underlyingPools!!1
+
+    operator <- getOperator
+    securitizer <- getSecuritizer
+    operator `submit` do
+      exercise poolAgreementResult.mortgagePoolAgreement ReadyAgreementForIssuance with
+          underlyingPools=[firstPool, secondPool]
+
+    securitizer `submitMustFail` do
+      firstPool <- fetch firstPool
+      return firstPool.owner
+
+    securitizer `submitMustFail` do
+      secondPool <- fetch secondPool
+      return secondPool.owner

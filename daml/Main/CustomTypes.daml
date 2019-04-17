@@ -1,0 +1,44 @@
+
+{-# LANGUAGE PartialTypeSignatures #-}
+
+daml 1.2
+module Main.CustomTypes where
+
+import DA.List
+
+data PoolType = Fixed | Floating deriving (Eq, Show)
+
+data MortgagePoolFields = MortgagePoolFields {
+    cusip: CUSIP;
+    poolType: PoolType;
+    passThroughRate: Decimal;
+    issueDate: Time;
+    lastLoanMaturity: Time;
+    originalFaceValue: Decimal;
+    currentFaceValue: Decimal
+} deriving (Eq, Show)
+
+data MortgagePoolAgreementDraftFields = MortgagePoolAgreementDraftFields {
+  referenceNumber: Text;
+  poolType: PoolType;
+  passThroughRate: Decimal;
+  lastLoanMaturity: Optional Time;
+  faceValue: Decimal
+} deriving (Eq, Show)
+
+data MortgagePoolAgreementFields = MortgagePoolAgreementFields {
+  referenceNumber: Text;
+  poolType: PoolType;
+  passThroughRate: Decimal;
+  lastLoanMaturity: Time;
+  faceValue: Decimal
+} deriving (Eq, Show)
+
+data CUSIP = CUSIP{text: Text} deriving (Eq, Ord, Show)
+
+cusipsMatch : ([(CUSIP)]) -> ([(CUSIP)]) -> Bool
+cusipsMatch left right =
+  if length left /= length right then
+    False
+  else
+    sort left == sort right

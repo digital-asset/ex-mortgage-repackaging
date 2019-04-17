@@ -1,0 +1,111 @@
+
+{-# LANGUAGE PartialTypeSignatures #-}
+
+daml 1.2
+module Main.Roles where
+
+import Main.MortgagePool
+import Main.MortgagePoolAgreement
+import Main.MortgagePoolAgreementDraft
+import Main.AvailableCusip
+import Main.Delegation
+import Main.CustomTypes
+
+buildMortgagePoolFields : (MortgagePoolAgreementFields) -> (CUSIP) -> (Time) -> MortgagePoolFields
+buildMortgagePoolFields agreementFields cusip now =
+  MortgagePoolFields with
+    cusip=cusip
+    poolType=agreementFields.poolType
+    passThroughRate=agreementFields.passThroughRate
+    issueDate=now
+    lastLoanMaturity=agreementFields.lastLoanMaturity
+    originalFaceValue=agreementFields.faceValue
+    currentFaceValue=agreementFields.faceValue
+
+template OperatorRights
+  with
+    operator: Party
+  where
+    signatory operator
+
+    controller operator can
+      nonconsuming SettleMortgagePoolAgreement : ContractId MortgagePool
+        with
+          mortgagePoolAgreementCid: ContractId MortgagePoolAgreement
+          underlyingMortgagePoolCids: [(ContractId MortgagePool)]
+          delegatedRegistrationRightsCid: ContractId DelegatedRegistrationRights
+          delegatedSecuritizerRightsCid: ContractId DelegatedSecuritizerRights
+        do
+          mortgagePoolAgreement <- fetch mortgagePoolAgreementCid
+          delegatedSecuritizerRights <- fetch delegatedSecuritizerRightsCid
+          assert(mortgagePoolAgreement.securitizer == delegatedSecuritizerRights.securitizer)
+          updatedAgreement <- exercise mortgagePoolAgreementCid ReadyAgreementForIssuance with underlyingPools=underlyingMortgagePoolCids
+          now <- getTime
+          let mortgagePoolFields =
+                buildMortgagePoolFields(mortgagePoolAgreement.agreementFields)
+                  (mortgagePoolAgreement.cusip)(now)
+          newPool <- exercise delegatedRegistrationRightsCid IssueMortgagePool_Delegated with mortgagePoolAgreementCid=updatedAgreement; mortgagePoolFields
+          exercise updatedAgreement Archives
+          exercise delegatedSecuritizerRightsCid TransferMortgagePool
+              with mortgagePool=newPool; newOwner=mortgagePoolAgreement.mortgagePoolHolder
+
+      nonconsuming OnboardMortgagePoolHolder
+        : ContractId MortgagePoolHolderRights
+          with mortgagePoolHolder: Party
+          do create MortgagePoolHolderRights with mortgagePoolHolder; operator
+
+      nonconsuming OnboardRegistry
+        : ContractId RegistryRights
+          with registry: Party
+          do create RegistryRights with registry; operator
+
+      nonconsuming OnboardSecuritizer
+        : ContractId SecuritizerRights
+          with securitizer: Party
+          do create SecuritizerRights with securitizer; operator
+
+template MortgagePoolHolderRights
+  with
+    mortgagePoolHolder: Party
+    operator: Party
+  where
+    signatory operator
+
+    controller mortgagePoolHolder can
+      nonconsuming CreateMortgagePoolAgreementDraft : ContractId MortgagePoolAgreementDraft
+        with
+          agreementDraftFields: MortgagePoolAgreementDraftFields
+        do
+          create MortgagePoolAgreementDraft with
+            mortgagePoolHolder; operator; agreementDraftFields; underlyingPools=[]
+
+template RegistryRights
+  with
+    registry: Party
+    operator: Party
+  where
+    signatory operator
+
+    controller registry can
+      nonconsuming DelegateRegistrationRights : ContractId DelegatedRegistrationRights
+        do create DelegatedRegistrationRights with registry; operator
+
+      nonconsuming IssueMortgagePool : ContractId MortgagePool
+          with owner: Party; mortgagePoolFields: MortgagePoolFields; underlyingCusips: [CUSIP]
+          do create MortgagePool with owner; registry; operator; securitizers=[]; mortgagePoolFields; underlyingCusips; isLocked=False
+
+template SecuritizerRights
+  with
+    securitizer: Party
+    operator: Party
+  where
+    signatory operator
+
+    controller securitizer can
+      nonconsuming DelegateSecuritizerRights
+        : ContractId DelegatedSecuritizerRights
+        do create DelegatedSecuritizerRights with securitizer; operator
+
+      nonconsuming RequestCUSIPs : ContractId AvailableCUSIPRequest
+        with registry: Party; numberRequested: Int
+        do create AvailableCUSIPRequest with securitizer; registry; numberRequested

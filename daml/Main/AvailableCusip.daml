@@ -1,0 +1,38 @@
+
+{-# LANGUAGE PartialTypeSignatures #-}
+
+daml 1.2
+module Main.AvailableCusip where
+
+import Main.CustomTypes
+
+template AvailableCUSIP
+  with
+    securitizer: Party
+    registry: Party
+    cusip: CUSIP
+  where
+    signatory securitizer, registry
+
+    controller securitizer can
+      AvailableCUSIP_Archives : ()
+        do return ()
+
+template AvailableCUSIPRequest
+  with
+    securitizer: Party
+    registry: Party
+    numberRequested: Int
+  where
+    signatory securitizer
+
+    controller registry can
+      Fulfill : [(ContractId AvailableCUSIP)]
+        with cusips: [CUSIP]
+        do
+          assert((length cusips) == numberRequested)
+          mapA
+              (\   (cusip: CUSIP) ->
+                do create AvailableCUSIP with securitizer; registry; cusip
+              )
+            cusips

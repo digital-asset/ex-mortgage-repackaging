@@ -1,0 +1,51 @@
+
+{-# LANGUAGE PartialTypeSignatures #-}
+
+daml 1.2
+module Main.MortgagePoolAgreement where
+
+import Main.CustomTypes
+import Main.MortgagePool
+
+poolCidsToCusips : [(ContractId MortgagePool)] -> Update [CUSIP]
+poolCidsToCusips mortgagePoolCids =
+      mapA (\
+        (poolCid: ContractId MortgagePool) ->
+          do
+            pool <- fetch poolCid
+            return pool.mortgagePoolFields.cusip
+        )
+        mortgagePoolCids
+
+template MortgagePoolAgreement
+  with
+    mortgagePoolHolder: Party
+    securitizer: Party
+    operator: Party
+    registry: Party
+    cusip: CUSIP
+    agreementFields: MortgagePoolAgreementFields
+    underlyingCusips: [CUSIP]
+    isReadyForIssuance: Bool
+  where
+    signatory mortgagePoolHolder, securitizer
+
+    controller operator can
+      ReadyAgreementForIssuance : ContractId MortgagePoolAgreement
+        with underlyingPools: [(ContractId MortgagePool)]
+        do
+          givenCusips <- poolCidsToCusips(underlyingPools)
+          assert(cusipsMatch(underlyingCusips)(givenCusips))
+          assert(isReadyForIssuance == False)
+          mapA (\
+                (pool: ContractId MortgagePool) ->
+                  do
+                    transferredPool <- do exercise pool Transfer with newOwner=securitizer
+                    do exercise transferredPool MortgagePool_Archives
+                )
+            underlyingPools
+          create this with isReadyForIssuance=True
+
+      Archives
+        : ()
+        do return ()

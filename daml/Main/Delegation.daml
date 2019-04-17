@@ -1,0 +1,47 @@
+
+{-# LANGUAGE PartialTypeSignatures #-}
+
+daml 1.2
+module Main.Delegation where
+
+import Main.MortgagePoolAgreement
+import Main.MortgagePool
+import Main.CustomTypes
+
+template DelegatedRegistrationRights
+  with
+    operator: Party
+    registry: Party
+  where
+    signatory registry
+
+    controller operator can
+      nonconsuming IssueMortgagePool_Delegated : ContractId MortgagePool
+        with mortgagePoolAgreementCid: ContractId MortgagePoolAgreement; mortgagePoolFields: MortgagePoolFields
+        do
+          mortgagePoolAgreement <- fetch mortgagePoolAgreementCid
+          assert(registry == mortgagePoolAgreement.registry)
+          assert(mortgagePoolAgreement.isReadyForIssuance)
+          do create MortgagePool with owner=mortgagePoolAgreement.securitizer; registry; operator; securitizers=[]; mortgagePoolFields; underlyingCusips=mortgagePoolAgreement.underlyingCusips; isLocked=False
+
+    controller registry can
+      RevokeDelegatedRegistrationRights
+        : ()
+        do return ()
+
+template DelegatedSecuritizerRights
+  with
+    securitizer: Party
+    operator: Party
+  where
+    signatory securitizer
+
+    controller operator can
+      nonconsuming TransferMortgagePool : ContractId MortgagePool
+        with mortgagePool: ContractId MortgagePool; newOwner: Party
+        do do exercise mortgagePool Transfer with newOwner
+
+    controller securitizer can
+      RevokeDelegatedSecuritizerRights
+        : ()
+        do return ()

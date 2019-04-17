@@ -1,0 +1,43 @@
+
+{-# LANGUAGE PartialTypeSignatures #-}
+
+daml 1.2
+module Main.MortgagePool where
+
+import Main.CustomTypes
+
+template MortgagePool
+  with
+    owner: Party
+    registry: Party
+    operator: Party
+    securitizers: [Party]
+    mortgagePoolFields: MortgagePoolFields
+    underlyingCusips: [CUSIP]
+    isLocked: Bool
+  where
+    signatory registry
+
+    observer operator
+    observer securitizers
+
+    controller owner can
+      Transfer : ContractId MortgagePool
+        with newOwner: Party
+        do create this with owner=newOwner
+
+      LockMortgagePool
+        : ContractId MortgagePool
+        do create this with isLocked = True
+
+      UnlockMortgagePool
+        : ContractId MortgagePool
+        do create this with isLocked = False
+
+      AddSecuritizer : ContractId MortgagePool
+        with securitizer: Party
+        do create this with securitizers = this.securitizers ++ [securitizer]
+
+      MortgagePool_Archives
+        : ()
+        do return ()

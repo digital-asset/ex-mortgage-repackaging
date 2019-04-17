@@ -1,0 +1,38 @@
+
+{-# LANGUAGE PartialTypeSignatures #-}
+
+daml 1.2
+module Tests.MortgagePoolTests where
+
+import DA.List
+
+import Tests.Factories
+import Main.MortgagePool
+
+-- test:
+weCanAddSecuritizers =
+  do
+    mortgagePoolCid <- buildPoolAbc123
+    mortgagePoolHolder <- getMortgagePoolHolder
+    securitizer <- getSecuritizer
+    mortgagePoolHolder `submit` do
+      mortgagePool <- fetch mortgagePoolCid
+      assert(length mortgagePool.securitizers == 0)
+
+    newPoolCid <- mortgagePoolHolder `submit` do exercise mortgagePoolCid AddSecuritizer with securitizer
+
+    mortgagePoolHolder `submit` do
+      mortgagePool <- fetch newPoolCid
+      assert(length mortgagePool.securitizers == 1)
+
+    additionalSecuritizer <- getParty "TheNewSecuritizer"
+
+    finalPoolCid <- mortgagePoolHolder `submit` do exercise newPoolCid AddSecuritizer with securitizer=additionalSecuritizer
+
+    mortgagePoolHolder `submit` do
+      mortgagePool <- fetch finalPoolCid
+      assert(mortgagePool.securitizers!!0 == securitizer)
+      assert(mortgagePool.securitizers!!1 == additionalSecuritizer)
+
+
+

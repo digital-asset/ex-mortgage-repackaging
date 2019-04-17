@@ -1,0 +1,163 @@
+
+{-# LANGUAGE PartialTypeSignatures #-}
+
+daml 1.2
+module Tests.Factories where
+
+import Main.MortgagePool
+import Main.MortgagePoolAgreementDraft
+import Main.MortgagePoolAgreementProposal
+import Main.MortgagePoolAgreement
+
+import Main.CustomTypes
+import Main.AvailableCusip
+
+import DA.List
+import DA.Date
+
+data AgreementDraftWithUnderlyingPools = AgreementDraftWithUnderlyingPools {
+    mortgagePoolAgreementDraft: ContractId MortgagePoolAgreementDraft,
+    underlyingPools: [(ContractId MortgagePool)]
+} deriving (Eq, Show)
+
+data AgreementWithUnderlyingPools = AgreementWithUnderlyingPools {
+    mortgagePoolAgreement: ContractId MortgagePoolAgreement,
+    underlyingPools: [(ContractId MortgagePool)]
+} deriving (Eq, Show)
+
+abc123 : CUSIP
+abc123 = CUSIP with text="ABC123"
+
+abc456 : CUSIP
+abc456 = CUSIP with text="ABC456"
+
+def123 : CUSIP
+def123 = CUSIP with text="DEF123"
+
+def456 : CUSIP
+def456 = CUSIP with text="DEF456"
+
+--buildMortgagePoolHolder : Party
+getMortgagePoolHolder = scenario do
+    getParty "MortgagePoolHolder"
+
+getSecuritizer = scenario do
+    getParty "Securitizer"
+
+getRegistry = scenario do
+    getParty "Registry"
+
+getOperator = scenario do
+    getParty "Operator"
+
+buildAgreementDraftFields : MortgagePoolAgreementDraftFields
+buildAgreementDraftFields =
+  MortgagePoolAgreementDraftFields with
+      referenceNumber="1"
+      poolType=Fixed
+      passThroughRate=3.5
+      lastLoanMaturity=Some (datetime 1970 Jan 1 0 0 0)
+      faceValue=0.0
+
+poolAbc123Fields : MortgagePoolFields
+poolAbc123Fields =
+  MortgagePoolFields with
+    cusip=abc123
+    poolType=Fixed
+    passThroughRate=3.5
+    issueDate=datetime 1970 Jan 1 0 0 0
+    lastLoanMaturity=datetime 1982 Jan 1 0 0 0
+    originalFaceValue=200.0
+    currentFaceValue=150.0
+
+poolAbc456Fields : MortgagePoolFields
+poolAbc456Fields =
+  MortgagePoolFields with
+    cusip=abc456
+    poolType=Fixed
+    passThroughRate=3.5
+    issueDate=datetime 1970 Jan 1 0 0 0
+    lastLoanMaturity=datetime 1980 Jan 1 0 0 0
+    originalFaceValue=200.0
+    currentFaceValue=100.0
+
+-- test:
+buildPoolAbc123 = scenario do
+  registry <- getRegistry
+  operator <- getOperator
+  mortgagePoolHolder <- getMortgagePoolHolder
+  registry `submit` do create MortgagePool with owner=mortgagePoolHolder; registry; operator; securitizers=[]; mortgagePoolFields=poolAbc123Fields; underlyingCusips=[CUSIP{text="zzz123"}]; isLocked = False
+
+-- test:
+buildPoolAbc456 = scenario do
+  registry <- getRegistry
+  operator <- getOperator
+  mortgagePoolHolder <- getMortgagePoolHolder
+  registry `submit` do create MortgagePool with owner=mortgagePoolHolder; registry; operator; securitizers=[]; mortgagePoolFields=poolAbc456Fields; underlyingCusips=[CUSIP{text="zzz456"}]; isLocked = False
+
+-- test:
+buildPoolDef123 = scenario do
+    registry <- getRegistry
+    mortgagePoolHolder <- getMortgagePoolHolder
+    operator <- getOperator
+    let mortgagePoolFields = MortgagePoolFields with
+                              cusip=def123
+                              poolType=Fixed
+                              passThroughRate=3.5
+                              issueDate=datetime 1970 Jan 1 0 0 0
+                              lastLoanMaturity=datetime 1970 Jan 1 0 0 0
+                              originalFaceValue=200.0
+                              currentFaceValue=150.0
+    registry `submit` do create MortgagePool with owner=mortgagePoolHolder; registry; operator; securitizers=[]; mortgagePoolFields; underlyingCusips=[CUSIP{text="zzz789"}]; isLocked = False
+
+-- test:
+buildPoolDef456 = scenario do
+    registry <- getRegistry
+    mortgagePoolHolder <- getMortgagePoolHolder
+    operator <- getOperator
+    let mortgagePoolFields = MortgagePoolFields with
+                              cusip=def456
+                              poolType=Fixed
+                              passThroughRate=3.5
+                              issueDate=datetime 1970 Jan 1 0 0 0
+                              lastLoanMaturity=datetime 1970 Jan 1 0 0 0
+                              originalFaceValue=200.0
+                              currentFaceValue=150.0
+    registry `submit` do create MortgagePool with owner=mortgagePoolHolder; registry; operator; securitizers=[]; mortgagePoolFields; underlyingCusips=[CUSIP{text="zzz101"}]; isLocked = False
+
+-- test:
+buildAvailableCusip = scenario do
+    securitizer <- getSecuritizer
+    registry <- getRegistry
+    requestCid <- securitizer `submit` do create AvailableCUSIPRequest with securitizer; registry; numberRequested=1
+    availableCusips <- registry `submit` do exercise requestCid Fulfill with cusips=[abc123]
+    let availableCusip = availableCusips!!0
+    return availableCusip
+
+-- test:
+buildMortgagePoolAgreementDraft = scenario do
+    mortgagePoolHolder <- getMortgagePoolHolder
+    operator <- getOperator
+    agreementProposal <- mortgagePoolHolder `submit` do create MortgagePoolAgreementDraft with mortgagePoolHolder; operator; agreementDraftFields=buildAgreementDraftFields; underlyingPools=[]
+
+    poolAbc123 <- buildPoolAbc123
+    draftUpdateResult <- mortgagePoolHolder `submit` do exercise agreementProposal AllocateCollateral with mortgagePool=poolAbc123
+
+    poolAbc456 <- buildPoolAbc456
+    secondDraftUpdateResult <- mortgagePoolHolder `submit` do exercise draftUpdateResult.mortgagePoolAgreementDraft AllocateCollateral with mortgagePool=poolAbc456
+    let underlyingPools = [draftUpdateResult.mortgagePool, secondDraftUpdateResult.mortgagePool]
+    return AgreementDraftWithUnderlyingPools with mortgagePoolAgreementDraft=secondDraftUpdateResult.mortgagePoolAgreementDraft; underlyingPools=underlyingPools
+
+-- test:
+buildMortgagePoolAgreement = scenario do
+    draft <- buildMortgagePoolAgreementDraft
+    mortgagePoolHolder <- getMortgagePoolHolder
+    securitizer <- getSecuritizer
+    registry <- getRegistry
+    draftProposalResult <- mortgagePoolHolder `submit` do
+                        exercise draft.mortgagePoolAgreementDraft SubmitProposal with
+                                              securitizer; underlyingPoolCids=[(draft.underlyingPools!!0), (draft.underlyingPools!!1)]
+    availableCusip <- buildAvailableCusip
+    poolAgreement <- securitizer `submit` do exercise draftProposalResult.mortgagePoolAgreementProposal Accept with availableCusipCid=availableCusip; registry
+
+    return AgreementWithUnderlyingPools with mortgagePoolAgreement=poolAgreement; underlyingPools=draftProposalResult.underlyingPoolCids

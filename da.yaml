@@ -1,0 +1,11 @@
+project:
+  sdk-version: 0.12.1
+  #scenario: Tests.MortgagePoolAgreementDraftTests.addPoolToUnderlyingAllosUsToAddMultiplePools
+  name: mortgage-repackaging
+  source: daml/LibraryModules.daml
+  parties:
+  - Operator
+  - Securitizer
+  - MortgagePoolHolder
+  - Registry
+version: 2

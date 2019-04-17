@@ -1,0 +1,176 @@
+
+{-# LANGUAGE PartialTypeSignatures #-}
+
+daml 1.2
+module Main.MortgagePoolAgreementDraft where
+
+import DA.List
+
+import Main.CustomTypes
+import Main.MortgagePool
+import Main.MortgagePoolAgreementProposal
+
+data DraftUpdateResult = DraftUpdateResult {
+  mortgagePoolAgreementDraft: ContractId MortgagePoolAgreementDraft;
+  mortgagePool: ContractId MortgagePool
+} deriving (Eq, Show)
+
+data DraftProposalResult = DraftProposalResult {
+  mortgagePoolAgreementProposal: ContractId MortgagePoolAgreementProposal;
+  underlyingPoolCids: [(ContractId MortgagePool)]
+} deriving (Eq, Show)
+
+data UnderlyingPool = UnderlyingPool{cusip: CUSIP; lastLoanMaturity: Time} deriving (Eq, Show)
+
+-- findIndex : (a -> Bool) -> [a] -> Maybe Int
+-- findIndex p l = fixedpoint (\f -> \case
+--               (i, []) -> None
+--               (i, x::xs) -> if p x then Just i else f (i+1, xs)
+--           ) (0, l)
+
+draftFieldsForAdded : MortgagePoolFields -> MortgagePoolAgreementDraftFields -> MortgagePoolAgreementDraftFields
+draftFieldsForAdded pool agreementDraftFields =
+  let newFaceValue = agreementDraftFields.faceValue + pool.currentFaceValue
+  in
+  let newLastLoanMaturity =
+          case agreementDraftFields.lastLoanMaturity of
+            None -> pool.lastLoanMaturity
+            Some existingLastLoanMaturity ->
+              if existingLastLoanMaturity < pool.lastLoanMaturity then
+                pool.lastLoanMaturity
+              else
+                existingLastLoanMaturity
+  in
+  agreementDraftFields with faceValue=newFaceValue; lastLoanMaturity = Some newLastLoanMaturity
+
+draftFieldsForRemoved : MortgagePoolFields -> Time -> MortgagePoolAgreementDraftFields -> [UnderlyingPool] -> MortgagePoolAgreementDraftFields
+draftFieldsForRemoved pool existingLastLoanMaturity agreementDraftFields underlyingPools =
+  let newFaceValue = agreementDraftFields.faceValue - pool.currentFaceValue
+  in
+  let isLastLoanMaturity = pool.lastLoanMaturity == existingLastLoanMaturity
+  in
+  let newLastLoanMaturity =
+        if isLastLoanMaturity && length underlyingPools > 1 then
+          let sortedUnderlyingPools = sortOn (\x -> x.lastLoanMaturity) underlyingPools
+          in
+          let nextMaturingPool = sortedUnderlyingPools!!((length sortedUnderlyingPools) - 2)
+          in
+          Some nextMaturingPool.lastLoanMaturity
+        else if isLastLoanMaturity then
+          None
+        else
+          Some existingLastLoanMaturity
+  in
+  agreementDraftFields with faceValue=newFaceValue; lastLoanMaturity = newLastLoanMaturity
+
+poolCidsToCusips : [(ContractId MortgagePool)] -> Update [CUSIP]
+poolCidsToCusips mortgagePoolCids =
+  mapA
+    (\
+      (poolCid: ContractId MortgagePool) ->
+        do
+          pool <- fetch poolCid
+          return pool.mortgagePoolFields.cusip
+      )
+    mortgagePoolCids
+
+buildAgreementFields : (MortgagePoolAgreementDraftFields) -> (Time) -> MortgagePoolAgreementFields
+buildAgreementFields agreementDraftFields existingLastLoanMaturity =
+  MortgagePoolAgreementFields with
+    referenceNumber=agreementDraftFields.referenceNumber
+    poolType=agreementDraftFields.poolType
+    passThroughRate=agreementDraftFields.passThroughRate
+    lastLoanMaturity=existingLastLoanMaturity
+    faceValue=agreementDraftFields.faceValue
+
+
+template MortgagePoolAgreementDraft
+  with
+    mortgagePoolHolder: Party
+    operator: Party
+    agreementDraftFields: MortgagePoolAgreementDraftFields
+    underlyingPools: [UnderlyingPool]
+  where
+    signatory mortgagePoolHolder
+
+    observer operator
+
+    controller mortgagePoolHolder can
+      AllocateCollateral : DraftUpdateResult
+        with mortgagePool: ContractId MortgagePool
+        do
+          pool <- fetch mortgagePool
+          let givenPool = UnderlyingPool with cusip=pool.mortgagePoolFields.cusip; lastLoanMaturity=pool.mortgagePoolFields.lastLoanMaturity
+          let isNotAlreadyUnderlying = notElem givenPool underlyingPools
+          let isNotLocked = pool.isLocked == False
+          assert(
+            isNotAlreadyUnderlying &&
+            isNotLocked &&
+            pool.mortgagePoolFields.passThroughRate == agreementDraftFields.passThroughRate &&
+            pool.mortgagePoolFields.poolType == agreementDraftFields.poolType
+           )
+          let newAgreementDraftFields = draftFieldsForAdded(pool.mortgagePoolFields)(agreementDraftFields)
+
+          mortgagePool <- do exercise mortgagePool LockMortgagePool
+          mortgagePoolAgreementDraft <- create this with
+            underlyingPools=((::) givenPool underlyingPools); agreementDraftFields=newAgreementDraftFields
+
+          return DraftUpdateResult with mortgagePoolAgreementDraft=mortgagePoolAgreementDraft; mortgagePool=mortgagePool
+
+      DeallocateCollateral : DraftUpdateResult
+        with mortgagePool: ContractId MortgagePool
+        do
+          pool <- fetch mortgagePool
+          assert(
+            pool.mortgagePoolFields.passThroughRate == agreementDraftFields.passThroughRate &&
+            pool.mortgagePoolFields.poolType == agreementDraftFields.poolType
+           )
+          let givenPool = UnderlyingPool {
+            cusip=pool.mortgagePoolFields.cusip;
+            lastLoanMaturity=pool.mortgagePoolFields.lastLoanMaturity
+          }
+
+          let isMatchingPool(pool: UnderlyingPool) = pool == givenPool
+          let indexOfMatchingPool = findIndex isMatchingPool underlyingPools
+          case indexOfMatchingPool of
+            None ->
+              abort
+                "The given pool is not currently underlying this agreement - cannot be removed!"
+            Some index -> do
+              case agreementDraftFields.lastLoanMaturity of
+                None ->
+                  abort
+                    "Invalid state reached. Cannot have length underlyingPools > 0 and no last loan maturity"
+                Some existingLastLoanMaturity ->
+                  do
+                    mortgagePool <- do exercise mortgagePool UnlockMortgagePool
+                    mortgagePoolAgreementDraft <-
+                      create this with
+                        underlyingPools= ((take index underlyingPools) ++ (drop (index+1) underlyingPools)); agreementDraftFields=draftFieldsForRemoved(pool.mortgagePoolFields)(existingLastLoanMaturity)(agreementDraftFields)(underlyingPools)
+
+                    return DraftUpdateResult with mortgagePoolAgreementDraft=mortgagePoolAgreementDraft; mortgagePool=mortgagePool
+
+      SubmitProposal : DraftProposalResult
+        with securitizer: Party; underlyingPoolCids: [(ContractId MortgagePool)]
+        do
+          givenCusips <- poolCidsToCusips(underlyingPoolCids)
+          let underlyingCusips =
+                map (\   (underlyingPool: UnderlyingPool) -> underlyingPool.cusip) underlyingPools
+
+          assert(
+            cusipsMatch(givenCusips)(underlyingCusips)
+           )
+          case agreementDraftFields.lastLoanMaturity of
+            None -> abort "Cannot submit proposal - no lastLoanMaturity"
+            Some existingLastLoanMaturity ->
+              do
+                updatedPoolCids <- mapA (\
+                  (mortgagePool: ContractId MortgagePool) ->
+                      do exercise mortgagePool AddSecuritizer with securitizer
+                  )
+                  underlyingPoolCids
+                let newAgreementFields = buildAgreementFields(agreementDraftFields)(existingLastLoanMaturity);
+                mortgagePoolAgreementProposal <- create MortgagePoolAgreementProposal with
+                              mortgagePoolHolder; securitizer; operator; agreementFields=newAgreementFields; underlyingCusips
+
+                return DraftProposalResult with mortgagePoolAgreementProposal=mortgagePoolAgreementProposal; underlyingPoolCids=updatedPoolCids

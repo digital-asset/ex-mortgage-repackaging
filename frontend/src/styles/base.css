@@ -1,0 +1,31 @@
+@import '../icons/icons.css';
+@import '../fonts/fonts.css';
+
+html, body, #root {
+  font-family: Karla, OpenSans, sans-serif;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: Karla, OpenSans, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #608AD8;
+}

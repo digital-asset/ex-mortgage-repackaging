@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('icomoon.eot?xhmhvl');
+  src:  url('icomoon.eot?xhmhvl#iefix') format('embedded-opentype'),
+    url('icomoon.ttf?xhmhvl') format('truetype'),
+    url('icomoon.woff?xhmhvl') format('woff'),
+    url('icomoon.svg?xhmhvl#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-da-sort-filled:before {
+  content: "\e903";
+  color: #282768;
+}
+.icon-da-sort-unfilled:before {
+  content: "\e911";
+  color: #282768;
+}
+.icon-da-checkbox-selected .path1:before {
+  content: "\e900";
+  color: rgb(32, 50, 96);
+}
+.icon-da-checkbox-selected .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-da-checkbox-default:before {
+  content: "\e902";
+  color: #203260;
+}
+.icon-da-chevron-left:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-da-chevron-down:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-da-close:before {
+  content: "\e906";
+  color: #d78542;
+}
+.icon-da-user:before {
+  content: "\e907";
+  color: #fff;
+}
+.icon-da-check:before {
+  content: "\e908";
+  color: #2cac85;
+}
+.icon-da-search:before {
+  content: "\e909";
+  color: #fff;
+}
+.icon-da-locked:before {
+  content: "\e90a";
+  color: #203260;
+}
+.icon-da-whitelogo:before {
+  content: "\e90b";
+  color: #fff;
+}
+.icon-da-unlocked:before {
+  content: "\e90c";
+  color: #203260;
+}
+.icon-da-addnew:before {
+  content: "\e90d";
+  color: #fff;
+}
+.icon-da-caret-down:before {
+  content: "\e90e";
+  color: #203260;
+}
+.icon-da-message:before {
+  content: "\e90f";
+  color: #203260;
+}
+.icon-da-caret-right:before {
+  content: "\e910";
+  color: #203260;
+}

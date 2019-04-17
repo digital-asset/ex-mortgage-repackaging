@@ -1,0 +1,66 @@
+
+{-# LANGUAGE PartialTypeSignatures #-}
+
+daml 1.2
+module Tests.RolesTests where
+
+import Main.MortgagePoolAgreementDraft
+import Main.MortgagePoolAgreementProposal
+
+import Main.CustomTypes
+import Main.AvailableCusip
+import Main.Roles
+
+import DA.List
+
+import Tests.Factories
+
+-- test:
+operatorCanSettleAMortgageAgreement =
+  do
+    operator <- getOperator
+    mortgagePoolHolder <- getMortgagePoolHolder
+    securitizer <- getSecuritizer
+    registry <- getRegistry
+    operatorRights <- operator `submit` do create OperatorRights with operator
+
+    mortgagePoolHolderRights <- operator `submit` do exercise operatorRights OnboardMortgagePoolHolder with mortgagePoolHolder
+
+    registryRights <- operator `submit` do exercise operatorRights OnboardRegistry with registry
+
+    securitizerRights <- operator `submit` do exercise operatorRights OnboardSecuritizer with securitizer
+
+    availableCusipRequest <- securitizer `submit` do exercise securitizerRights RequestCUSIPs with registry; numberRequested=4
+
+    availableCusips <- registry `submit` do exercise availableCusipRequest Fulfill with cusips=[abc123, abc456, def123, def456]
+
+    let availableCusip = availableCusips!!0
+
+    agreementProposal <- mortgagePoolHolder `submit` do exercise mortgagePoolHolderRights CreateMortgagePoolAgreementDraft with agreementDraftFields=buildAgreementDraftFields
+
+    poolAbc123 <- registry `submit` do exercise registryRights IssueMortgagePool with owner=mortgagePoolHolder; mortgagePoolFields=poolAbc123Fields; underlyingCusips=[CUSIP{text="zzz123"}]
+
+    firstDraftUpdateResult <- mortgagePoolHolder `submit` do exercise agreementProposal AllocateCollateral with mortgagePool=poolAbc123
+
+    poolAbc456 <- registry `submit` do exercise registryRights IssueMortgagePool with owner=mortgagePoolHolder; mortgagePoolFields=poolAbc456Fields; underlyingCusips=[CUSIP{text="zzz123"}]
+
+    finalDraftUpdateResult <- mortgagePoolHolder `submit` do exercise firstDraftUpdateResult.mortgagePoolAgreementDraft AllocateCollateral with mortgagePool=poolAbc456
+
+    draftProposalResult <- mortgagePoolHolder `submit` do exercise finalDraftUpdateResult.mortgagePoolAgreementDraft SubmitProposal with securitizer; underlyingPoolCids=[firstDraftUpdateResult.mortgagePool, finalDraftUpdateResult.mortgagePool]
+
+    mortgageAgreement <- securitizer `submit` do exercise draftProposalResult.mortgagePoolAgreementProposal Accept with availableCusipCid=availableCusip; registry
+
+    delegatedRegistrationRightsCid <- registry `submit` do exercise registryRights DelegateRegistrationRights
+
+    delegatedSecuritizerRightsCid <- securitizer `submit` do exercise securitizerRights DelegateSecuritizerRights
+
+    let latestFirstUnderlyingPoolCid = draftProposalResult.underlyingPoolCids!!0
+    let latestSecondUnderlyingPoolCid = draftProposalResult.underlyingPoolCids!!1
+
+    operator `submit` do
+      exercise operatorRights SettleMortgagePoolAgreement
+        with
+          mortgagePoolAgreementCid=mortgageAgreement
+          underlyingMortgagePoolCids=[latestFirstUnderlyingPoolCid, latestSecondUnderlyingPoolCid]
+          delegatedRegistrationRightsCid
+          delegatedSecuritizerRightsCid

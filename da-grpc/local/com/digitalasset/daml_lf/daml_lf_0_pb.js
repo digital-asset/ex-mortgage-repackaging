@@ -1,0 +1,15867 @@
+/**
+ * @fileoverview
+ * @enhanceable
+ * @suppress {messageConventions} JS Compiler reports an error if a variable or
+ *     field starts with 'MSG_' and isn't a translatable message.
+ * @public
+ */
+// GENERATED CODE -- DO NOT EDIT!
+
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
+
+goog.exportSymbol('proto.daml_lf_0.AbstractParty', null, global);
+goog.exportSymbol('proto.daml_lf_0.AbstractParty.Elim', null, global);
+goog.exportSymbol('proto.daml_lf_0.AbstractParty.Neutral', null, global);
+goog.exportSymbol('proto.daml_lf_0.Agreement', null, global);
+goog.exportSymbol('proto.daml_lf_0.Await', null, global);
+goog.exportSymbol('proto.daml_lf_0.Await.Choice', null, global);
+goog.exportSymbol('proto.daml_lf_0.Builtin', null, global);
+goog.exportSymbol('proto.daml_lf_0.BuiltinType', null, global);
+goog.exportSymbol('proto.daml_lf_0.Case', null, global);
+goog.exportSymbol('proto.daml_lf_0.Case.Alt', null, global);
+goog.exportSymbol('proto.daml_lf_0.CasePat', null, global);
+goog.exportSymbol('proto.daml_lf_0.CasePat.Data', null, global);
+goog.exportSymbol('proto.daml_lf_0.CasePat.Variant', null, global);
+goog.exportSymbol('proto.daml_lf_0.Choice', null, global);
+goog.exportSymbol('proto.daml_lf_0.ChoiceKind', null, global);
+goog.exportSymbol('proto.daml_lf_0.ContractExpr', null, global);
+goog.exportSymbol('proto.daml_lf_0.ContractId', null, global);
+goog.exportSymbol('proto.daml_lf_0.Controllers', null, global);
+goog.exportSymbol('proto.daml_lf_0.Controllers.Controller', null, global);
+goog.exportSymbol('proto.daml_lf_0.Controllers.DeterminedControllers', null, global);
+goog.exportSymbol('proto.daml_lf_0.Decl', null, global);
+goog.exportSymbol('proto.daml_lf_0.DeclTerm', null, global);
+goog.exportSymbol('proto.daml_lf_0.DeclTermKind', null, global);
+goog.exportSymbol('proto.daml_lf_0.DeclType', null, global);
+goog.exportSymbol('proto.daml_lf_0.Expr', null, global);
+goog.exportSymbol('proto.daml_lf_0.Expr.App', null, global);
+goog.exportSymbol('proto.daml_lf_0.Expr.Extend', null, global);
+goog.exportSymbol('proto.daml_lf_0.Expr.ExtendField', null, global);
+goog.exportSymbol('proto.daml_lf_0.Expr.If', null, global);
+goog.exportSymbol('proto.daml_lf_0.Expr.Lambda', null, global);
+goog.exportSymbol('proto.daml_lf_0.Expr.Let', null, global);
+goog.exportSymbol('proto.daml_lf_0.Expr.List', null, global);
+goog.exportSymbol('proto.daml_lf_0.LetBinder', null, global);
+goog.exportSymbol('proto.daml_lf_0.Library', null, global);
+goog.exportSymbol('proto.daml_lf_0.Literal', null, global);
+goog.exportSymbol('proto.daml_lf_0.Obligables', null, global);
+goog.exportSymbol('proto.daml_lf_0.Obligables.DeterminedObligables', null, global);
+goog.exportSymbol('proto.daml_lf_0.Obligables.ObligableClause', null, global);
+goog.exportSymbol('proto.daml_lf_0.Op', null, global);
+goog.exportSymbol('proto.daml_lf_0.Package', null, global);
+goog.exportSymbol('proto.daml_lf_0.PatternMatch', null, global);
+goog.exportSymbol('proto.daml_lf_0.RecordPattern', null, global);
+goog.exportSymbol('proto.daml_lf_0.RecordPattern.LabelWithPattern', null, global);
+goog.exportSymbol('proto.daml_lf_0.RecordPattern.Record', null, global);
+goog.exportSymbol('proto.daml_lf_0.RefTemplate', null, global);
+goog.exportSymbol('proto.daml_lf_0.RefTemplate.External', null, global);
+goog.exportSymbol('proto.daml_lf_0.RefTerm', null, global);
+goog.exportSymbol('proto.daml_lf_0.RefType', null, global);
+goog.exportSymbol('proto.daml_lf_0.Scenario', null, global);
+goog.exportSymbol('proto.daml_lf_0.Scenario.ScenarioStep', null, global);
+goog.exportSymbol('proto.daml_lf_0.ScenarioTopology', null, global);
+goog.exportSymbol('proto.daml_lf_0.Template', null, global);
+goog.exportSymbol('proto.daml_lf_0.TemplateGroup', null, global);
+goog.exportSymbol('proto.daml_lf_0.TemplateGroupStakeholders', null, global);
+goog.exportSymbol('proto.daml_lf_0.TemplateStakeholders', null, global);
+goog.exportSymbol('proto.daml_lf_0.TemplateStoreStakeholders', null, global);
+goog.exportSymbol('proto.daml_lf_0.Type', null, global);
+goog.exportSymbol('proto.daml_lf_0.Type.Abs', null, global);
+goog.exportSymbol('proto.daml_lf_0.Type.App', null, global);
+goog.exportSymbol('proto.daml_lf_0.Type.Arr', null, global);
+goog.exportSymbol('proto.daml_lf_0.Type.Await', null, global);
+goog.exportSymbol('proto.daml_lf_0.Type.Contract', null, global);
+goog.exportSymbol('proto.daml_lf_0.Type.Data', null, global);
+goog.exportSymbol('proto.daml_lf_0.Type.Record', null, global);
+goog.exportSymbol('proto.daml_lf_0.Type.Variant', null, global);
+goog.exportSymbol('proto.daml_lf_0.TypeChoice', null, global);
+goog.exportSymbol('proto.daml_lf_0.TypeField', null, global);
+goog.exportSymbol('proto.daml_lf_0.TypedBinder', null, global);
+goog.exportSymbol('proto.daml_lf_0.Unit', null, global);
+goog.exportSymbol('proto.daml_lf_0.Update', null, global);
+goog.exportSymbol('proto.daml_lf_0.Update.UpdateStep', null, global);
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Unit = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.Unit, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Unit.displayName = 'proto.daml_lf_0.Unit';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Unit.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Unit.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Unit} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Unit.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Unit}
+ */
+proto.daml_lf_0.Unit.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Unit;
+  return proto.daml_lf_0.Unit.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Unit} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Unit}
+ */
+proto.daml_lf_0.Unit.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Unit.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Unit.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Unit} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Unit.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Package = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.Package, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Package.displayName = 'proto.daml_lf_0.Package';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Package.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Package.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Package} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Package.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    library: (f = msg.getLibrary()) && proto.daml_lf_0.Library.toObject(includeInstance, f),
+    stakeholders: (f = msg.getStakeholders()) && proto.daml_lf_0.TemplateStoreStakeholders.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Package}
+ */
+proto.daml_lf_0.Package.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Package;
+  return proto.daml_lf_0.Package.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Package} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Package}
+ */
+proto.daml_lf_0.Package.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Library;
+      reader.readMessage(value,proto.daml_lf_0.Library.deserializeBinaryFromReader);
+      msg.setLibrary(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.TemplateStoreStakeholders;
+      reader.readMessage(value,proto.daml_lf_0.TemplateStoreStakeholders.deserializeBinaryFromReader);
+      msg.setStakeholders(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Package.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Package.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Package} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Package.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getLibrary();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.Library.serializeBinaryToWriter
+    );
+  }
+  f = message.getStakeholders();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.TemplateStoreStakeholders.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Library library = 1;
+ * @return {?proto.daml_lf_0.Library}
+ */
+proto.daml_lf_0.Package.prototype.getLibrary = function() {
+  return /** @type{?proto.daml_lf_0.Library} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Library, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.Library|undefined} value */
+proto.daml_lf_0.Package.prototype.setLibrary = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.daml_lf_0.Package.prototype.clearLibrary = function() {
+  this.setLibrary(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Package.prototype.hasLibrary = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional TemplateStoreStakeholders stakeholders = 2;
+ * @return {?proto.daml_lf_0.TemplateStoreStakeholders}
+ */
+proto.daml_lf_0.Package.prototype.getStakeholders = function() {
+  return /** @type{?proto.daml_lf_0.TemplateStoreStakeholders} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.TemplateStoreStakeholders, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.TemplateStoreStakeholders|undefined} value */
+proto.daml_lf_0.Package.prototype.setStakeholders = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.Package.prototype.clearStakeholders = function() {
+  this.setStakeholders(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Package.prototype.hasStakeholders = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Library = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Library.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Library, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Library.displayName = 'proto.daml_lf_0.Library';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Library.repeatedFields_ = [1,2,3];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Library.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Library.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Library} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Library.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    templateStoreList: jspb.Message.toObjectList(msg.getTemplateStoreList(),
+    proto.daml_lf_0.TemplateGroup.toObject, includeInstance),
+    declStoreList: jspb.Message.toObjectList(msg.getDeclStoreList(),
+    proto.daml_lf_0.Decl.toObject, includeInstance),
+    moduleTemplateGroupIdsList: jspb.Message.getRepeatedField(msg, 3)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Library}
+ */
+proto.daml_lf_0.Library.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Library;
+  return proto.daml_lf_0.Library.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Library} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Library}
+ */
+proto.daml_lf_0.Library.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.TemplateGroup;
+      reader.readMessage(value,proto.daml_lf_0.TemplateGroup.deserializeBinaryFromReader);
+      msg.addTemplateStore(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Decl;
+      reader.readMessage(value,proto.daml_lf_0.Decl.deserializeBinaryFromReader);
+      msg.addDeclStore(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addModuleTemplateGroupIds(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Library.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Library.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Library} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Library.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getTemplateStoreList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.TemplateGroup.serializeBinaryToWriter
+    );
+  }
+  f = message.getDeclStoreList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.daml_lf_0.Decl.serializeBinaryToWriter
+    );
+  }
+  f = message.getModuleTemplateGroupIdsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      3,
+      f
+    );
+  }
+};
+
+
+/**
+ * repeated TemplateGroup template_store = 1;
+ * @return {!Array<!proto.daml_lf_0.TemplateGroup>}
+ */
+proto.daml_lf_0.Library.prototype.getTemplateStoreList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.TemplateGroup>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.TemplateGroup, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.TemplateGroup>} value */
+proto.daml_lf_0.Library.prototype.setTemplateStoreList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.TemplateGroup=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.TemplateGroup}
+ */
+proto.daml_lf_0.Library.prototype.addTemplateStore = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.TemplateGroup, opt_index);
+};
+
+
+proto.daml_lf_0.Library.prototype.clearTemplateStoreList = function() {
+  this.setTemplateStoreList([]);
+};
+
+
+/**
+ * repeated Decl decl_store = 2;
+ * @return {!Array<!proto.daml_lf_0.Decl>}
+ */
+proto.daml_lf_0.Library.prototype.getDeclStoreList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Decl>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Decl, 2));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Decl>} value */
+proto.daml_lf_0.Library.prototype.setDeclStoreList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Decl=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Decl}
+ */
+proto.daml_lf_0.Library.prototype.addDeclStore = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.daml_lf_0.Decl, opt_index);
+};
+
+
+proto.daml_lf_0.Library.prototype.clearDeclStoreList = function() {
+  this.setDeclStoreList([]);
+};
+
+
+/**
+ * repeated string module_template_group_ids = 3;
+ * @return {!Array<string>}
+ */
+proto.daml_lf_0.Library.prototype.getModuleTemplateGroupIdsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 3));
+};
+
+
+/** @param {!Array<string>} value */
+proto.daml_lf_0.Library.prototype.setModuleTemplateGroupIdsList = function(value) {
+  jspb.Message.setField(this, 3, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ */
+proto.daml_lf_0.Library.prototype.addModuleTemplateGroupIds = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 3, value, opt_index);
+};
+
+
+proto.daml_lf_0.Library.prototype.clearModuleTemplateGroupIdsList = function() {
+  this.setModuleTemplateGroupIdsList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.TemplateGroup = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.TemplateGroup.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.TemplateGroup, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.TemplateGroup.displayName = 'proto.daml_lf_0.TemplateGroup';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.TemplateGroup.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.TemplateGroup.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.TemplateGroup.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.TemplateGroup} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.TemplateGroup.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    templatesList: jspb.Message.toObjectList(msg.getTemplatesList(),
+    proto.daml_lf_0.Template.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.TemplateGroup}
+ */
+proto.daml_lf_0.TemplateGroup.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.TemplateGroup;
+  return proto.daml_lf_0.TemplateGroup.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.TemplateGroup} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.TemplateGroup}
+ */
+proto.daml_lf_0.TemplateGroup.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setId(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Template;
+      reader.readMessage(value,proto.daml_lf_0.Template.deserializeBinaryFromReader);
+      msg.addTemplates(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.TemplateGroup.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.TemplateGroup.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.TemplateGroup} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.TemplateGroup.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getId();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getTemplatesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.daml_lf_0.Template.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string id = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.TemplateGroup.prototype.getId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.TemplateGroup.prototype.setId = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * repeated Template templates = 2;
+ * @return {!Array<!proto.daml_lf_0.Template>}
+ */
+proto.daml_lf_0.TemplateGroup.prototype.getTemplatesList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Template>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Template, 2));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Template>} value */
+proto.daml_lf_0.TemplateGroup.prototype.setTemplatesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Template=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Template}
+ */
+proto.daml_lf_0.TemplateGroup.prototype.addTemplates = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.daml_lf_0.Template, opt_index);
+};
+
+
+proto.daml_lf_0.TemplateGroup.prototype.clearTemplatesList = function() {
+  this.setTemplatesList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Template = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Template.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Template, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Template.displayName = 'proto.daml_lf_0.Template';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Template.repeatedFields_ = [2,3];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Template.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Template.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Template} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Template.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    letsList: jspb.Message.toObjectList(msg.getLetsList(),
+    proto.daml_lf_0.LetBinder.toObject, includeInstance),
+    paramsList: jspb.Message.toObjectList(msg.getParamsList(),
+    proto.daml_lf_0.TypedBinder.toObject, includeInstance),
+    contractExpr: (f = msg.getContractExpr()) && proto.daml_lf_0.ContractExpr.toObject(includeInstance, f),
+    topleveldef: jspb.Message.getFieldWithDefault(msg, 5, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Template}
+ */
+proto.daml_lf_0.Template.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Template;
+  return proto.daml_lf_0.Template.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Template} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Template}
+ */
+proto.daml_lf_0.Template.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setId(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.LetBinder;
+      reader.readMessage(value,proto.daml_lf_0.LetBinder.deserializeBinaryFromReader);
+      msg.addLets(value);
+      break;
+    case 3:
+      var value = new proto.daml_lf_0.TypedBinder;
+      reader.readMessage(value,proto.daml_lf_0.TypedBinder.deserializeBinaryFromReader);
+      msg.addParams(value);
+      break;
+    case 4:
+      var value = new proto.daml_lf_0.ContractExpr;
+      reader.readMessage(value,proto.daml_lf_0.ContractExpr.deserializeBinaryFromReader);
+      msg.setContractExpr(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTopleveldef(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Template.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Template.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Template} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Template.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getId();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getLetsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.daml_lf_0.LetBinder.serializeBinaryToWriter
+    );
+  }
+  f = message.getParamsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      3,
+      f,
+      proto.daml_lf_0.TypedBinder.serializeBinaryToWriter
+    );
+  }
+  f = message.getContractExpr();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.daml_lf_0.ContractExpr.serializeBinaryToWriter
+    );
+  }
+  f = message.getTopleveldef();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string id = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.Template.prototype.getId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.Template.prototype.setId = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * repeated LetBinder lets = 2;
+ * @return {!Array<!proto.daml_lf_0.LetBinder>}
+ */
+proto.daml_lf_0.Template.prototype.getLetsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.LetBinder>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.LetBinder, 2));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.LetBinder>} value */
+proto.daml_lf_0.Template.prototype.setLetsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.LetBinder=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.LetBinder}
+ */
+proto.daml_lf_0.Template.prototype.addLets = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.daml_lf_0.LetBinder, opt_index);
+};
+
+
+proto.daml_lf_0.Template.prototype.clearLetsList = function() {
+  this.setLetsList([]);
+};
+
+
+/**
+ * repeated TypedBinder params = 3;
+ * @return {!Array<!proto.daml_lf_0.TypedBinder>}
+ */
+proto.daml_lf_0.Template.prototype.getParamsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.TypedBinder>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.TypedBinder, 3));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.TypedBinder>} value */
+proto.daml_lf_0.Template.prototype.setParamsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 3, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.TypedBinder=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.TypedBinder}
+ */
+proto.daml_lf_0.Template.prototype.addParams = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.daml_lf_0.TypedBinder, opt_index);
+};
+
+
+proto.daml_lf_0.Template.prototype.clearParamsList = function() {
+  this.setParamsList([]);
+};
+
+
+/**
+ * optional ContractExpr contract_expr = 4;
+ * @return {?proto.daml_lf_0.ContractExpr}
+ */
+proto.daml_lf_0.Template.prototype.getContractExpr = function() {
+  return /** @type{?proto.daml_lf_0.ContractExpr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.ContractExpr, 4));
+};
+
+
+/** @param {?proto.daml_lf_0.ContractExpr|undefined} value */
+proto.daml_lf_0.Template.prototype.setContractExpr = function(value) {
+  jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+proto.daml_lf_0.Template.prototype.clearContractExpr = function() {
+  this.setContractExpr(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Template.prototype.hasContractExpr = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional string topLevelDef = 5;
+ * @return {string}
+ */
+proto.daml_lf_0.Template.prototype.getTopleveldef = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.Template.prototype.setTopleveldef = function(value) {
+  jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.LetBinder = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.LetBinder, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.LetBinder.displayName = 'proto.daml_lf_0.LetBinder';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.LetBinder.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.LetBinder.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.LetBinder} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.LetBinder.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    pb_var: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    expr: (f = msg.getExpr()) && proto.daml_lf_0.Expr.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.LetBinder}
+ */
+proto.daml_lf_0.LetBinder.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.LetBinder;
+  return proto.daml_lf_0.LetBinder.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.LetBinder} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.LetBinder}
+ */
+proto.daml_lf_0.LetBinder.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setVar(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setExpr(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.LetBinder.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.LetBinder.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.LetBinder} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.LetBinder.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getVar();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getExpr();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string var = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.LetBinder.prototype.getVar = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.LetBinder.prototype.setVar = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional Expr expr = 2;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.LetBinder.prototype.getExpr = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.LetBinder.prototype.setExpr = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.LetBinder.prototype.clearExpr = function() {
+  this.setExpr(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.LetBinder.prototype.hasExpr = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Expr = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.daml_lf_0.Expr.oneofGroups_);
+};
+goog.inherits(proto.daml_lf_0.Expr, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Expr.displayName = 'proto.daml_lf_0.Expr';
+}
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.daml_lf_0.Expr.oneofGroups_ = [[1,2,3,4,5,6,7,8,9,10,11,12,13]];
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.Expr.SumCase = {
+  SUM_NOT_SET: 0,
+  REF: 1,
+  LIT: 2,
+  APP: 3,
+  LAM: 4,
+  LET: 5,
+  IF: 6,
+  CASE: 7,
+  CHOICE: 8,
+  UPDATE: 9,
+  PATTERN_MATCH: 10,
+  SCENARIO: 11,
+  EXTEND: 12,
+  LIST: 13
+};
+
+/**
+ * @return {proto.daml_lf_0.Expr.SumCase}
+ */
+proto.daml_lf_0.Expr.prototype.getSumCase = function() {
+  return /** @type {proto.daml_lf_0.Expr.SumCase} */(jspb.Message.computeOneofCase(this, proto.daml_lf_0.Expr.oneofGroups_[0]));
+};
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Expr.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Expr.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Expr} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    ref: (f = msg.getRef()) && proto.daml_lf_0.RefTerm.toObject(includeInstance, f),
+    lit: (f = msg.getLit()) && proto.daml_lf_0.Literal.toObject(includeInstance, f),
+    app: (f = msg.getApp()) && proto.daml_lf_0.Expr.App.toObject(includeInstance, f),
+    lam: (f = msg.getLam()) && proto.daml_lf_0.Expr.Lambda.toObject(includeInstance, f),
+    let: (f = msg.getLet()) && proto.daml_lf_0.Expr.Let.toObject(includeInstance, f),
+    pb_if: (f = msg.getIf()) && proto.daml_lf_0.Expr.If.toObject(includeInstance, f),
+    pb_case: (f = msg.getCase()) && proto.daml_lf_0.Case.toObject(includeInstance, f),
+    choice: (f = msg.getChoice()) && proto.daml_lf_0.Choice.toObject(includeInstance, f),
+    update: (f = msg.getUpdate()) && proto.daml_lf_0.Update.toObject(includeInstance, f),
+    patternMatch: (f = msg.getPatternMatch()) && proto.daml_lf_0.PatternMatch.toObject(includeInstance, f),
+    scenario: (f = msg.getScenario()) && proto.daml_lf_0.Scenario.toObject(includeInstance, f),
+    extend: (f = msg.getExtend()) && proto.daml_lf_0.Expr.Extend.toObject(includeInstance, f),
+    list: (f = msg.getList()) && proto.daml_lf_0.Expr.List.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Expr.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Expr;
+  return proto.daml_lf_0.Expr.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Expr} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Expr.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.RefTerm;
+      reader.readMessage(value,proto.daml_lf_0.RefTerm.deserializeBinaryFromReader);
+      msg.setRef(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Literal;
+      reader.readMessage(value,proto.daml_lf_0.Literal.deserializeBinaryFromReader);
+      msg.setLit(value);
+      break;
+    case 3:
+      var value = new proto.daml_lf_0.Expr.App;
+      reader.readMessage(value,proto.daml_lf_0.Expr.App.deserializeBinaryFromReader);
+      msg.setApp(value);
+      break;
+    case 4:
+      var value = new proto.daml_lf_0.Expr.Lambda;
+      reader.readMessage(value,proto.daml_lf_0.Expr.Lambda.deserializeBinaryFromReader);
+      msg.setLam(value);
+      break;
+    case 5:
+      var value = new proto.daml_lf_0.Expr.Let;
+      reader.readMessage(value,proto.daml_lf_0.Expr.Let.deserializeBinaryFromReader);
+      msg.setLet(value);
+      break;
+    case 6:
+      var value = new proto.daml_lf_0.Expr.If;
+      reader.readMessage(value,proto.daml_lf_0.Expr.If.deserializeBinaryFromReader);
+      msg.setIf(value);
+      break;
+    case 7:
+      var value = new proto.daml_lf_0.Case;
+      reader.readMessage(value,proto.daml_lf_0.Case.deserializeBinaryFromReader);
+      msg.setCase(value);
+      break;
+    case 8:
+      var value = new proto.daml_lf_0.Choice;
+      reader.readMessage(value,proto.daml_lf_0.Choice.deserializeBinaryFromReader);
+      msg.setChoice(value);
+      break;
+    case 9:
+      var value = new proto.daml_lf_0.Update;
+      reader.readMessage(value,proto.daml_lf_0.Update.deserializeBinaryFromReader);
+      msg.setUpdate(value);
+      break;
+    case 10:
+      var value = new proto.daml_lf_0.PatternMatch;
+      reader.readMessage(value,proto.daml_lf_0.PatternMatch.deserializeBinaryFromReader);
+      msg.setPatternMatch(value);
+      break;
+    case 11:
+      var value = new proto.daml_lf_0.Scenario;
+      reader.readMessage(value,proto.daml_lf_0.Scenario.deserializeBinaryFromReader);
+      msg.setScenario(value);
+      break;
+    case 12:
+      var value = new proto.daml_lf_0.Expr.Extend;
+      reader.readMessage(value,proto.daml_lf_0.Expr.Extend.deserializeBinaryFromReader);
+      msg.setExtend(value);
+      break;
+    case 13:
+      var value = new proto.daml_lf_0.Expr.List;
+      reader.readMessage(value,proto.daml_lf_0.Expr.List.deserializeBinaryFromReader);
+      msg.setList(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Expr.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Expr.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Expr} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getRef();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.RefTerm.serializeBinaryToWriter
+    );
+  }
+  f = message.getLit();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Literal.serializeBinaryToWriter
+    );
+  }
+  f = message.getApp();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.daml_lf_0.Expr.App.serializeBinaryToWriter
+    );
+  }
+  f = message.getLam();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.daml_lf_0.Expr.Lambda.serializeBinaryToWriter
+    );
+  }
+  f = message.getLet();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      proto.daml_lf_0.Expr.Let.serializeBinaryToWriter
+    );
+  }
+  f = message.getIf();
+  if (f != null) {
+    writer.writeMessage(
+      6,
+      f,
+      proto.daml_lf_0.Expr.If.serializeBinaryToWriter
+    );
+  }
+  f = message.getCase();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      proto.daml_lf_0.Case.serializeBinaryToWriter
+    );
+  }
+  f = message.getChoice();
+  if (f != null) {
+    writer.writeMessage(
+      8,
+      f,
+      proto.daml_lf_0.Choice.serializeBinaryToWriter
+    );
+  }
+  f = message.getUpdate();
+  if (f != null) {
+    writer.writeMessage(
+      9,
+      f,
+      proto.daml_lf_0.Update.serializeBinaryToWriter
+    );
+  }
+  f = message.getPatternMatch();
+  if (f != null) {
+    writer.writeMessage(
+      10,
+      f,
+      proto.daml_lf_0.PatternMatch.serializeBinaryToWriter
+    );
+  }
+  f = message.getScenario();
+  if (f != null) {
+    writer.writeMessage(
+      11,
+      f,
+      proto.daml_lf_0.Scenario.serializeBinaryToWriter
+    );
+  }
+  f = message.getExtend();
+  if (f != null) {
+    writer.writeMessage(
+      12,
+      f,
+      proto.daml_lf_0.Expr.Extend.serializeBinaryToWriter
+    );
+  }
+  f = message.getList();
+  if (f != null) {
+    writer.writeMessage(
+      13,
+      f,
+      proto.daml_lf_0.Expr.List.serializeBinaryToWriter
+    );
+  }
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Expr.App = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Expr.App.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Expr.App, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Expr.App.displayName = 'proto.daml_lf_0.Expr.App';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Expr.App.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Expr.App.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Expr.App.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Expr.App} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.App.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    fun: (f = msg.getFun()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    argsList: jspb.Message.toObjectList(msg.getArgsList(),
+    proto.daml_lf_0.Expr.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Expr.App}
+ */
+proto.daml_lf_0.Expr.App.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Expr.App;
+  return proto.daml_lf_0.Expr.App.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Expr.App} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Expr.App}
+ */
+proto.daml_lf_0.Expr.App.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setFun(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.addArgs(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Expr.App.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Expr.App.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Expr.App} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.App.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getFun();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getArgsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Expr fun = 1;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Expr.App.prototype.getFun = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Expr.App.prototype.setFun = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.daml_lf_0.Expr.App.prototype.clearFun = function() {
+  this.setFun(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.App.prototype.hasFun = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * repeated Expr args = 2;
+ * @return {!Array<!proto.daml_lf_0.Expr>}
+ */
+proto.daml_lf_0.Expr.App.prototype.getArgsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Expr>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Expr, 2));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Expr>} value */
+proto.daml_lf_0.Expr.App.prototype.setArgsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Expr=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Expr.App.prototype.addArgs = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.daml_lf_0.Expr, opt_index);
+};
+
+
+proto.daml_lf_0.Expr.App.prototype.clearArgsList = function() {
+  this.setArgsList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Expr.Lambda = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Expr.Lambda.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Expr.Lambda, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Expr.Lambda.displayName = 'proto.daml_lf_0.Expr.Lambda';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Expr.Lambda.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Expr.Lambda.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Expr.Lambda.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Expr.Lambda} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.Lambda.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    paramsList: jspb.Message.toObjectList(msg.getParamsList(),
+    proto.daml_lf_0.TypedBinder.toObject, includeInstance),
+    body: (f = msg.getBody()) && proto.daml_lf_0.Expr.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Expr.Lambda}
+ */
+proto.daml_lf_0.Expr.Lambda.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Expr.Lambda;
+  return proto.daml_lf_0.Expr.Lambda.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Expr.Lambda} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Expr.Lambda}
+ */
+proto.daml_lf_0.Expr.Lambda.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.TypedBinder;
+      reader.readMessage(value,proto.daml_lf_0.TypedBinder.deserializeBinaryFromReader);
+      msg.addParams(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setBody(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Expr.Lambda.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Expr.Lambda.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Expr.Lambda} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.Lambda.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getParamsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.TypedBinder.serializeBinaryToWriter
+    );
+  }
+  f = message.getBody();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated TypedBinder params = 1;
+ * @return {!Array<!proto.daml_lf_0.TypedBinder>}
+ */
+proto.daml_lf_0.Expr.Lambda.prototype.getParamsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.TypedBinder>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.TypedBinder, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.TypedBinder>} value */
+proto.daml_lf_0.Expr.Lambda.prototype.setParamsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.TypedBinder=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.TypedBinder}
+ */
+proto.daml_lf_0.Expr.Lambda.prototype.addParams = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.TypedBinder, opt_index);
+};
+
+
+proto.daml_lf_0.Expr.Lambda.prototype.clearParamsList = function() {
+  this.setParamsList([]);
+};
+
+
+/**
+ * optional Expr body = 2;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Expr.Lambda.prototype.getBody = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Expr.Lambda.prototype.setBody = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.Expr.Lambda.prototype.clearBody = function() {
+  this.setBody(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.Lambda.prototype.hasBody = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Expr.Let = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Expr.Let.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Expr.Let, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Expr.Let.displayName = 'proto.daml_lf_0.Expr.Let';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Expr.Let.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Expr.Let.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Expr.Let.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Expr.Let} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.Let.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    bindingsList: jspb.Message.toObjectList(msg.getBindingsList(),
+    proto.daml_lf_0.LetBinder.toObject, includeInstance),
+    body: (f = msg.getBody()) && proto.daml_lf_0.Expr.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Expr.Let}
+ */
+proto.daml_lf_0.Expr.Let.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Expr.Let;
+  return proto.daml_lf_0.Expr.Let.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Expr.Let} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Expr.Let}
+ */
+proto.daml_lf_0.Expr.Let.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.LetBinder;
+      reader.readMessage(value,proto.daml_lf_0.LetBinder.deserializeBinaryFromReader);
+      msg.addBindings(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setBody(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Expr.Let.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Expr.Let.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Expr.Let} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.Let.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getBindingsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.LetBinder.serializeBinaryToWriter
+    );
+  }
+  f = message.getBody();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated LetBinder bindings = 1;
+ * @return {!Array<!proto.daml_lf_0.LetBinder>}
+ */
+proto.daml_lf_0.Expr.Let.prototype.getBindingsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.LetBinder>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.LetBinder, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.LetBinder>} value */
+proto.daml_lf_0.Expr.Let.prototype.setBindingsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.LetBinder=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.LetBinder}
+ */
+proto.daml_lf_0.Expr.Let.prototype.addBindings = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.LetBinder, opt_index);
+};
+
+
+proto.daml_lf_0.Expr.Let.prototype.clearBindingsList = function() {
+  this.setBindingsList([]);
+};
+
+
+/**
+ * optional Expr body = 2;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Expr.Let.prototype.getBody = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Expr.Let.prototype.setBody = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.Expr.Let.prototype.clearBody = function() {
+  this.setBody(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.Let.prototype.hasBody = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Expr.If = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.Expr.If, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Expr.If.displayName = 'proto.daml_lf_0.Expr.If';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Expr.If.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Expr.If.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Expr.If} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.If.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    cond: (f = msg.getCond()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    then: (f = msg.getThen()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    pb_else: (f = msg.getElse()) && proto.daml_lf_0.Expr.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Expr.If}
+ */
+proto.daml_lf_0.Expr.If.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Expr.If;
+  return proto.daml_lf_0.Expr.If.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Expr.If} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Expr.If}
+ */
+proto.daml_lf_0.Expr.If.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setCond(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setThen(value);
+      break;
+    case 3:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setElse(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Expr.If.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Expr.If.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Expr.If} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.If.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getCond();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getThen();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getElse();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Expr cond = 1;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Expr.If.prototype.getCond = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Expr.If.prototype.setCond = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.daml_lf_0.Expr.If.prototype.clearCond = function() {
+  this.setCond(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.If.prototype.hasCond = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional Expr then = 2;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Expr.If.prototype.getThen = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Expr.If.prototype.setThen = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.Expr.If.prototype.clearThen = function() {
+  this.setThen(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.If.prototype.hasThen = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional Expr else = 3;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Expr.If.prototype.getElse = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 3));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Expr.If.prototype.setElse = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+proto.daml_lf_0.Expr.If.prototype.clearElse = function() {
+  this.setElse(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.If.prototype.hasElse = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Expr.ExtendField = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.Expr.ExtendField, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Expr.ExtendField.displayName = 'proto.daml_lf_0.Expr.ExtendField';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Expr.ExtendField.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Expr.ExtendField.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Expr.ExtendField} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.ExtendField.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    expr: (f = msg.getExpr()) && proto.daml_lf_0.Expr.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Expr.ExtendField}
+ */
+proto.daml_lf_0.Expr.ExtendField.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Expr.ExtendField;
+  return proto.daml_lf_0.Expr.ExtendField.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Expr.ExtendField} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Expr.ExtendField}
+ */
+proto.daml_lf_0.Expr.ExtendField.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setExpr(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Expr.ExtendField.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Expr.ExtendField.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Expr.ExtendField} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.ExtendField.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getExpr();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string name = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.Expr.ExtendField.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.Expr.ExtendField.prototype.setName = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional Expr expr = 2;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Expr.ExtendField.prototype.getExpr = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Expr.ExtendField.prototype.setExpr = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.Expr.ExtendField.prototype.clearExpr = function() {
+  this.setExpr(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.ExtendField.prototype.hasExpr = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Expr.Extend = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Expr.Extend.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Expr.Extend, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Expr.Extend.displayName = 'proto.daml_lf_0.Expr.Extend';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Expr.Extend.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Expr.Extend.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Expr.Extend.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Expr.Extend} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.Extend.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    fieldsList: jspb.Message.toObjectList(msg.getFieldsList(),
+    proto.daml_lf_0.Expr.ExtendField.toObject, includeInstance),
+    record: (f = msg.getRecord()) && proto.daml_lf_0.Expr.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Expr.Extend}
+ */
+proto.daml_lf_0.Expr.Extend.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Expr.Extend;
+  return proto.daml_lf_0.Expr.Extend.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Expr.Extend} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Expr.Extend}
+ */
+proto.daml_lf_0.Expr.Extend.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Expr.ExtendField;
+      reader.readMessage(value,proto.daml_lf_0.Expr.ExtendField.deserializeBinaryFromReader);
+      msg.addFields(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setRecord(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Expr.Extend.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Expr.Extend.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Expr.Extend} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.Extend.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getFieldsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.Expr.ExtendField.serializeBinaryToWriter
+    );
+  }
+  f = message.getRecord();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated ExtendField fields = 1;
+ * @return {!Array<!proto.daml_lf_0.Expr.ExtendField>}
+ */
+proto.daml_lf_0.Expr.Extend.prototype.getFieldsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Expr.ExtendField>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Expr.ExtendField, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Expr.ExtendField>} value */
+proto.daml_lf_0.Expr.Extend.prototype.setFieldsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Expr.ExtendField=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Expr.ExtendField}
+ */
+proto.daml_lf_0.Expr.Extend.prototype.addFields = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.Expr.ExtendField, opt_index);
+};
+
+
+proto.daml_lf_0.Expr.Extend.prototype.clearFieldsList = function() {
+  this.setFieldsList([]);
+};
+
+
+/**
+ * optional Expr record = 2;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Expr.Extend.prototype.getRecord = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Expr.Extend.prototype.setRecord = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.Expr.Extend.prototype.clearRecord = function() {
+  this.setRecord(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.Extend.prototype.hasRecord = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Expr.List = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Expr.List.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Expr.List, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Expr.List.displayName = 'proto.daml_lf_0.Expr.List';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Expr.List.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Expr.List.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Expr.List.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Expr.List} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.List.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    headsList: jspb.Message.toObjectList(msg.getHeadsList(),
+    proto.daml_lf_0.Expr.toObject, includeInstance),
+    tail: (f = msg.getTail()) && proto.daml_lf_0.Expr.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Expr.List}
+ */
+proto.daml_lf_0.Expr.List.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Expr.List;
+  return proto.daml_lf_0.Expr.List.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Expr.List} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Expr.List}
+ */
+proto.daml_lf_0.Expr.List.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.addHeads(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setTail(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Expr.List.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Expr.List.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Expr.List} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Expr.List.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getHeadsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getTail();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated Expr heads = 1;
+ * @return {!Array<!proto.daml_lf_0.Expr>}
+ */
+proto.daml_lf_0.Expr.List.prototype.getHeadsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Expr>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Expr, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Expr>} value */
+proto.daml_lf_0.Expr.List.prototype.setHeadsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Expr=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Expr.List.prototype.addHeads = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.Expr, opt_index);
+};
+
+
+proto.daml_lf_0.Expr.List.prototype.clearHeadsList = function() {
+  this.setHeadsList([]);
+};
+
+
+/**
+ * optional Expr tail = 2;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Expr.List.prototype.getTail = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Expr.List.prototype.setTail = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.Expr.List.prototype.clearTail = function() {
+  this.setTail(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.List.prototype.hasTail = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional RefTerm ref = 1;
+ * @return {?proto.daml_lf_0.RefTerm}
+ */
+proto.daml_lf_0.Expr.prototype.getRef = function() {
+  return /** @type{?proto.daml_lf_0.RefTerm} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.RefTerm, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.RefTerm|undefined} value */
+proto.daml_lf_0.Expr.prototype.setRef = function(value) {
+  jspb.Message.setOneofWrapperField(this, 1, proto.daml_lf_0.Expr.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Expr.prototype.clearRef = function() {
+  this.setRef(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.prototype.hasRef = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional Literal lit = 2;
+ * @return {?proto.daml_lf_0.Literal}
+ */
+proto.daml_lf_0.Expr.prototype.getLit = function() {
+  return /** @type{?proto.daml_lf_0.Literal} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Literal, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Literal|undefined} value */
+proto.daml_lf_0.Expr.prototype.setLit = function(value) {
+  jspb.Message.setOneofWrapperField(this, 2, proto.daml_lf_0.Expr.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Expr.prototype.clearLit = function() {
+  this.setLit(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.prototype.hasLit = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional App app = 3;
+ * @return {?proto.daml_lf_0.Expr.App}
+ */
+proto.daml_lf_0.Expr.prototype.getApp = function() {
+  return /** @type{?proto.daml_lf_0.Expr.App} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr.App, 3));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr.App|undefined} value */
+proto.daml_lf_0.Expr.prototype.setApp = function(value) {
+  jspb.Message.setOneofWrapperField(this, 3, proto.daml_lf_0.Expr.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Expr.prototype.clearApp = function() {
+  this.setApp(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.prototype.hasApp = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional Lambda lam = 4;
+ * @return {?proto.daml_lf_0.Expr.Lambda}
+ */
+proto.daml_lf_0.Expr.prototype.getLam = function() {
+  return /** @type{?proto.daml_lf_0.Expr.Lambda} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr.Lambda, 4));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr.Lambda|undefined} value */
+proto.daml_lf_0.Expr.prototype.setLam = function(value) {
+  jspb.Message.setOneofWrapperField(this, 4, proto.daml_lf_0.Expr.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Expr.prototype.clearLam = function() {
+  this.setLam(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.prototype.hasLam = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional Let let = 5;
+ * @return {?proto.daml_lf_0.Expr.Let}
+ */
+proto.daml_lf_0.Expr.prototype.getLet = function() {
+  return /** @type{?proto.daml_lf_0.Expr.Let} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr.Let, 5));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr.Let|undefined} value */
+proto.daml_lf_0.Expr.prototype.setLet = function(value) {
+  jspb.Message.setOneofWrapperField(this, 5, proto.daml_lf_0.Expr.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Expr.prototype.clearLet = function() {
+  this.setLet(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.prototype.hasLet = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional If if = 6;
+ * @return {?proto.daml_lf_0.Expr.If}
+ */
+proto.daml_lf_0.Expr.prototype.getIf = function() {
+  return /** @type{?proto.daml_lf_0.Expr.If} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr.If, 6));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr.If|undefined} value */
+proto.daml_lf_0.Expr.prototype.setIf = function(value) {
+  jspb.Message.setOneofWrapperField(this, 6, proto.daml_lf_0.Expr.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Expr.prototype.clearIf = function() {
+  this.setIf(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.prototype.hasIf = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional Case case = 7;
+ * @return {?proto.daml_lf_0.Case}
+ */
+proto.daml_lf_0.Expr.prototype.getCase = function() {
+  return /** @type{?proto.daml_lf_0.Case} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Case, 7));
+};
+
+
+/** @param {?proto.daml_lf_0.Case|undefined} value */
+proto.daml_lf_0.Expr.prototype.setCase = function(value) {
+  jspb.Message.setOneofWrapperField(this, 7, proto.daml_lf_0.Expr.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Expr.prototype.clearCase = function() {
+  this.setCase(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.prototype.hasCase = function() {
+  return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional Choice choice = 8;
+ * @return {?proto.daml_lf_0.Choice}
+ */
+proto.daml_lf_0.Expr.prototype.getChoice = function() {
+  return /** @type{?proto.daml_lf_0.Choice} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Choice, 8));
+};
+
+
+/** @param {?proto.daml_lf_0.Choice|undefined} value */
+proto.daml_lf_0.Expr.prototype.setChoice = function(value) {
+  jspb.Message.setOneofWrapperField(this, 8, proto.daml_lf_0.Expr.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Expr.prototype.clearChoice = function() {
+  this.setChoice(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.prototype.hasChoice = function() {
+  return jspb.Message.getField(this, 8) != null;
+};
+
+
+/**
+ * optional Update update = 9;
+ * @return {?proto.daml_lf_0.Update}
+ */
+proto.daml_lf_0.Expr.prototype.getUpdate = function() {
+  return /** @type{?proto.daml_lf_0.Update} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Update, 9));
+};
+
+
+/** @param {?proto.daml_lf_0.Update|undefined} value */
+proto.daml_lf_0.Expr.prototype.setUpdate = function(value) {
+  jspb.Message.setOneofWrapperField(this, 9, proto.daml_lf_0.Expr.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Expr.prototype.clearUpdate = function() {
+  this.setUpdate(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.prototype.hasUpdate = function() {
+  return jspb.Message.getField(this, 9) != null;
+};
+
+
+/**
+ * optional PatternMatch pattern_match = 10;
+ * @return {?proto.daml_lf_0.PatternMatch}
+ */
+proto.daml_lf_0.Expr.prototype.getPatternMatch = function() {
+  return /** @type{?proto.daml_lf_0.PatternMatch} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.PatternMatch, 10));
+};
+
+
+/** @param {?proto.daml_lf_0.PatternMatch|undefined} value */
+proto.daml_lf_0.Expr.prototype.setPatternMatch = function(value) {
+  jspb.Message.setOneofWrapperField(this, 10, proto.daml_lf_0.Expr.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Expr.prototype.clearPatternMatch = function() {
+  this.setPatternMatch(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.prototype.hasPatternMatch = function() {
+  return jspb.Message.getField(this, 10) != null;
+};
+
+
+/**
+ * optional Scenario scenario = 11;
+ * @return {?proto.daml_lf_0.Scenario}
+ */
+proto.daml_lf_0.Expr.prototype.getScenario = function() {
+  return /** @type{?proto.daml_lf_0.Scenario} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Scenario, 11));
+};
+
+
+/** @param {?proto.daml_lf_0.Scenario|undefined} value */
+proto.daml_lf_0.Expr.prototype.setScenario = function(value) {
+  jspb.Message.setOneofWrapperField(this, 11, proto.daml_lf_0.Expr.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Expr.prototype.clearScenario = function() {
+  this.setScenario(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.prototype.hasScenario = function() {
+  return jspb.Message.getField(this, 11) != null;
+};
+
+
+/**
+ * optional Extend extend = 12;
+ * @return {?proto.daml_lf_0.Expr.Extend}
+ */
+proto.daml_lf_0.Expr.prototype.getExtend = function() {
+  return /** @type{?proto.daml_lf_0.Expr.Extend} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr.Extend, 12));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr.Extend|undefined} value */
+proto.daml_lf_0.Expr.prototype.setExtend = function(value) {
+  jspb.Message.setOneofWrapperField(this, 12, proto.daml_lf_0.Expr.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Expr.prototype.clearExtend = function() {
+  this.setExtend(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.prototype.hasExtend = function() {
+  return jspb.Message.getField(this, 12) != null;
+};
+
+
+/**
+ * optional List list = 13;
+ * @return {?proto.daml_lf_0.Expr.List}
+ */
+proto.daml_lf_0.Expr.prototype.getList = function() {
+  return /** @type{?proto.daml_lf_0.Expr.List} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr.List, 13));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr.List|undefined} value */
+proto.daml_lf_0.Expr.prototype.setList = function(value) {
+  jspb.Message.setOneofWrapperField(this, 13, proto.daml_lf_0.Expr.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Expr.prototype.clearList = function() {
+  this.setList(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Expr.prototype.hasList = function() {
+  return jspb.Message.getField(this, 13) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Choice = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Choice.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Choice, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Choice.displayName = 'proto.daml_lf_0.Choice';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Choice.repeatedFields_ = [3];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Choice.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Choice.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Choice} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Choice.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    kind: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    controller: (f = msg.getController()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    valuesList: jspb.Message.toObjectList(msg.getValuesList(),
+    proto.daml_lf_0.TypedBinder.toObject, includeInstance),
+    exercisedAt: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    after: (f = msg.getAfter()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    until: (f = msg.getUntil()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    cond: (f = msg.getCond()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    followUp: (f = msg.getFollowUp()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    resultTy: (f = msg.getResultTy()) && proto.daml_lf_0.Type.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Choice}
+ */
+proto.daml_lf_0.Choice.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Choice;
+  return proto.daml_lf_0.Choice.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Choice} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Choice}
+ */
+proto.daml_lf_0.Choice.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {!proto.daml_lf_0.ChoiceKind} */ (reader.readEnum());
+      msg.setKind(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setController(value);
+      break;
+    case 3:
+      var value = new proto.daml_lf_0.TypedBinder;
+      reader.readMessage(value,proto.daml_lf_0.TypedBinder.deserializeBinaryFromReader);
+      msg.addValues(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setExercisedAt(value);
+      break;
+    case 5:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setAfter(value);
+      break;
+    case 6:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setUntil(value);
+      break;
+    case 7:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setCond(value);
+      break;
+    case 8:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setFollowUp(value);
+      break;
+    case 9:
+      var value = new proto.daml_lf_0.Type;
+      reader.readMessage(value,proto.daml_lf_0.Type.deserializeBinaryFromReader);
+      msg.setResultTy(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Choice.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Choice.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Choice} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Choice.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getKind();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      1,
+      f
+    );
+  }
+  f = message.getController();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getValuesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      3,
+      f,
+      proto.daml_lf_0.TypedBinder.serializeBinaryToWriter
+    );
+  }
+  f = message.getExercisedAt();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = message.getAfter();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getUntil();
+  if (f != null) {
+    writer.writeMessage(
+      6,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getCond();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getFollowUp();
+  if (f != null) {
+    writer.writeMessage(
+      8,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getResultTy();
+  if (f != null) {
+    writer.writeMessage(
+      9,
+      f,
+      proto.daml_lf_0.Type.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional ChoiceKind kind = 1;
+ * @return {!proto.daml_lf_0.ChoiceKind}
+ */
+proto.daml_lf_0.Choice.prototype.getKind = function() {
+  return /** @type {!proto.daml_lf_0.ChoiceKind} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {!proto.daml_lf_0.ChoiceKind} value */
+proto.daml_lf_0.Choice.prototype.setKind = function(value) {
+  jspb.Message.setProto3EnumField(this, 1, value);
+};
+
+
+/**
+ * optional Expr controller = 2;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Choice.prototype.getController = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Choice.prototype.setController = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.Choice.prototype.clearController = function() {
+  this.setController(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Choice.prototype.hasController = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * repeated TypedBinder values = 3;
+ * @return {!Array<!proto.daml_lf_0.TypedBinder>}
+ */
+proto.daml_lf_0.Choice.prototype.getValuesList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.TypedBinder>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.TypedBinder, 3));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.TypedBinder>} value */
+proto.daml_lf_0.Choice.prototype.setValuesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 3, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.TypedBinder=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.TypedBinder}
+ */
+proto.daml_lf_0.Choice.prototype.addValues = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.daml_lf_0.TypedBinder, opt_index);
+};
+
+
+proto.daml_lf_0.Choice.prototype.clearValuesList = function() {
+  this.setValuesList([]);
+};
+
+
+/**
+ * optional string exercised_at = 4;
+ * @return {string}
+ */
+proto.daml_lf_0.Choice.prototype.getExercisedAt = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.Choice.prototype.setExercisedAt = function(value) {
+  jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional Expr after = 5;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Choice.prototype.getAfter = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 5));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Choice.prototype.setAfter = function(value) {
+  jspb.Message.setWrapperField(this, 5, value);
+};
+
+
+proto.daml_lf_0.Choice.prototype.clearAfter = function() {
+  this.setAfter(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Choice.prototype.hasAfter = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional Expr until = 6;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Choice.prototype.getUntil = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 6));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Choice.prototype.setUntil = function(value) {
+  jspb.Message.setWrapperField(this, 6, value);
+};
+
+
+proto.daml_lf_0.Choice.prototype.clearUntil = function() {
+  this.setUntil(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Choice.prototype.hasUntil = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional Expr cond = 7;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Choice.prototype.getCond = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 7));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Choice.prototype.setCond = function(value) {
+  jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+proto.daml_lf_0.Choice.prototype.clearCond = function() {
+  this.setCond(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Choice.prototype.hasCond = function() {
+  return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional Expr follow_up = 8;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Choice.prototype.getFollowUp = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 8));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Choice.prototype.setFollowUp = function(value) {
+  jspb.Message.setWrapperField(this, 8, value);
+};
+
+
+proto.daml_lf_0.Choice.prototype.clearFollowUp = function() {
+  this.setFollowUp(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Choice.prototype.hasFollowUp = function() {
+  return jspb.Message.getField(this, 8) != null;
+};
+
+
+/**
+ * optional Type result_ty = 9;
+ * @return {?proto.daml_lf_0.Type}
+ */
+proto.daml_lf_0.Choice.prototype.getResultTy = function() {
+  return /** @type{?proto.daml_lf_0.Type} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type, 9));
+};
+
+
+/** @param {?proto.daml_lf_0.Type|undefined} value */
+proto.daml_lf_0.Choice.prototype.setResultTy = function(value) {
+  jspb.Message.setWrapperField(this, 9, value);
+};
+
+
+proto.daml_lf_0.Choice.prototype.clearResultTy = function() {
+  this.setResultTy(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Choice.prototype.hasResultTy = function() {
+  return jspb.Message.getField(this, 9) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.CasePat = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.daml_lf_0.CasePat.oneofGroups_);
+};
+goog.inherits(proto.daml_lf_0.CasePat, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.CasePat.displayName = 'proto.daml_lf_0.CasePat';
+}
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.daml_lf_0.CasePat.oneofGroups_ = [[1,2,3,4]];
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.CasePat.SumCase = {
+  SUM_NOT_SET: 0,
+  DEFAULT: 1,
+  VARIANT: 2,
+  LITERAL: 3,
+  DATA: 4
+};
+
+/**
+ * @return {proto.daml_lf_0.CasePat.SumCase}
+ */
+proto.daml_lf_0.CasePat.prototype.getSumCase = function() {
+  return /** @type {proto.daml_lf_0.CasePat.SumCase} */(jspb.Message.computeOneofCase(this, proto.daml_lf_0.CasePat.oneofGroups_[0]));
+};
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.CasePat.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.CasePat.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.CasePat} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.CasePat.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    pb_default: (f = msg.getDefault()) && proto.daml_lf_0.Unit.toObject(includeInstance, f),
+    variant: (f = msg.getVariant()) && proto.daml_lf_0.CasePat.Variant.toObject(includeInstance, f),
+    literal: (f = msg.getLiteral()) && proto.daml_lf_0.Literal.toObject(includeInstance, f),
+    data: (f = msg.getData()) && proto.daml_lf_0.CasePat.Data.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.CasePat}
+ */
+proto.daml_lf_0.CasePat.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.CasePat;
+  return proto.daml_lf_0.CasePat.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.CasePat} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.CasePat}
+ */
+proto.daml_lf_0.CasePat.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Unit;
+      reader.readMessage(value,proto.daml_lf_0.Unit.deserializeBinaryFromReader);
+      msg.setDefault(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.CasePat.Variant;
+      reader.readMessage(value,proto.daml_lf_0.CasePat.Variant.deserializeBinaryFromReader);
+      msg.setVariant(value);
+      break;
+    case 3:
+      var value = new proto.daml_lf_0.Literal;
+      reader.readMessage(value,proto.daml_lf_0.Literal.deserializeBinaryFromReader);
+      msg.setLiteral(value);
+      break;
+    case 4:
+      var value = new proto.daml_lf_0.CasePat.Data;
+      reader.readMessage(value,proto.daml_lf_0.CasePat.Data.deserializeBinaryFromReader);
+      msg.setData(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.CasePat.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.CasePat.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.CasePat} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.CasePat.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDefault();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.Unit.serializeBinaryToWriter
+    );
+  }
+  f = message.getVariant();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.CasePat.Variant.serializeBinaryToWriter
+    );
+  }
+  f = message.getLiteral();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.daml_lf_0.Literal.serializeBinaryToWriter
+    );
+  }
+  f = message.getData();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.daml_lf_0.CasePat.Data.serializeBinaryToWriter
+    );
+  }
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.CasePat.Variant = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.CasePat.Variant, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.CasePat.Variant.displayName = 'proto.daml_lf_0.CasePat.Variant';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.CasePat.Variant.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.CasePat.Variant.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.CasePat.Variant} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.CasePat.Variant.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    label: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    binder: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.CasePat.Variant}
+ */
+proto.daml_lf_0.CasePat.Variant.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.CasePat.Variant;
+  return proto.daml_lf_0.CasePat.Variant.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.CasePat.Variant} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.CasePat.Variant}
+ */
+proto.daml_lf_0.CasePat.Variant.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setLabel(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBinder(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.CasePat.Variant.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.CasePat.Variant.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.CasePat.Variant} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.CasePat.Variant.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getLabel();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getBinder();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string label = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.CasePat.Variant.prototype.getLabel = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.CasePat.Variant.prototype.setLabel = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string binder = 2;
+ * @return {string}
+ */
+proto.daml_lf_0.CasePat.Variant.prototype.getBinder = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.CasePat.Variant.prototype.setBinder = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.CasePat.Data = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.CasePat.Data.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.CasePat.Data, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.CasePat.Data.displayName = 'proto.daml_lf_0.CasePat.Data';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.CasePat.Data.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.CasePat.Data.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.CasePat.Data.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.CasePat.Data} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.CasePat.Data.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    constructor: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    argsList: jspb.Message.getRepeatedField(msg, 2)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.CasePat.Data}
+ */
+proto.daml_lf_0.CasePat.Data.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.CasePat.Data;
+  return proto.daml_lf_0.CasePat.Data.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.CasePat.Data} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.CasePat.Data}
+ */
+proto.daml_lf_0.CasePat.Data.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {!proto.daml_lf_0.Builtin} */ (reader.readEnum());
+      msg.setConstructor(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addArgs(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.CasePat.Data.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.CasePat.Data.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.CasePat.Data} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.CasePat.Data.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getConstructor();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      1,
+      f
+    );
+  }
+  f = message.getArgsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional Builtin constructor = 1;
+ * @return {!proto.daml_lf_0.Builtin}
+ */
+proto.daml_lf_0.CasePat.Data.prototype.getConstructor = function() {
+  return /** @type {!proto.daml_lf_0.Builtin} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {!proto.daml_lf_0.Builtin} value */
+proto.daml_lf_0.CasePat.Data.prototype.setConstructor = function(value) {
+  jspb.Message.setProto3EnumField(this, 1, value);
+};
+
+
+/**
+ * repeated string args = 2;
+ * @return {!Array<string>}
+ */
+proto.daml_lf_0.CasePat.Data.prototype.getArgsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
+};
+
+
+/** @param {!Array<string>} value */
+proto.daml_lf_0.CasePat.Data.prototype.setArgsList = function(value) {
+  jspb.Message.setField(this, 2, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ */
+proto.daml_lf_0.CasePat.Data.prototype.addArgs = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 2, value, opt_index);
+};
+
+
+proto.daml_lf_0.CasePat.Data.prototype.clearArgsList = function() {
+  this.setArgsList([]);
+};
+
+
+/**
+ * optional Unit default = 1;
+ * @return {?proto.daml_lf_0.Unit}
+ */
+proto.daml_lf_0.CasePat.prototype.getDefault = function() {
+  return /** @type{?proto.daml_lf_0.Unit} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Unit, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.Unit|undefined} value */
+proto.daml_lf_0.CasePat.prototype.setDefault = function(value) {
+  jspb.Message.setOneofWrapperField(this, 1, proto.daml_lf_0.CasePat.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.CasePat.prototype.clearDefault = function() {
+  this.setDefault(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.CasePat.prototype.hasDefault = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional Variant variant = 2;
+ * @return {?proto.daml_lf_0.CasePat.Variant}
+ */
+proto.daml_lf_0.CasePat.prototype.getVariant = function() {
+  return /** @type{?proto.daml_lf_0.CasePat.Variant} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.CasePat.Variant, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.CasePat.Variant|undefined} value */
+proto.daml_lf_0.CasePat.prototype.setVariant = function(value) {
+  jspb.Message.setOneofWrapperField(this, 2, proto.daml_lf_0.CasePat.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.CasePat.prototype.clearVariant = function() {
+  this.setVariant(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.CasePat.prototype.hasVariant = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional Literal literal = 3;
+ * @return {?proto.daml_lf_0.Literal}
+ */
+proto.daml_lf_0.CasePat.prototype.getLiteral = function() {
+  return /** @type{?proto.daml_lf_0.Literal} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Literal, 3));
+};
+
+
+/** @param {?proto.daml_lf_0.Literal|undefined} value */
+proto.daml_lf_0.CasePat.prototype.setLiteral = function(value) {
+  jspb.Message.setOneofWrapperField(this, 3, proto.daml_lf_0.CasePat.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.CasePat.prototype.clearLiteral = function() {
+  this.setLiteral(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.CasePat.prototype.hasLiteral = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional Data data = 4;
+ * @return {?proto.daml_lf_0.CasePat.Data}
+ */
+proto.daml_lf_0.CasePat.prototype.getData = function() {
+  return /** @type{?proto.daml_lf_0.CasePat.Data} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.CasePat.Data, 4));
+};
+
+
+/** @param {?proto.daml_lf_0.CasePat.Data|undefined} value */
+proto.daml_lf_0.CasePat.prototype.setData = function(value) {
+  jspb.Message.setOneofWrapperField(this, 4, proto.daml_lf_0.CasePat.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.CasePat.prototype.clearData = function() {
+  this.setData(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.CasePat.prototype.hasData = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Case = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Case.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Case, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Case.displayName = 'proto.daml_lf_0.Case';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Case.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Case.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Case.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Case} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Case.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    scrut: (f = msg.getScrut()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    altsList: jspb.Message.toObjectList(msg.getAltsList(),
+    proto.daml_lf_0.Case.Alt.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Case}
+ */
+proto.daml_lf_0.Case.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Case;
+  return proto.daml_lf_0.Case.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Case} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Case}
+ */
+proto.daml_lf_0.Case.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setScrut(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Case.Alt;
+      reader.readMessage(value,proto.daml_lf_0.Case.Alt.deserializeBinaryFromReader);
+      msg.addAlts(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Case.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Case.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Case} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Case.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getScrut();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getAltsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.daml_lf_0.Case.Alt.serializeBinaryToWriter
+    );
+  }
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Case.Alt = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.Case.Alt, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Case.Alt.displayName = 'proto.daml_lf_0.Case.Alt';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Case.Alt.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Case.Alt.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Case.Alt} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Case.Alt.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    pat: (f = msg.getPat()) && proto.daml_lf_0.CasePat.toObject(includeInstance, f),
+    expr: (f = msg.getExpr()) && proto.daml_lf_0.Expr.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Case.Alt}
+ */
+proto.daml_lf_0.Case.Alt.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Case.Alt;
+  return proto.daml_lf_0.Case.Alt.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Case.Alt} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Case.Alt}
+ */
+proto.daml_lf_0.Case.Alt.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.CasePat;
+      reader.readMessage(value,proto.daml_lf_0.CasePat.deserializeBinaryFromReader);
+      msg.setPat(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setExpr(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Case.Alt.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Case.Alt.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Case.Alt} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Case.Alt.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPat();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.CasePat.serializeBinaryToWriter
+    );
+  }
+  f = message.getExpr();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional CasePat pat = 1;
+ * @return {?proto.daml_lf_0.CasePat}
+ */
+proto.daml_lf_0.Case.Alt.prototype.getPat = function() {
+  return /** @type{?proto.daml_lf_0.CasePat} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.CasePat, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.CasePat|undefined} value */
+proto.daml_lf_0.Case.Alt.prototype.setPat = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.daml_lf_0.Case.Alt.prototype.clearPat = function() {
+  this.setPat(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Case.Alt.prototype.hasPat = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional Expr expr = 2;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Case.Alt.prototype.getExpr = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Case.Alt.prototype.setExpr = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.Case.Alt.prototype.clearExpr = function() {
+  this.setExpr(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Case.Alt.prototype.hasExpr = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional Expr scrut = 1;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Case.prototype.getScrut = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Case.prototype.setScrut = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.daml_lf_0.Case.prototype.clearScrut = function() {
+  this.setScrut(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Case.prototype.hasScrut = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * repeated Alt alts = 2;
+ * @return {!Array<!proto.daml_lf_0.Case.Alt>}
+ */
+proto.daml_lf_0.Case.prototype.getAltsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Case.Alt>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Case.Alt, 2));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Case.Alt>} value */
+proto.daml_lf_0.Case.prototype.setAltsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Case.Alt=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Case.Alt}
+ */
+proto.daml_lf_0.Case.prototype.addAlts = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.daml_lf_0.Case.Alt, opt_index);
+};
+
+
+proto.daml_lf_0.Case.prototype.clearAltsList = function() {
+  this.setAltsList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Literal = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.daml_lf_0.Literal.oneofGroups_);
+};
+goog.inherits(proto.daml_lf_0.Literal, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Literal.displayName = 'proto.daml_lf_0.Literal';
+}
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.daml_lf_0.Literal.oneofGroups_ = [[1,2,3,4,5,6,10,7,8,9,11]];
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.Literal.SumCase = {
+  SUM_NOT_SET: 0,
+  BOOL: 1,
+  INTEGER: 2,
+  DECIMAL: 3,
+  REL_TIME: 4,
+  CHAR: 5,
+  TEXT: 6,
+  TIME: 10,
+  PARTY: 7,
+  CONTRACT_ID: 8,
+  EMPTY_RECORD: 9,
+  UNIT: 11
+};
+
+/**
+ * @return {proto.daml_lf_0.Literal.SumCase}
+ */
+proto.daml_lf_0.Literal.prototype.getSumCase = function() {
+  return /** @type {proto.daml_lf_0.Literal.SumCase} */(jspb.Message.computeOneofCase(this, proto.daml_lf_0.Literal.oneofGroups_[0]));
+};
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Literal.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Literal.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Literal} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Literal.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    bool: jspb.Message.getFieldWithDefault(msg, 1, false),
+    integer: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    decimal: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    relTime: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    pb_char: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    text: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    time: jspb.Message.getFieldWithDefault(msg, 10, ""),
+    party: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    contractId: (f = msg.getContractId()) && proto.daml_lf_0.ContractId.toObject(includeInstance, f),
+    emptyRecord: (f = msg.getEmptyRecord()) && proto.daml_lf_0.Unit.toObject(includeInstance, f),
+    unit: (f = msg.getUnit()) && proto.daml_lf_0.Unit.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Literal}
+ */
+proto.daml_lf_0.Literal.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Literal;
+  return proto.daml_lf_0.Literal.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Literal} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Literal}
+ */
+proto.daml_lf_0.Literal.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setBool(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setInteger(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDecimal(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRelTime(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChar(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setText(value);
+      break;
+    case 10:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTime(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setParty(value);
+      break;
+    case 8:
+      var value = new proto.daml_lf_0.ContractId;
+      reader.readMessage(value,proto.daml_lf_0.ContractId.deserializeBinaryFromReader);
+      msg.setContractId(value);
+      break;
+    case 9:
+      var value = new proto.daml_lf_0.Unit;
+      reader.readMessage(value,proto.daml_lf_0.Unit.deserializeBinaryFromReader);
+      msg.setEmptyRecord(value);
+      break;
+    case 11:
+      var value = new proto.daml_lf_0.Unit;
+      reader.readMessage(value,proto.daml_lf_0.Unit.deserializeBinaryFromReader);
+      msg.setUnit(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Literal.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Literal.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Literal} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Literal.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 1));
+  if (f != null) {
+    writer.writeBool(
+      1,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 2));
+  if (f != null) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 3));
+  if (f != null) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 4));
+  if (f != null) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
+    writer.writeString(
+      6,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 10));
+  if (f != null) {
+    writer.writeString(
+      10,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 7));
+  if (f != null) {
+    writer.writeString(
+      7,
+      f
+    );
+  }
+  f = message.getContractId();
+  if (f != null) {
+    writer.writeMessage(
+      8,
+      f,
+      proto.daml_lf_0.ContractId.serializeBinaryToWriter
+    );
+  }
+  f = message.getEmptyRecord();
+  if (f != null) {
+    writer.writeMessage(
+      9,
+      f,
+      proto.daml_lf_0.Unit.serializeBinaryToWriter
+    );
+  }
+  f = message.getUnit();
+  if (f != null) {
+    writer.writeMessage(
+      11,
+      f,
+      proto.daml_lf_0.Unit.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional bool bool = 1;
+ * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
+ * You should avoid comparisons like {@code val === true/false} in those cases.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Literal.prototype.getBool = function() {
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 1, false));
+};
+
+
+/** @param {boolean} value */
+proto.daml_lf_0.Literal.prototype.setBool = function(value) {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.Literal.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Literal.prototype.clearBool = function() {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.Literal.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Literal.prototype.hasBool = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional string integer = 2;
+ * @return {string}
+ */
+proto.daml_lf_0.Literal.prototype.getInteger = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.Literal.prototype.setInteger = function(value) {
+  jspb.Message.setOneofField(this, 2, proto.daml_lf_0.Literal.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Literal.prototype.clearInteger = function() {
+  jspb.Message.setOneofField(this, 2, proto.daml_lf_0.Literal.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Literal.prototype.hasInteger = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional string decimal = 3;
+ * @return {string}
+ */
+proto.daml_lf_0.Literal.prototype.getDecimal = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.Literal.prototype.setDecimal = function(value) {
+  jspb.Message.setOneofField(this, 3, proto.daml_lf_0.Literal.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Literal.prototype.clearDecimal = function() {
+  jspb.Message.setOneofField(this, 3, proto.daml_lf_0.Literal.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Literal.prototype.hasDecimal = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional string rel_time = 4;
+ * @return {string}
+ */
+proto.daml_lf_0.Literal.prototype.getRelTime = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.Literal.prototype.setRelTime = function(value) {
+  jspb.Message.setOneofField(this, 4, proto.daml_lf_0.Literal.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Literal.prototype.clearRelTime = function() {
+  jspb.Message.setOneofField(this, 4, proto.daml_lf_0.Literal.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Literal.prototype.hasRelTime = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional string char = 5;
+ * @return {string}
+ */
+proto.daml_lf_0.Literal.prototype.getChar = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.Literal.prototype.setChar = function(value) {
+  jspb.Message.setOneofField(this, 5, proto.daml_lf_0.Literal.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Literal.prototype.clearChar = function() {
+  jspb.Message.setOneofField(this, 5, proto.daml_lf_0.Literal.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Literal.prototype.hasChar = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional string text = 6;
+ * @return {string}
+ */
+proto.daml_lf_0.Literal.prototype.getText = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.Literal.prototype.setText = function(value) {
+  jspb.Message.setOneofField(this, 6, proto.daml_lf_0.Literal.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Literal.prototype.clearText = function() {
+  jspb.Message.setOneofField(this, 6, proto.daml_lf_0.Literal.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Literal.prototype.hasText = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional string time = 10;
+ * @return {string}
+ */
+proto.daml_lf_0.Literal.prototype.getTime = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.Literal.prototype.setTime = function(value) {
+  jspb.Message.setOneofField(this, 10, proto.daml_lf_0.Literal.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Literal.prototype.clearTime = function() {
+  jspb.Message.setOneofField(this, 10, proto.daml_lf_0.Literal.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Literal.prototype.hasTime = function() {
+  return jspb.Message.getField(this, 10) != null;
+};
+
+
+/**
+ * optional string party = 7;
+ * @return {string}
+ */
+proto.daml_lf_0.Literal.prototype.getParty = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.Literal.prototype.setParty = function(value) {
+  jspb.Message.setOneofField(this, 7, proto.daml_lf_0.Literal.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Literal.prototype.clearParty = function() {
+  jspb.Message.setOneofField(this, 7, proto.daml_lf_0.Literal.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Literal.prototype.hasParty = function() {
+  return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional ContractId contract_id = 8;
+ * @return {?proto.daml_lf_0.ContractId}
+ */
+proto.daml_lf_0.Literal.prototype.getContractId = function() {
+  return /** @type{?proto.daml_lf_0.ContractId} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.ContractId, 8));
+};
+
+
+/** @param {?proto.daml_lf_0.ContractId|undefined} value */
+proto.daml_lf_0.Literal.prototype.setContractId = function(value) {
+  jspb.Message.setOneofWrapperField(this, 8, proto.daml_lf_0.Literal.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Literal.prototype.clearContractId = function() {
+  this.setContractId(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Literal.prototype.hasContractId = function() {
+  return jspb.Message.getField(this, 8) != null;
+};
+
+
+/**
+ * optional Unit empty_record = 9;
+ * @return {?proto.daml_lf_0.Unit}
+ */
+proto.daml_lf_0.Literal.prototype.getEmptyRecord = function() {
+  return /** @type{?proto.daml_lf_0.Unit} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Unit, 9));
+};
+
+
+/** @param {?proto.daml_lf_0.Unit|undefined} value */
+proto.daml_lf_0.Literal.prototype.setEmptyRecord = function(value) {
+  jspb.Message.setOneofWrapperField(this, 9, proto.daml_lf_0.Literal.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Literal.prototype.clearEmptyRecord = function() {
+  this.setEmptyRecord(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Literal.prototype.hasEmptyRecord = function() {
+  return jspb.Message.getField(this, 9) != null;
+};
+
+
+/**
+ * optional Unit unit = 11;
+ * @return {?proto.daml_lf_0.Unit}
+ */
+proto.daml_lf_0.Literal.prototype.getUnit = function() {
+  return /** @type{?proto.daml_lf_0.Unit} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Unit, 11));
+};
+
+
+/** @param {?proto.daml_lf_0.Unit|undefined} value */
+proto.daml_lf_0.Literal.prototype.setUnit = function(value) {
+  jspb.Message.setOneofWrapperField(this, 11, proto.daml_lf_0.Literal.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Literal.prototype.clearUnit = function() {
+  this.setUnit(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Literal.prototype.hasUnit = function() {
+  return jspb.Message.getField(this, 11) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.ContractId = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.daml_lf_0.ContractId.oneofGroups_);
+};
+goog.inherits(proto.daml_lf_0.ContractId, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.ContractId.displayName = 'proto.daml_lf_0.ContractId';
+}
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.daml_lf_0.ContractId.oneofGroups_ = [[1,2]];
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.ContractId.SumCase = {
+  SUM_NOT_SET: 0,
+  ABSOLUTE: 1,
+  RELATIVE: 2
+};
+
+/**
+ * @return {proto.daml_lf_0.ContractId.SumCase}
+ */
+proto.daml_lf_0.ContractId.prototype.getSumCase = function() {
+  return /** @type {proto.daml_lf_0.ContractId.SumCase} */(jspb.Message.computeOneofCase(this, proto.daml_lf_0.ContractId.oneofGroups_[0]));
+};
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.ContractId.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.ContractId.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.ContractId} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.ContractId.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    absolute: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    relative: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.ContractId}
+ */
+proto.daml_lf_0.ContractId.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.ContractId;
+  return proto.daml_lf_0.ContractId.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.ContractId} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.ContractId}
+ */
+proto.daml_lf_0.ContractId.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setAbsolute(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setRelative(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.ContractId.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.ContractId.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.ContractId} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.ContractId.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = /** @type {string} */ (jspb.Message.getField(message, 1));
+  if (f != null) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 2));
+  if (f != null) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string absolute = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.ContractId.prototype.getAbsolute = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.ContractId.prototype.setAbsolute = function(value) {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.ContractId.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.ContractId.prototype.clearAbsolute = function() {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.ContractId.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.ContractId.prototype.hasAbsolute = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional int32 relative = 2;
+ * @return {number}
+ */
+proto.daml_lf_0.ContractId.prototype.getRelative = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/** @param {number} value */
+proto.daml_lf_0.ContractId.prototype.setRelative = function(value) {
+  jspb.Message.setOneofField(this, 2, proto.daml_lf_0.ContractId.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.ContractId.prototype.clearRelative = function() {
+  jspb.Message.setOneofField(this, 2, proto.daml_lf_0.ContractId.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.ContractId.prototype.hasRelative = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.RecordPattern = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.daml_lf_0.RecordPattern.oneofGroups_);
+};
+goog.inherits(proto.daml_lf_0.RecordPattern, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.RecordPattern.displayName = 'proto.daml_lf_0.RecordPattern';
+}
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.daml_lf_0.RecordPattern.oneofGroups_ = [[1,2]];
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.RecordPattern.SumCase = {
+  SUM_NOT_SET: 0,
+  VAR: 1,
+  RECORD: 2
+};
+
+/**
+ * @return {proto.daml_lf_0.RecordPattern.SumCase}
+ */
+proto.daml_lf_0.RecordPattern.prototype.getSumCase = function() {
+  return /** @type {proto.daml_lf_0.RecordPattern.SumCase} */(jspb.Message.computeOneofCase(this, proto.daml_lf_0.RecordPattern.oneofGroups_[0]));
+};
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.RecordPattern.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.RecordPattern.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.RecordPattern} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.RecordPattern.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    pb_var: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    record: (f = msg.getRecord()) && proto.daml_lf_0.RecordPattern.Record.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.RecordPattern}
+ */
+proto.daml_lf_0.RecordPattern.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.RecordPattern;
+  return proto.daml_lf_0.RecordPattern.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.RecordPattern} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.RecordPattern}
+ */
+proto.daml_lf_0.RecordPattern.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setVar(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.RecordPattern.Record;
+      reader.readMessage(value,proto.daml_lf_0.RecordPattern.Record.deserializeBinaryFromReader);
+      msg.setRecord(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.RecordPattern.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.RecordPattern.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.RecordPattern} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.RecordPattern.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = /** @type {string} */ (jspb.Message.getField(message, 1));
+  if (f != null) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getRecord();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.RecordPattern.Record.serializeBinaryToWriter
+    );
+  }
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.RecordPattern.LabelWithPattern = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.RecordPattern.LabelWithPattern, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.RecordPattern.LabelWithPattern.displayName = 'proto.daml_lf_0.RecordPattern.LabelWithPattern';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.RecordPattern.LabelWithPattern.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.RecordPattern.LabelWithPattern.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.RecordPattern.LabelWithPattern} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.RecordPattern.LabelWithPattern.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    label: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    pattern: (f = msg.getPattern()) && proto.daml_lf_0.RecordPattern.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.RecordPattern.LabelWithPattern}
+ */
+proto.daml_lf_0.RecordPattern.LabelWithPattern.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.RecordPattern.LabelWithPattern;
+  return proto.daml_lf_0.RecordPattern.LabelWithPattern.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.RecordPattern.LabelWithPattern} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.RecordPattern.LabelWithPattern}
+ */
+proto.daml_lf_0.RecordPattern.LabelWithPattern.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setLabel(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.RecordPattern;
+      reader.readMessage(value,proto.daml_lf_0.RecordPattern.deserializeBinaryFromReader);
+      msg.setPattern(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.RecordPattern.LabelWithPattern.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.RecordPattern.LabelWithPattern.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.RecordPattern.LabelWithPattern} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.RecordPattern.LabelWithPattern.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getLabel();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getPattern();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.RecordPattern.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string label = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.RecordPattern.LabelWithPattern.prototype.getLabel = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.RecordPattern.LabelWithPattern.prototype.setLabel = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional RecordPattern pattern = 2;
+ * @return {?proto.daml_lf_0.RecordPattern}
+ */
+proto.daml_lf_0.RecordPattern.LabelWithPattern.prototype.getPattern = function() {
+  return /** @type{?proto.daml_lf_0.RecordPattern} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.RecordPattern, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.RecordPattern|undefined} value */
+proto.daml_lf_0.RecordPattern.LabelWithPattern.prototype.setPattern = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.RecordPattern.LabelWithPattern.prototype.clearPattern = function() {
+  this.setPattern(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.RecordPattern.LabelWithPattern.prototype.hasPattern = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.RecordPattern.Record = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.RecordPattern.Record.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.RecordPattern.Record, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.RecordPattern.Record.displayName = 'proto.daml_lf_0.RecordPattern.Record';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.RecordPattern.Record.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.RecordPattern.Record.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.RecordPattern.Record.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.RecordPattern.Record} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.RecordPattern.Record.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    patsList: jspb.Message.toObjectList(msg.getPatsList(),
+    proto.daml_lf_0.RecordPattern.LabelWithPattern.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.RecordPattern.Record}
+ */
+proto.daml_lf_0.RecordPattern.Record.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.RecordPattern.Record;
+  return proto.daml_lf_0.RecordPattern.Record.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.RecordPattern.Record} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.RecordPattern.Record}
+ */
+proto.daml_lf_0.RecordPattern.Record.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.RecordPattern.LabelWithPattern;
+      reader.readMessage(value,proto.daml_lf_0.RecordPattern.LabelWithPattern.deserializeBinaryFromReader);
+      msg.addPats(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.RecordPattern.Record.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.RecordPattern.Record.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.RecordPattern.Record} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.RecordPattern.Record.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPatsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.RecordPattern.LabelWithPattern.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated LabelWithPattern pats = 1;
+ * @return {!Array<!proto.daml_lf_0.RecordPattern.LabelWithPattern>}
+ */
+proto.daml_lf_0.RecordPattern.Record.prototype.getPatsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.RecordPattern.LabelWithPattern>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.RecordPattern.LabelWithPattern, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.RecordPattern.LabelWithPattern>} value */
+proto.daml_lf_0.RecordPattern.Record.prototype.setPatsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.RecordPattern.LabelWithPattern=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.RecordPattern.LabelWithPattern}
+ */
+proto.daml_lf_0.RecordPattern.Record.prototype.addPats = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.RecordPattern.LabelWithPattern, opt_index);
+};
+
+
+proto.daml_lf_0.RecordPattern.Record.prototype.clearPatsList = function() {
+  this.setPatsList([]);
+};
+
+
+/**
+ * optional string var = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.RecordPattern.prototype.getVar = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.RecordPattern.prototype.setVar = function(value) {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.RecordPattern.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.RecordPattern.prototype.clearVar = function() {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.RecordPattern.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.RecordPattern.prototype.hasVar = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional Record record = 2;
+ * @return {?proto.daml_lf_0.RecordPattern.Record}
+ */
+proto.daml_lf_0.RecordPattern.prototype.getRecord = function() {
+  return /** @type{?proto.daml_lf_0.RecordPattern.Record} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.RecordPattern.Record, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.RecordPattern.Record|undefined} value */
+proto.daml_lf_0.RecordPattern.prototype.setRecord = function(value) {
+  jspb.Message.setOneofWrapperField(this, 2, proto.daml_lf_0.RecordPattern.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.RecordPattern.prototype.clearRecord = function() {
+  this.setRecord(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.RecordPattern.prototype.hasRecord = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Update = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Update.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Update, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Update.displayName = 'proto.daml_lf_0.Update';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Update.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Update.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Update.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Update} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Update.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    stepsList: jspb.Message.toObjectList(msg.getStepsList(),
+    proto.daml_lf_0.Update.UpdateStep.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Update}
+ */
+proto.daml_lf_0.Update.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Update;
+  return proto.daml_lf_0.Update.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Update} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Update}
+ */
+proto.daml_lf_0.Update.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Update.UpdateStep;
+      reader.readMessage(value,proto.daml_lf_0.Update.UpdateStep.deserializeBinaryFromReader);
+      msg.addSteps(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Update.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Update.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Update} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Update.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getStepsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.Update.UpdateStep.serializeBinaryToWriter
+    );
+  }
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Update.UpdateStep = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.Update.UpdateStep, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Update.UpdateStep.displayName = 'proto.daml_lf_0.Update.UpdateStep';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Update.UpdateStep.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Update.UpdateStep.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Update.UpdateStep} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Update.UpdateStep.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    expr: (f = msg.getExpr()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    pat: (f = msg.getPat()) && proto.daml_lf_0.RecordPattern.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Update.UpdateStep}
+ */
+proto.daml_lf_0.Update.UpdateStep.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Update.UpdateStep;
+  return proto.daml_lf_0.Update.UpdateStep.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Update.UpdateStep} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Update.UpdateStep}
+ */
+proto.daml_lf_0.Update.UpdateStep.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setExpr(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.RecordPattern;
+      reader.readMessage(value,proto.daml_lf_0.RecordPattern.deserializeBinaryFromReader);
+      msg.setPat(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Update.UpdateStep.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Update.UpdateStep.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Update.UpdateStep} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Update.UpdateStep.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getExpr();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getPat();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.RecordPattern.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Expr expr = 1;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Update.UpdateStep.prototype.getExpr = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Update.UpdateStep.prototype.setExpr = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.daml_lf_0.Update.UpdateStep.prototype.clearExpr = function() {
+  this.setExpr(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Update.UpdateStep.prototype.hasExpr = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional RecordPattern pat = 2;
+ * @return {?proto.daml_lf_0.RecordPattern}
+ */
+proto.daml_lf_0.Update.UpdateStep.prototype.getPat = function() {
+  return /** @type{?proto.daml_lf_0.RecordPattern} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.RecordPattern, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.RecordPattern|undefined} value */
+proto.daml_lf_0.Update.UpdateStep.prototype.setPat = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.Update.UpdateStep.prototype.clearPat = function() {
+  this.setPat(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Update.UpdateStep.prototype.hasPat = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * repeated UpdateStep steps = 1;
+ * @return {!Array<!proto.daml_lf_0.Update.UpdateStep>}
+ */
+proto.daml_lf_0.Update.prototype.getStepsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Update.UpdateStep>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Update.UpdateStep, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Update.UpdateStep>} value */
+proto.daml_lf_0.Update.prototype.setStepsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Update.UpdateStep=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Update.UpdateStep}
+ */
+proto.daml_lf_0.Update.prototype.addSteps = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.Update.UpdateStep, opt_index);
+};
+
+
+proto.daml_lf_0.Update.prototype.clearStepsList = function() {
+  this.setStepsList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.RefTerm = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.daml_lf_0.RefTerm.oneofGroups_);
+};
+goog.inherits(proto.daml_lf_0.RefTerm, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.RefTerm.displayName = 'proto.daml_lf_0.RefTerm';
+}
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.daml_lf_0.RefTerm.oneofGroups_ = [[1,2,3,4,5]];
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.RefTerm.SumCase = {
+  SUM_NOT_SET: 0,
+  BUILTIN: 1,
+  OP: 2,
+  BINDER: 3,
+  TEMPLATE: 4,
+  TOP_LEVEL_DECL: 5
+};
+
+/**
+ * @return {proto.daml_lf_0.RefTerm.SumCase}
+ */
+proto.daml_lf_0.RefTerm.prototype.getSumCase = function() {
+  return /** @type {proto.daml_lf_0.RefTerm.SumCase} */(jspb.Message.computeOneofCase(this, proto.daml_lf_0.RefTerm.oneofGroups_[0]));
+};
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.RefTerm.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.RefTerm.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.RefTerm} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.RefTerm.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    builtin: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    op: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    binder: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    template: (f = msg.getTemplate()) && proto.daml_lf_0.RefTemplate.toObject(includeInstance, f),
+    topLevelDecl: jspb.Message.getFieldWithDefault(msg, 5, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.RefTerm}
+ */
+proto.daml_lf_0.RefTerm.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.RefTerm;
+  return proto.daml_lf_0.RefTerm.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.RefTerm} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.RefTerm}
+ */
+proto.daml_lf_0.RefTerm.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {!proto.daml_lf_0.Builtin} */ (reader.readEnum());
+      msg.setBuiltin(value);
+      break;
+    case 2:
+      var value = /** @type {!proto.daml_lf_0.Op} */ (reader.readEnum());
+      msg.setOp(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBinder(value);
+      break;
+    case 4:
+      var value = new proto.daml_lf_0.RefTemplate;
+      reader.readMessage(value,proto.daml_lf_0.RefTemplate.deserializeBinaryFromReader);
+      msg.setTemplate(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTopLevelDecl(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.RefTerm.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.RefTerm.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.RefTerm} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.RefTerm.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = /** @type {!proto.daml_lf_0.Builtin} */ (jspb.Message.getField(message, 1));
+  if (f != null) {
+    writer.writeEnum(
+      1,
+      f
+    );
+  }
+  f = /** @type {!proto.daml_lf_0.Op} */ (jspb.Message.getField(message, 2));
+  if (f != null) {
+    writer.writeEnum(
+      2,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 3));
+  if (f != null) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = message.getTemplate();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.daml_lf_0.RefTemplate.serializeBinaryToWriter
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional Builtin builtin = 1;
+ * @return {!proto.daml_lf_0.Builtin}
+ */
+proto.daml_lf_0.RefTerm.prototype.getBuiltin = function() {
+  return /** @type {!proto.daml_lf_0.Builtin} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {!proto.daml_lf_0.Builtin} value */
+proto.daml_lf_0.RefTerm.prototype.setBuiltin = function(value) {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.RefTerm.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.RefTerm.prototype.clearBuiltin = function() {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.RefTerm.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.RefTerm.prototype.hasBuiltin = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional Op op = 2;
+ * @return {!proto.daml_lf_0.Op}
+ */
+proto.daml_lf_0.RefTerm.prototype.getOp = function() {
+  return /** @type {!proto.daml_lf_0.Op} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/** @param {!proto.daml_lf_0.Op} value */
+proto.daml_lf_0.RefTerm.prototype.setOp = function(value) {
+  jspb.Message.setOneofField(this, 2, proto.daml_lf_0.RefTerm.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.RefTerm.prototype.clearOp = function() {
+  jspb.Message.setOneofField(this, 2, proto.daml_lf_0.RefTerm.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.RefTerm.prototype.hasOp = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional string binder = 3;
+ * @return {string}
+ */
+proto.daml_lf_0.RefTerm.prototype.getBinder = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.RefTerm.prototype.setBinder = function(value) {
+  jspb.Message.setOneofField(this, 3, proto.daml_lf_0.RefTerm.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.RefTerm.prototype.clearBinder = function() {
+  jspb.Message.setOneofField(this, 3, proto.daml_lf_0.RefTerm.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.RefTerm.prototype.hasBinder = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional RefTemplate template = 4;
+ * @return {?proto.daml_lf_0.RefTemplate}
+ */
+proto.daml_lf_0.RefTerm.prototype.getTemplate = function() {
+  return /** @type{?proto.daml_lf_0.RefTemplate} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.RefTemplate, 4));
+};
+
+
+/** @param {?proto.daml_lf_0.RefTemplate|undefined} value */
+proto.daml_lf_0.RefTerm.prototype.setTemplate = function(value) {
+  jspb.Message.setOneofWrapperField(this, 4, proto.daml_lf_0.RefTerm.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.RefTerm.prototype.clearTemplate = function() {
+  this.setTemplate(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.RefTerm.prototype.hasTemplate = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional string top_level_decl = 5;
+ * @return {string}
+ */
+proto.daml_lf_0.RefTerm.prototype.getTopLevelDecl = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.RefTerm.prototype.setTopLevelDecl = function(value) {
+  jspb.Message.setOneofField(this, 5, proto.daml_lf_0.RefTerm.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.RefTerm.prototype.clearTopLevelDecl = function() {
+  jspb.Message.setOneofField(this, 5, proto.daml_lf_0.RefTerm.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.RefTerm.prototype.hasTopLevelDecl = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.RefTemplate = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.daml_lf_0.RefTemplate.oneofGroups_);
+};
+goog.inherits(proto.daml_lf_0.RefTemplate, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.RefTemplate.displayName = 'proto.daml_lf_0.RefTemplate';
+}
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.daml_lf_0.RefTemplate.oneofGroups_ = [[1,2]];
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.RefTemplate.SumCase = {
+  SUM_NOT_SET: 0,
+  INTERNAL: 1,
+  EXTERNAL: 2
+};
+
+/**
+ * @return {proto.daml_lf_0.RefTemplate.SumCase}
+ */
+proto.daml_lf_0.RefTemplate.prototype.getSumCase = function() {
+  return /** @type {proto.daml_lf_0.RefTemplate.SumCase} */(jspb.Message.computeOneofCase(this, proto.daml_lf_0.RefTemplate.oneofGroups_[0]));
+};
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.RefTemplate.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.RefTemplate.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.RefTemplate} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.RefTemplate.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    internal: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    external: (f = msg.getExternal()) && proto.daml_lf_0.RefTemplate.External.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.RefTemplate}
+ */
+proto.daml_lf_0.RefTemplate.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.RefTemplate;
+  return proto.daml_lf_0.RefTemplate.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.RefTemplate} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.RefTemplate}
+ */
+proto.daml_lf_0.RefTemplate.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setInternal(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.RefTemplate.External;
+      reader.readMessage(value,proto.daml_lf_0.RefTemplate.External.deserializeBinaryFromReader);
+      msg.setExternal(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.RefTemplate.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.RefTemplate.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.RefTemplate} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.RefTemplate.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = /** @type {string} */ (jspb.Message.getField(message, 1));
+  if (f != null) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getExternal();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.RefTemplate.External.serializeBinaryToWriter
+    );
+  }
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.RefTemplate.External = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.RefTemplate.External, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.RefTemplate.External.displayName = 'proto.daml_lf_0.RefTemplate.External';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.RefTemplate.External.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.RefTemplate.External.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.RefTemplate.External} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.RefTemplate.External.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    groupId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    tplId: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.RefTemplate.External}
+ */
+proto.daml_lf_0.RefTemplate.External.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.RefTemplate.External;
+  return proto.daml_lf_0.RefTemplate.External.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.RefTemplate.External} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.RefTemplate.External}
+ */
+proto.daml_lf_0.RefTemplate.External.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setGroupId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTplId(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.RefTemplate.External.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.RefTemplate.External.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.RefTemplate.External} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.RefTemplate.External.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getGroupId();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getTplId();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string group_id = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.RefTemplate.External.prototype.getGroupId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.RefTemplate.External.prototype.setGroupId = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string tpl_id = 2;
+ * @return {string}
+ */
+proto.daml_lf_0.RefTemplate.External.prototype.getTplId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.RefTemplate.External.prototype.setTplId = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional string internal = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.RefTemplate.prototype.getInternal = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.RefTemplate.prototype.setInternal = function(value) {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.RefTemplate.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.RefTemplate.prototype.clearInternal = function() {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.RefTemplate.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.RefTemplate.prototype.hasInternal = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional External external = 2;
+ * @return {?proto.daml_lf_0.RefTemplate.External}
+ */
+proto.daml_lf_0.RefTemplate.prototype.getExternal = function() {
+  return /** @type{?proto.daml_lf_0.RefTemplate.External} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.RefTemplate.External, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.RefTemplate.External|undefined} value */
+proto.daml_lf_0.RefTemplate.prototype.setExternal = function(value) {
+  jspb.Message.setOneofWrapperField(this, 2, proto.daml_lf_0.RefTemplate.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.RefTemplate.prototype.clearExternal = function() {
+  this.setExternal(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.RefTemplate.prototype.hasExternal = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.TypedBinder = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.TypedBinder, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.TypedBinder.displayName = 'proto.daml_lf_0.TypedBinder';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.TypedBinder.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.TypedBinder.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.TypedBinder} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.TypedBinder.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    binder: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    type: (f = msg.getType()) && proto.daml_lf_0.Type.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.TypedBinder}
+ */
+proto.daml_lf_0.TypedBinder.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.TypedBinder;
+  return proto.daml_lf_0.TypedBinder.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.TypedBinder} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.TypedBinder}
+ */
+proto.daml_lf_0.TypedBinder.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBinder(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Type;
+      reader.readMessage(value,proto.daml_lf_0.Type.deserializeBinaryFromReader);
+      msg.setType(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.TypedBinder.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.TypedBinder.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.TypedBinder} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.TypedBinder.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getBinder();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getType();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Type.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string binder = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.TypedBinder.prototype.getBinder = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.TypedBinder.prototype.setBinder = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional Type type = 2;
+ * @return {?proto.daml_lf_0.Type}
+ */
+proto.daml_lf_0.TypedBinder.prototype.getType = function() {
+  return /** @type{?proto.daml_lf_0.Type} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Type|undefined} value */
+proto.daml_lf_0.TypedBinder.prototype.setType = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.TypedBinder.prototype.clearType = function() {
+  this.setType(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.TypedBinder.prototype.hasType = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Type = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.daml_lf_0.Type.oneofGroups_);
+};
+goog.inherits(proto.daml_lf_0.Type, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Type.displayName = 'proto.daml_lf_0.Type';
+}
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.daml_lf_0.Type.oneofGroups_ = [[1,2,3,4,5,6,7,8,9]];
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.Type.SumCase = {
+  SUM_NOT_SET: 0,
+  REF: 1,
+  ARR: 2,
+  APP: 3,
+  ABS: 4,
+  DATA: 5,
+  RECORD: 6,
+  VARIANT: 7,
+  CONTRACT: 8,
+  AWAIT: 9
+};
+
+/**
+ * @return {proto.daml_lf_0.Type.SumCase}
+ */
+proto.daml_lf_0.Type.prototype.getSumCase = function() {
+  return /** @type {proto.daml_lf_0.Type.SumCase} */(jspb.Message.computeOneofCase(this, proto.daml_lf_0.Type.oneofGroups_[0]));
+};
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Type.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Type.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Type} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    ref: (f = msg.getRef()) && proto.daml_lf_0.RefType.toObject(includeInstance, f),
+    arr: (f = msg.getArr()) && proto.daml_lf_0.Type.Arr.toObject(includeInstance, f),
+    app: (f = msg.getApp()) && proto.daml_lf_0.Type.App.toObject(includeInstance, f),
+    abs: (f = msg.getAbs()) && proto.daml_lf_0.Type.Abs.toObject(includeInstance, f),
+    data: (f = msg.getData()) && proto.daml_lf_0.Type.Data.toObject(includeInstance, f),
+    record: (f = msg.getRecord()) && proto.daml_lf_0.Type.Record.toObject(includeInstance, f),
+    variant: (f = msg.getVariant()) && proto.daml_lf_0.Type.Variant.toObject(includeInstance, f),
+    contract: (f = msg.getContract()) && proto.daml_lf_0.Type.Contract.toObject(includeInstance, f),
+    await: (f = msg.getAwait()) && proto.daml_lf_0.Type.Await.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Type}
+ */
+proto.daml_lf_0.Type.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Type;
+  return proto.daml_lf_0.Type.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Type} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Type}
+ */
+proto.daml_lf_0.Type.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.RefType;
+      reader.readMessage(value,proto.daml_lf_0.RefType.deserializeBinaryFromReader);
+      msg.setRef(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Type.Arr;
+      reader.readMessage(value,proto.daml_lf_0.Type.Arr.deserializeBinaryFromReader);
+      msg.setArr(value);
+      break;
+    case 3:
+      var value = new proto.daml_lf_0.Type.App;
+      reader.readMessage(value,proto.daml_lf_0.Type.App.deserializeBinaryFromReader);
+      msg.setApp(value);
+      break;
+    case 4:
+      var value = new proto.daml_lf_0.Type.Abs;
+      reader.readMessage(value,proto.daml_lf_0.Type.Abs.deserializeBinaryFromReader);
+      msg.setAbs(value);
+      break;
+    case 5:
+      var value = new proto.daml_lf_0.Type.Data;
+      reader.readMessage(value,proto.daml_lf_0.Type.Data.deserializeBinaryFromReader);
+      msg.setData(value);
+      break;
+    case 6:
+      var value = new proto.daml_lf_0.Type.Record;
+      reader.readMessage(value,proto.daml_lf_0.Type.Record.deserializeBinaryFromReader);
+      msg.setRecord(value);
+      break;
+    case 7:
+      var value = new proto.daml_lf_0.Type.Variant;
+      reader.readMessage(value,proto.daml_lf_0.Type.Variant.deserializeBinaryFromReader);
+      msg.setVariant(value);
+      break;
+    case 8:
+      var value = new proto.daml_lf_0.Type.Contract;
+      reader.readMessage(value,proto.daml_lf_0.Type.Contract.deserializeBinaryFromReader);
+      msg.setContract(value);
+      break;
+    case 9:
+      var value = new proto.daml_lf_0.Type.Await;
+      reader.readMessage(value,proto.daml_lf_0.Type.Await.deserializeBinaryFromReader);
+      msg.setAwait(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Type.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Type.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Type} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getRef();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.RefType.serializeBinaryToWriter
+    );
+  }
+  f = message.getArr();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Type.Arr.serializeBinaryToWriter
+    );
+  }
+  f = message.getApp();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.daml_lf_0.Type.App.serializeBinaryToWriter
+    );
+  }
+  f = message.getAbs();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.daml_lf_0.Type.Abs.serializeBinaryToWriter
+    );
+  }
+  f = message.getData();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      proto.daml_lf_0.Type.Data.serializeBinaryToWriter
+    );
+  }
+  f = message.getRecord();
+  if (f != null) {
+    writer.writeMessage(
+      6,
+      f,
+      proto.daml_lf_0.Type.Record.serializeBinaryToWriter
+    );
+  }
+  f = message.getVariant();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      proto.daml_lf_0.Type.Variant.serializeBinaryToWriter
+    );
+  }
+  f = message.getContract();
+  if (f != null) {
+    writer.writeMessage(
+      8,
+      f,
+      proto.daml_lf_0.Type.Contract.serializeBinaryToWriter
+    );
+  }
+  f = message.getAwait();
+  if (f != null) {
+    writer.writeMessage(
+      9,
+      f,
+      proto.daml_lf_0.Type.Await.serializeBinaryToWriter
+    );
+  }
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Type.Arr = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Type.Arr.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Type.Arr, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Type.Arr.displayName = 'proto.daml_lf_0.Type.Arr';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Type.Arr.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Type.Arr.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Type.Arr.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Type.Arr} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.Arr.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    argsList: jspb.Message.toObjectList(msg.getArgsList(),
+    proto.daml_lf_0.Type.toObject, includeInstance),
+    result: (f = msg.getResult()) && proto.daml_lf_0.Type.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Type.Arr}
+ */
+proto.daml_lf_0.Type.Arr.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Type.Arr;
+  return proto.daml_lf_0.Type.Arr.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Type.Arr} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Type.Arr}
+ */
+proto.daml_lf_0.Type.Arr.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Type;
+      reader.readMessage(value,proto.daml_lf_0.Type.deserializeBinaryFromReader);
+      msg.addArgs(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Type;
+      reader.readMessage(value,proto.daml_lf_0.Type.deserializeBinaryFromReader);
+      msg.setResult(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Type.Arr.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Type.Arr.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Type.Arr} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.Arr.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getArgsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.Type.serializeBinaryToWriter
+    );
+  }
+  f = message.getResult();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Type.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated Type args = 1;
+ * @return {!Array<!proto.daml_lf_0.Type>}
+ */
+proto.daml_lf_0.Type.Arr.prototype.getArgsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Type>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Type, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Type>} value */
+proto.daml_lf_0.Type.Arr.prototype.setArgsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Type=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Type}
+ */
+proto.daml_lf_0.Type.Arr.prototype.addArgs = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.Type, opt_index);
+};
+
+
+proto.daml_lf_0.Type.Arr.prototype.clearArgsList = function() {
+  this.setArgsList([]);
+};
+
+
+/**
+ * optional Type result = 2;
+ * @return {?proto.daml_lf_0.Type}
+ */
+proto.daml_lf_0.Type.Arr.prototype.getResult = function() {
+  return /** @type{?proto.daml_lf_0.Type} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Type|undefined} value */
+proto.daml_lf_0.Type.Arr.prototype.setResult = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.Type.Arr.prototype.clearResult = function() {
+  this.setResult(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Type.Arr.prototype.hasResult = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Type.App = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Type.App.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Type.App, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Type.App.displayName = 'proto.daml_lf_0.Type.App';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Type.App.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Type.App.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Type.App.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Type.App} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.App.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    ref: (f = msg.getRef()) && proto.daml_lf_0.RefType.toObject(includeInstance, f),
+    argsList: jspb.Message.toObjectList(msg.getArgsList(),
+    proto.daml_lf_0.Type.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Type.App}
+ */
+proto.daml_lf_0.Type.App.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Type.App;
+  return proto.daml_lf_0.Type.App.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Type.App} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Type.App}
+ */
+proto.daml_lf_0.Type.App.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.RefType;
+      reader.readMessage(value,proto.daml_lf_0.RefType.deserializeBinaryFromReader);
+      msg.setRef(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Type;
+      reader.readMessage(value,proto.daml_lf_0.Type.deserializeBinaryFromReader);
+      msg.addArgs(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Type.App.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Type.App.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Type.App} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.App.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getRef();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.RefType.serializeBinaryToWriter
+    );
+  }
+  f = message.getArgsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.daml_lf_0.Type.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional RefType ref = 1;
+ * @return {?proto.daml_lf_0.RefType}
+ */
+proto.daml_lf_0.Type.App.prototype.getRef = function() {
+  return /** @type{?proto.daml_lf_0.RefType} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.RefType, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.RefType|undefined} value */
+proto.daml_lf_0.Type.App.prototype.setRef = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.daml_lf_0.Type.App.prototype.clearRef = function() {
+  this.setRef(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Type.App.prototype.hasRef = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * repeated Type args = 2;
+ * @return {!Array<!proto.daml_lf_0.Type>}
+ */
+proto.daml_lf_0.Type.App.prototype.getArgsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Type>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Type, 2));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Type>} value */
+proto.daml_lf_0.Type.App.prototype.setArgsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Type=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Type}
+ */
+proto.daml_lf_0.Type.App.prototype.addArgs = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.daml_lf_0.Type, opt_index);
+};
+
+
+proto.daml_lf_0.Type.App.prototype.clearArgsList = function() {
+  this.setArgsList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Type.Abs = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Type.Abs.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Type.Abs, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Type.Abs.displayName = 'proto.daml_lf_0.Type.Abs';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Type.Abs.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Type.Abs.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Type.Abs.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Type.Abs} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.Abs.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    bindersList: jspb.Message.getRepeatedField(msg, 1),
+    body: (f = msg.getBody()) && proto.daml_lf_0.Type.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Type.Abs}
+ */
+proto.daml_lf_0.Type.Abs.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Type.Abs;
+  return proto.daml_lf_0.Type.Abs.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Type.Abs} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Type.Abs}
+ */
+proto.daml_lf_0.Type.Abs.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addBinders(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Type;
+      reader.readMessage(value,proto.daml_lf_0.Type.deserializeBinaryFromReader);
+      msg.setBody(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Type.Abs.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Type.Abs.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Type.Abs} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.Abs.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getBindersList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      1,
+      f
+    );
+  }
+  f = message.getBody();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Type.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated string binders = 1;
+ * @return {!Array<string>}
+ */
+proto.daml_lf_0.Type.Abs.prototype.getBindersList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
+};
+
+
+/** @param {!Array<string>} value */
+proto.daml_lf_0.Type.Abs.prototype.setBindersList = function(value) {
+  jspb.Message.setField(this, 1, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ */
+proto.daml_lf_0.Type.Abs.prototype.addBinders = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 1, value, opt_index);
+};
+
+
+proto.daml_lf_0.Type.Abs.prototype.clearBindersList = function() {
+  this.setBindersList([]);
+};
+
+
+/**
+ * optional Type body = 2;
+ * @return {?proto.daml_lf_0.Type}
+ */
+proto.daml_lf_0.Type.Abs.prototype.getBody = function() {
+  return /** @type{?proto.daml_lf_0.Type} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Type|undefined} value */
+proto.daml_lf_0.Type.Abs.prototype.setBody = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.Type.Abs.prototype.clearBody = function() {
+  this.setBody(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Type.Abs.prototype.hasBody = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Type.Data = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Type.Data.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Type.Data, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Type.Data.displayName = 'proto.daml_lf_0.Type.Data';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Type.Data.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Type.Data.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Type.Data.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Type.Data} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.Data.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    builtin: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    argsList: jspb.Message.toObjectList(msg.getArgsList(),
+    proto.daml_lf_0.Type.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Type.Data}
+ */
+proto.daml_lf_0.Type.Data.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Type.Data;
+  return proto.daml_lf_0.Type.Data.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Type.Data} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Type.Data}
+ */
+proto.daml_lf_0.Type.Data.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {!proto.daml_lf_0.BuiltinType} */ (reader.readEnum());
+      msg.setBuiltin(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Type;
+      reader.readMessage(value,proto.daml_lf_0.Type.deserializeBinaryFromReader);
+      msg.addArgs(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Type.Data.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Type.Data.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Type.Data} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.Data.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getBuiltin();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      1,
+      f
+    );
+  }
+  f = message.getArgsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.daml_lf_0.Type.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional BuiltinType builtin = 1;
+ * @return {!proto.daml_lf_0.BuiltinType}
+ */
+proto.daml_lf_0.Type.Data.prototype.getBuiltin = function() {
+  return /** @type {!proto.daml_lf_0.BuiltinType} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {!proto.daml_lf_0.BuiltinType} value */
+proto.daml_lf_0.Type.Data.prototype.setBuiltin = function(value) {
+  jspb.Message.setProto3EnumField(this, 1, value);
+};
+
+
+/**
+ * repeated Type args = 2;
+ * @return {!Array<!proto.daml_lf_0.Type>}
+ */
+proto.daml_lf_0.Type.Data.prototype.getArgsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Type>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Type, 2));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Type>} value */
+proto.daml_lf_0.Type.Data.prototype.setArgsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Type=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Type}
+ */
+proto.daml_lf_0.Type.Data.prototype.addArgs = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.daml_lf_0.Type, opt_index);
+};
+
+
+proto.daml_lf_0.Type.Data.prototype.clearArgsList = function() {
+  this.setArgsList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Type.Record = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Type.Record.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Type.Record, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Type.Record.displayName = 'proto.daml_lf_0.Type.Record';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Type.Record.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Type.Record.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Type.Record.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Type.Record} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.Record.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    fieldsList: jspb.Message.toObjectList(msg.getFieldsList(),
+    proto.daml_lf_0.TypeField.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Type.Record}
+ */
+proto.daml_lf_0.Type.Record.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Type.Record;
+  return proto.daml_lf_0.Type.Record.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Type.Record} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Type.Record}
+ */
+proto.daml_lf_0.Type.Record.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.TypeField;
+      reader.readMessage(value,proto.daml_lf_0.TypeField.deserializeBinaryFromReader);
+      msg.addFields(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Type.Record.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Type.Record.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Type.Record} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.Record.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getFieldsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.TypeField.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated TypeField fields = 1;
+ * @return {!Array<!proto.daml_lf_0.TypeField>}
+ */
+proto.daml_lf_0.Type.Record.prototype.getFieldsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.TypeField>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.TypeField, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.TypeField>} value */
+proto.daml_lf_0.Type.Record.prototype.setFieldsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.TypeField=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.TypeField}
+ */
+proto.daml_lf_0.Type.Record.prototype.addFields = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.TypeField, opt_index);
+};
+
+
+proto.daml_lf_0.Type.Record.prototype.clearFieldsList = function() {
+  this.setFieldsList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Type.Variant = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Type.Variant.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Type.Variant, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Type.Variant.displayName = 'proto.daml_lf_0.Type.Variant';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Type.Variant.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Type.Variant.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Type.Variant.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Type.Variant} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.Variant.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    tagsList: jspb.Message.toObjectList(msg.getTagsList(),
+    proto.daml_lf_0.TypeField.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Type.Variant}
+ */
+proto.daml_lf_0.Type.Variant.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Type.Variant;
+  return proto.daml_lf_0.Type.Variant.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Type.Variant} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Type.Variant}
+ */
+proto.daml_lf_0.Type.Variant.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.TypeField;
+      reader.readMessage(value,proto.daml_lf_0.TypeField.deserializeBinaryFromReader);
+      msg.addTags(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Type.Variant.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Type.Variant.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Type.Variant} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.Variant.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getTagsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.TypeField.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated TypeField tags = 1;
+ * @return {!Array<!proto.daml_lf_0.TypeField>}
+ */
+proto.daml_lf_0.Type.Variant.prototype.getTagsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.TypeField>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.TypeField, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.TypeField>} value */
+proto.daml_lf_0.Type.Variant.prototype.setTagsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.TypeField=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.TypeField}
+ */
+proto.daml_lf_0.Type.Variant.prototype.addTags = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.TypeField, opt_index);
+};
+
+
+proto.daml_lf_0.Type.Variant.prototype.clearTagsList = function() {
+  this.setTagsList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Type.Contract = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Type.Contract.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Type.Contract, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Type.Contract.displayName = 'proto.daml_lf_0.Type.Contract';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Type.Contract.repeatedFields_ = [1,2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Type.Contract.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Type.Contract.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Type.Contract} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.Contract.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    argsList: jspb.Message.toObjectList(msg.getArgsList(),
+    proto.daml_lf_0.TypeField.toObject, includeInstance),
+    choicesList: jspb.Message.toObjectList(msg.getChoicesList(),
+    proto.daml_lf_0.TypeChoice.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Type.Contract}
+ */
+proto.daml_lf_0.Type.Contract.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Type.Contract;
+  return proto.daml_lf_0.Type.Contract.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Type.Contract} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Type.Contract}
+ */
+proto.daml_lf_0.Type.Contract.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.TypeField;
+      reader.readMessage(value,proto.daml_lf_0.TypeField.deserializeBinaryFromReader);
+      msg.addArgs(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.TypeChoice;
+      reader.readMessage(value,proto.daml_lf_0.TypeChoice.deserializeBinaryFromReader);
+      msg.addChoices(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Type.Contract.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Type.Contract.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Type.Contract} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.Contract.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getArgsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.TypeField.serializeBinaryToWriter
+    );
+  }
+  f = message.getChoicesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.daml_lf_0.TypeChoice.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated TypeField args = 1;
+ * @return {!Array<!proto.daml_lf_0.TypeField>}
+ */
+proto.daml_lf_0.Type.Contract.prototype.getArgsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.TypeField>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.TypeField, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.TypeField>} value */
+proto.daml_lf_0.Type.Contract.prototype.setArgsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.TypeField=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.TypeField}
+ */
+proto.daml_lf_0.Type.Contract.prototype.addArgs = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.TypeField, opt_index);
+};
+
+
+proto.daml_lf_0.Type.Contract.prototype.clearArgsList = function() {
+  this.setArgsList([]);
+};
+
+
+/**
+ * repeated TypeChoice choices = 2;
+ * @return {!Array<!proto.daml_lf_0.TypeChoice>}
+ */
+proto.daml_lf_0.Type.Contract.prototype.getChoicesList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.TypeChoice>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.TypeChoice, 2));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.TypeChoice>} value */
+proto.daml_lf_0.Type.Contract.prototype.setChoicesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.TypeChoice=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.TypeChoice}
+ */
+proto.daml_lf_0.Type.Contract.prototype.addChoices = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.daml_lf_0.TypeChoice, opt_index);
+};
+
+
+proto.daml_lf_0.Type.Contract.prototype.clearChoicesList = function() {
+  this.setChoicesList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Type.Await = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Type.Await.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Type.Await, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Type.Await.displayName = 'proto.daml_lf_0.Type.Await';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Type.Await.repeatedFields_ = [3];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Type.Await.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Type.Await.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Type.Await} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.Await.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    choicesList: jspb.Message.toObjectList(msg.getChoicesList(),
+    proto.daml_lf_0.TypeChoice.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Type.Await}
+ */
+proto.daml_lf_0.Type.Await.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Type.Await;
+  return proto.daml_lf_0.Type.Await.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Type.Await} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Type.Await}
+ */
+proto.daml_lf_0.Type.Await.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 3:
+      var value = new proto.daml_lf_0.TypeChoice;
+      reader.readMessage(value,proto.daml_lf_0.TypeChoice.deserializeBinaryFromReader);
+      msg.addChoices(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Type.Await.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Type.Await.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Type.Await} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Type.Await.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getChoicesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      3,
+      f,
+      proto.daml_lf_0.TypeChoice.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated TypeChoice choices = 3;
+ * @return {!Array<!proto.daml_lf_0.TypeChoice>}
+ */
+proto.daml_lf_0.Type.Await.prototype.getChoicesList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.TypeChoice>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.TypeChoice, 3));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.TypeChoice>} value */
+proto.daml_lf_0.Type.Await.prototype.setChoicesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 3, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.TypeChoice=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.TypeChoice}
+ */
+proto.daml_lf_0.Type.Await.prototype.addChoices = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.daml_lf_0.TypeChoice, opt_index);
+};
+
+
+proto.daml_lf_0.Type.Await.prototype.clearChoicesList = function() {
+  this.setChoicesList([]);
+};
+
+
+/**
+ * optional RefType ref = 1;
+ * @return {?proto.daml_lf_0.RefType}
+ */
+proto.daml_lf_0.Type.prototype.getRef = function() {
+  return /** @type{?proto.daml_lf_0.RefType} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.RefType, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.RefType|undefined} value */
+proto.daml_lf_0.Type.prototype.setRef = function(value) {
+  jspb.Message.setOneofWrapperField(this, 1, proto.daml_lf_0.Type.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Type.prototype.clearRef = function() {
+  this.setRef(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Type.prototype.hasRef = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional Arr arr = 2;
+ * @return {?proto.daml_lf_0.Type.Arr}
+ */
+proto.daml_lf_0.Type.prototype.getArr = function() {
+  return /** @type{?proto.daml_lf_0.Type.Arr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type.Arr, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Type.Arr|undefined} value */
+proto.daml_lf_0.Type.prototype.setArr = function(value) {
+  jspb.Message.setOneofWrapperField(this, 2, proto.daml_lf_0.Type.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Type.prototype.clearArr = function() {
+  this.setArr(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Type.prototype.hasArr = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional App app = 3;
+ * @return {?proto.daml_lf_0.Type.App}
+ */
+proto.daml_lf_0.Type.prototype.getApp = function() {
+  return /** @type{?proto.daml_lf_0.Type.App} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type.App, 3));
+};
+
+
+/** @param {?proto.daml_lf_0.Type.App|undefined} value */
+proto.daml_lf_0.Type.prototype.setApp = function(value) {
+  jspb.Message.setOneofWrapperField(this, 3, proto.daml_lf_0.Type.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Type.prototype.clearApp = function() {
+  this.setApp(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Type.prototype.hasApp = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional Abs abs = 4;
+ * @return {?proto.daml_lf_0.Type.Abs}
+ */
+proto.daml_lf_0.Type.prototype.getAbs = function() {
+  return /** @type{?proto.daml_lf_0.Type.Abs} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type.Abs, 4));
+};
+
+
+/** @param {?proto.daml_lf_0.Type.Abs|undefined} value */
+proto.daml_lf_0.Type.prototype.setAbs = function(value) {
+  jspb.Message.setOneofWrapperField(this, 4, proto.daml_lf_0.Type.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Type.prototype.clearAbs = function() {
+  this.setAbs(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Type.prototype.hasAbs = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional Data data = 5;
+ * @return {?proto.daml_lf_0.Type.Data}
+ */
+proto.daml_lf_0.Type.prototype.getData = function() {
+  return /** @type{?proto.daml_lf_0.Type.Data} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type.Data, 5));
+};
+
+
+/** @param {?proto.daml_lf_0.Type.Data|undefined} value */
+proto.daml_lf_0.Type.prototype.setData = function(value) {
+  jspb.Message.setOneofWrapperField(this, 5, proto.daml_lf_0.Type.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Type.prototype.clearData = function() {
+  this.setData(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Type.prototype.hasData = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional Record record = 6;
+ * @return {?proto.daml_lf_0.Type.Record}
+ */
+proto.daml_lf_0.Type.prototype.getRecord = function() {
+  return /** @type{?proto.daml_lf_0.Type.Record} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type.Record, 6));
+};
+
+
+/** @param {?proto.daml_lf_0.Type.Record|undefined} value */
+proto.daml_lf_0.Type.prototype.setRecord = function(value) {
+  jspb.Message.setOneofWrapperField(this, 6, proto.daml_lf_0.Type.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Type.prototype.clearRecord = function() {
+  this.setRecord(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Type.prototype.hasRecord = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional Variant variant = 7;
+ * @return {?proto.daml_lf_0.Type.Variant}
+ */
+proto.daml_lf_0.Type.prototype.getVariant = function() {
+  return /** @type{?proto.daml_lf_0.Type.Variant} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type.Variant, 7));
+};
+
+
+/** @param {?proto.daml_lf_0.Type.Variant|undefined} value */
+proto.daml_lf_0.Type.prototype.setVariant = function(value) {
+  jspb.Message.setOneofWrapperField(this, 7, proto.daml_lf_0.Type.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Type.prototype.clearVariant = function() {
+  this.setVariant(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Type.prototype.hasVariant = function() {
+  return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional Contract contract = 8;
+ * @return {?proto.daml_lf_0.Type.Contract}
+ */
+proto.daml_lf_0.Type.prototype.getContract = function() {
+  return /** @type{?proto.daml_lf_0.Type.Contract} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type.Contract, 8));
+};
+
+
+/** @param {?proto.daml_lf_0.Type.Contract|undefined} value */
+proto.daml_lf_0.Type.prototype.setContract = function(value) {
+  jspb.Message.setOneofWrapperField(this, 8, proto.daml_lf_0.Type.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Type.prototype.clearContract = function() {
+  this.setContract(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Type.prototype.hasContract = function() {
+  return jspb.Message.getField(this, 8) != null;
+};
+
+
+/**
+ * optional Await await = 9;
+ * @return {?proto.daml_lf_0.Type.Await}
+ */
+proto.daml_lf_0.Type.prototype.getAwait = function() {
+  return /** @type{?proto.daml_lf_0.Type.Await} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type.Await, 9));
+};
+
+
+/** @param {?proto.daml_lf_0.Type.Await|undefined} value */
+proto.daml_lf_0.Type.prototype.setAwait = function(value) {
+  jspb.Message.setOneofWrapperField(this, 9, proto.daml_lf_0.Type.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Type.prototype.clearAwait = function() {
+  this.setAwait(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Type.prototype.hasAwait = function() {
+  return jspb.Message.getField(this, 9) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.RefType = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.daml_lf_0.RefType.oneofGroups_);
+};
+goog.inherits(proto.daml_lf_0.RefType, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.RefType.displayName = 'proto.daml_lf_0.RefType';
+}
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.daml_lf_0.RefType.oneofGroups_ = [[1,2,3]];
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.RefType.SumCase = {
+  SUM_NOT_SET: 0,
+  BUILTIN: 1,
+  TOP_LEVEL_DECL: 2,
+  VAR: 3
+};
+
+/**
+ * @return {proto.daml_lf_0.RefType.SumCase}
+ */
+proto.daml_lf_0.RefType.prototype.getSumCase = function() {
+  return /** @type {proto.daml_lf_0.RefType.SumCase} */(jspb.Message.computeOneofCase(this, proto.daml_lf_0.RefType.oneofGroups_[0]));
+};
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.RefType.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.RefType.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.RefType} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.RefType.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    builtin: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    topLevelDecl: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    pb_var: jspb.Message.getFieldWithDefault(msg, 3, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.RefType}
+ */
+proto.daml_lf_0.RefType.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.RefType;
+  return proto.daml_lf_0.RefType.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.RefType} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.RefType}
+ */
+proto.daml_lf_0.RefType.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {!proto.daml_lf_0.BuiltinType} */ (reader.readEnum());
+      msg.setBuiltin(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTopLevelDecl(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setVar(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.RefType.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.RefType.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.RefType} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.RefType.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = /** @type {!proto.daml_lf_0.BuiltinType} */ (jspb.Message.getField(message, 1));
+  if (f != null) {
+    writer.writeEnum(
+      1,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 2));
+  if (f != null) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 3));
+  if (f != null) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional BuiltinType builtin = 1;
+ * @return {!proto.daml_lf_0.BuiltinType}
+ */
+proto.daml_lf_0.RefType.prototype.getBuiltin = function() {
+  return /** @type {!proto.daml_lf_0.BuiltinType} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {!proto.daml_lf_0.BuiltinType} value */
+proto.daml_lf_0.RefType.prototype.setBuiltin = function(value) {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.RefType.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.RefType.prototype.clearBuiltin = function() {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.RefType.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.RefType.prototype.hasBuiltin = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional string top_level_decl = 2;
+ * @return {string}
+ */
+proto.daml_lf_0.RefType.prototype.getTopLevelDecl = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.RefType.prototype.setTopLevelDecl = function(value) {
+  jspb.Message.setOneofField(this, 2, proto.daml_lf_0.RefType.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.RefType.prototype.clearTopLevelDecl = function() {
+  jspb.Message.setOneofField(this, 2, proto.daml_lf_0.RefType.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.RefType.prototype.hasTopLevelDecl = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional string var = 3;
+ * @return {string}
+ */
+proto.daml_lf_0.RefType.prototype.getVar = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.RefType.prototype.setVar = function(value) {
+  jspb.Message.setOneofField(this, 3, proto.daml_lf_0.RefType.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.RefType.prototype.clearVar = function() {
+  jspb.Message.setOneofField(this, 3, proto.daml_lf_0.RefType.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.RefType.prototype.hasVar = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.TypeField = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.TypeField, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.TypeField.displayName = 'proto.daml_lf_0.TypeField';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.TypeField.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.TypeField.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.TypeField} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.TypeField.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    field: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    type: (f = msg.getType()) && proto.daml_lf_0.Type.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.TypeField}
+ */
+proto.daml_lf_0.TypeField.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.TypeField;
+  return proto.daml_lf_0.TypeField.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.TypeField} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.TypeField}
+ */
+proto.daml_lf_0.TypeField.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setField(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Type;
+      reader.readMessage(value,proto.daml_lf_0.Type.deserializeBinaryFromReader);
+      msg.setType(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.TypeField.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.TypeField.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.TypeField} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.TypeField.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getField();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getType();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Type.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string field = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.TypeField.prototype.getField = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.TypeField.prototype.setField = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional Type type = 2;
+ * @return {?proto.daml_lf_0.Type}
+ */
+proto.daml_lf_0.TypeField.prototype.getType = function() {
+  return /** @type{?proto.daml_lf_0.Type} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Type|undefined} value */
+proto.daml_lf_0.TypeField.prototype.setType = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.TypeField.prototype.clearType = function() {
+  this.setType(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.TypeField.prototype.hasType = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.TypeChoice = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.TypeChoice.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.TypeChoice, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.TypeChoice.displayName = 'proto.daml_lf_0.TypeChoice';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.TypeChoice.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.TypeChoice.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.TypeChoice.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.TypeChoice} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.TypeChoice.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    label: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    paramsList: jspb.Message.toObjectList(msg.getParamsList(),
+    proto.daml_lf_0.TypeField.toObject, includeInstance),
+    result: (f = msg.getResult()) && proto.daml_lf_0.Type.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.TypeChoice}
+ */
+proto.daml_lf_0.TypeChoice.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.TypeChoice;
+  return proto.daml_lf_0.TypeChoice.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.TypeChoice} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.TypeChoice}
+ */
+proto.daml_lf_0.TypeChoice.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setLabel(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.TypeField;
+      reader.readMessage(value,proto.daml_lf_0.TypeField.deserializeBinaryFromReader);
+      msg.addParams(value);
+      break;
+    case 3:
+      var value = new proto.daml_lf_0.Type;
+      reader.readMessage(value,proto.daml_lf_0.Type.deserializeBinaryFromReader);
+      msg.setResult(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.TypeChoice.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.TypeChoice.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.TypeChoice} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.TypeChoice.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getLabel();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getParamsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.daml_lf_0.TypeField.serializeBinaryToWriter
+    );
+  }
+  f = message.getResult();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.daml_lf_0.Type.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string label = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.TypeChoice.prototype.getLabel = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.TypeChoice.prototype.setLabel = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * repeated TypeField params = 2;
+ * @return {!Array<!proto.daml_lf_0.TypeField>}
+ */
+proto.daml_lf_0.TypeChoice.prototype.getParamsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.TypeField>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.TypeField, 2));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.TypeField>} value */
+proto.daml_lf_0.TypeChoice.prototype.setParamsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.TypeField=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.TypeField}
+ */
+proto.daml_lf_0.TypeChoice.prototype.addParams = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.daml_lf_0.TypeField, opt_index);
+};
+
+
+proto.daml_lf_0.TypeChoice.prototype.clearParamsList = function() {
+  this.setParamsList([]);
+};
+
+
+/**
+ * optional Type result = 3;
+ * @return {?proto.daml_lf_0.Type}
+ */
+proto.daml_lf_0.TypeChoice.prototype.getResult = function() {
+  return /** @type{?proto.daml_lf_0.Type} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type, 3));
+};
+
+
+/** @param {?proto.daml_lf_0.Type|undefined} value */
+proto.daml_lf_0.TypeChoice.prototype.setResult = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+proto.daml_lf_0.TypeChoice.prototype.clearResult = function() {
+  this.setResult(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.TypeChoice.prototype.hasResult = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.ContractExpr = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.ContractExpr, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.ContractExpr.displayName = 'proto.daml_lf_0.ContractExpr';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.ContractExpr.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.ContractExpr.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.ContractExpr} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.ContractExpr.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    precondition: (f = msg.getPrecondition()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    agreement: (f = msg.getAgreement()) && proto.daml_lf_0.Agreement.toObject(includeInstance, f),
+    await: (f = msg.getAwait()) && proto.daml_lf_0.Await.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.ContractExpr}
+ */
+proto.daml_lf_0.ContractExpr.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.ContractExpr;
+  return proto.daml_lf_0.ContractExpr.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.ContractExpr} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.ContractExpr}
+ */
+proto.daml_lf_0.ContractExpr.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setPrecondition(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Agreement;
+      reader.readMessage(value,proto.daml_lf_0.Agreement.deserializeBinaryFromReader);
+      msg.setAgreement(value);
+      break;
+    case 3:
+      var value = new proto.daml_lf_0.Await;
+      reader.readMessage(value,proto.daml_lf_0.Await.deserializeBinaryFromReader);
+      msg.setAwait(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.ContractExpr.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.ContractExpr.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.ContractExpr} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.ContractExpr.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPrecondition();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getAgreement();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Agreement.serializeBinaryToWriter
+    );
+  }
+  f = message.getAwait();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.daml_lf_0.Await.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Expr precondition = 1;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.ContractExpr.prototype.getPrecondition = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.ContractExpr.prototype.setPrecondition = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.daml_lf_0.ContractExpr.prototype.clearPrecondition = function() {
+  this.setPrecondition(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.ContractExpr.prototype.hasPrecondition = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional Agreement agreement = 2;
+ * @return {?proto.daml_lf_0.Agreement}
+ */
+proto.daml_lf_0.ContractExpr.prototype.getAgreement = function() {
+  return /** @type{?proto.daml_lf_0.Agreement} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Agreement, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Agreement|undefined} value */
+proto.daml_lf_0.ContractExpr.prototype.setAgreement = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.ContractExpr.prototype.clearAgreement = function() {
+  this.setAgreement(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.ContractExpr.prototype.hasAgreement = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional Await await = 3;
+ * @return {?proto.daml_lf_0.Await}
+ */
+proto.daml_lf_0.ContractExpr.prototype.getAwait = function() {
+  return /** @type{?proto.daml_lf_0.Await} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Await, 3));
+};
+
+
+/** @param {?proto.daml_lf_0.Await|undefined} value */
+proto.daml_lf_0.ContractExpr.prototype.setAwait = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+proto.daml_lf_0.ContractExpr.prototype.clearAwait = function() {
+  this.setAwait(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.ContractExpr.prototype.hasAwait = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Await = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Await.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Await, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Await.displayName = 'proto.daml_lf_0.Await';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Await.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Await.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Await.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Await} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Await.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    choicesList: jspb.Message.toObjectList(msg.getChoicesList(),
+    proto.daml_lf_0.Await.Choice.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Await}
+ */
+proto.daml_lf_0.Await.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Await;
+  return proto.daml_lf_0.Await.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Await} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Await}
+ */
+proto.daml_lf_0.Await.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Await.Choice;
+      reader.readMessage(value,proto.daml_lf_0.Await.Choice.deserializeBinaryFromReader);
+      msg.addChoices(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Await.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Await.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Await} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Await.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getChoicesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.Await.Choice.serializeBinaryToWriter
+    );
+  }
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Await.Choice = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.Await.Choice, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Await.Choice.displayName = 'proto.daml_lf_0.Await.Choice';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Await.Choice.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Await.Choice.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Await.Choice} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Await.Choice.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    label: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    body: (f = msg.getBody()) && proto.daml_lf_0.Expr.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Await.Choice}
+ */
+proto.daml_lf_0.Await.Choice.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Await.Choice;
+  return proto.daml_lf_0.Await.Choice.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Await.Choice} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Await.Choice}
+ */
+proto.daml_lf_0.Await.Choice.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setLabel(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setBody(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Await.Choice.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Await.Choice.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Await.Choice} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Await.Choice.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getLabel();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getBody();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string label = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.Await.Choice.prototype.getLabel = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.Await.Choice.prototype.setLabel = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional Expr body = 2;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Await.Choice.prototype.getBody = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Await.Choice.prototype.setBody = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.Await.Choice.prototype.clearBody = function() {
+  this.setBody(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Await.Choice.prototype.hasBody = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * repeated Choice choices = 1;
+ * @return {!Array<!proto.daml_lf_0.Await.Choice>}
+ */
+proto.daml_lf_0.Await.prototype.getChoicesList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Await.Choice>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Await.Choice, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Await.Choice>} value */
+proto.daml_lf_0.Await.prototype.setChoicesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Await.Choice=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Await.Choice}
+ */
+proto.daml_lf_0.Await.prototype.addChoices = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.Await.Choice, opt_index);
+};
+
+
+proto.daml_lf_0.Await.prototype.clearChoicesList = function() {
+  this.setChoicesList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Agreement = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Agreement.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Agreement, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Agreement.displayName = 'proto.daml_lf_0.Agreement';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Agreement.repeatedFields_ = [1,3];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Agreement.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Agreement.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Agreement} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Agreement.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    partiesList: jspb.Message.toObjectList(msg.getPartiesList(),
+    proto.daml_lf_0.Expr.toObject, includeInstance),
+    text: (f = msg.getText()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    observersList: jspb.Message.toObjectList(msg.getObserversList(),
+    proto.daml_lf_0.Expr.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Agreement}
+ */
+proto.daml_lf_0.Agreement.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Agreement;
+  return proto.daml_lf_0.Agreement.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Agreement} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Agreement}
+ */
+proto.daml_lf_0.Agreement.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.addParties(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setText(value);
+      break;
+    case 3:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.addObservers(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Agreement.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Agreement.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Agreement} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Agreement.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPartiesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getText();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getObserversList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      3,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated Expr parties = 1;
+ * @return {!Array<!proto.daml_lf_0.Expr>}
+ */
+proto.daml_lf_0.Agreement.prototype.getPartiesList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Expr>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Expr, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Expr>} value */
+proto.daml_lf_0.Agreement.prototype.setPartiesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Expr=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Agreement.prototype.addParties = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.Expr, opt_index);
+};
+
+
+proto.daml_lf_0.Agreement.prototype.clearPartiesList = function() {
+  this.setPartiesList([]);
+};
+
+
+/**
+ * optional Expr text = 2;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Agreement.prototype.getText = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Agreement.prototype.setText = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.Agreement.prototype.clearText = function() {
+  this.setText(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Agreement.prototype.hasText = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * repeated Expr observers = 3;
+ * @return {!Array<!proto.daml_lf_0.Expr>}
+ */
+proto.daml_lf_0.Agreement.prototype.getObserversList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Expr>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Expr, 3));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Expr>} value */
+proto.daml_lf_0.Agreement.prototype.setObserversList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 3, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Expr=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Agreement.prototype.addObservers = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.daml_lf_0.Expr, opt_index);
+};
+
+
+proto.daml_lf_0.Agreement.prototype.clearObserversList = function() {
+  this.setObserversList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.TemplateStoreStakeholders = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.TemplateStoreStakeholders.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.TemplateStoreStakeholders, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.TemplateStoreStakeholders.displayName = 'proto.daml_lf_0.TemplateStoreStakeholders';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.TemplateStoreStakeholders.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.TemplateStoreStakeholders.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.TemplateStoreStakeholders.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.TemplateStoreStakeholders} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.TemplateStoreStakeholders.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    stakeholdersList: jspb.Message.toObjectList(msg.getStakeholdersList(),
+    proto.daml_lf_0.TemplateGroupStakeholders.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.TemplateStoreStakeholders}
+ */
+proto.daml_lf_0.TemplateStoreStakeholders.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.TemplateStoreStakeholders;
+  return proto.daml_lf_0.TemplateStoreStakeholders.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.TemplateStoreStakeholders} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.TemplateStoreStakeholders}
+ */
+proto.daml_lf_0.TemplateStoreStakeholders.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.TemplateGroupStakeholders;
+      reader.readMessage(value,proto.daml_lf_0.TemplateGroupStakeholders.deserializeBinaryFromReader);
+      msg.addStakeholders(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.TemplateStoreStakeholders.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.TemplateStoreStakeholders.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.TemplateStoreStakeholders} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.TemplateStoreStakeholders.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getStakeholdersList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.TemplateGroupStakeholders.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated TemplateGroupStakeholders stakeholders = 1;
+ * @return {!Array<!proto.daml_lf_0.TemplateGroupStakeholders>}
+ */
+proto.daml_lf_0.TemplateStoreStakeholders.prototype.getStakeholdersList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.TemplateGroupStakeholders>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.TemplateGroupStakeholders, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.TemplateGroupStakeholders>} value */
+proto.daml_lf_0.TemplateStoreStakeholders.prototype.setStakeholdersList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.TemplateGroupStakeholders=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.TemplateGroupStakeholders}
+ */
+proto.daml_lf_0.TemplateStoreStakeholders.prototype.addStakeholders = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.TemplateGroupStakeholders, opt_index);
+};
+
+
+proto.daml_lf_0.TemplateStoreStakeholders.prototype.clearStakeholdersList = function() {
+  this.setStakeholdersList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.TemplateGroupStakeholders = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.TemplateGroupStakeholders.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.TemplateGroupStakeholders, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.TemplateGroupStakeholders.displayName = 'proto.daml_lf_0.TemplateGroupStakeholders';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.TemplateGroupStakeholders.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.TemplateGroupStakeholders.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.TemplateGroupStakeholders.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.TemplateGroupStakeholders} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.TemplateGroupStakeholders.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    groupStakeholdersList: jspb.Message.toObjectList(msg.getGroupStakeholdersList(),
+    proto.daml_lf_0.TemplateStakeholders.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.TemplateGroupStakeholders}
+ */
+proto.daml_lf_0.TemplateGroupStakeholders.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.TemplateGroupStakeholders;
+  return proto.daml_lf_0.TemplateGroupStakeholders.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.TemplateGroupStakeholders} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.TemplateGroupStakeholders}
+ */
+proto.daml_lf_0.TemplateGroupStakeholders.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setId(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.TemplateStakeholders;
+      reader.readMessage(value,proto.daml_lf_0.TemplateStakeholders.deserializeBinaryFromReader);
+      msg.addGroupStakeholders(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.TemplateGroupStakeholders.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.TemplateGroupStakeholders.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.TemplateGroupStakeholders} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.TemplateGroupStakeholders.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getId();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getGroupStakeholdersList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.daml_lf_0.TemplateStakeholders.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string id = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.TemplateGroupStakeholders.prototype.getId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.TemplateGroupStakeholders.prototype.setId = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * repeated TemplateStakeholders group_stakeholders = 2;
+ * @return {!Array<!proto.daml_lf_0.TemplateStakeholders>}
+ */
+proto.daml_lf_0.TemplateGroupStakeholders.prototype.getGroupStakeholdersList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.TemplateStakeholders>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.TemplateStakeholders, 2));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.TemplateStakeholders>} value */
+proto.daml_lf_0.TemplateGroupStakeholders.prototype.setGroupStakeholdersList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.TemplateStakeholders=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.TemplateStakeholders}
+ */
+proto.daml_lf_0.TemplateGroupStakeholders.prototype.addGroupStakeholders = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.daml_lf_0.TemplateStakeholders, opt_index);
+};
+
+
+proto.daml_lf_0.TemplateGroupStakeholders.prototype.clearGroupStakeholdersList = function() {
+  this.setGroupStakeholdersList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.TemplateStakeholders = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.TemplateStakeholders.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.TemplateStakeholders, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.TemplateStakeholders.displayName = 'proto.daml_lf_0.TemplateStakeholders';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.TemplateStakeholders.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.TemplateStakeholders.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.TemplateStakeholders.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.TemplateStakeholders} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.TemplateStakeholders.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    paramsList: jspb.Message.getRepeatedField(msg, 2),
+    obligables: (f = msg.getObligables()) && proto.daml_lf_0.Obligables.toObject(includeInstance, f),
+    controllers: (f = msg.getControllers()) && proto.daml_lf_0.Controllers.toObject(includeInstance, f),
+    isDaml1x: jspb.Message.getFieldWithDefault(msg, 5, false)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.TemplateStakeholders}
+ */
+proto.daml_lf_0.TemplateStakeholders.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.TemplateStakeholders;
+  return proto.daml_lf_0.TemplateStakeholders.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.TemplateStakeholders} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.TemplateStakeholders}
+ */
+proto.daml_lf_0.TemplateStakeholders.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addParams(value);
+      break;
+    case 3:
+      var value = new proto.daml_lf_0.Obligables;
+      reader.readMessage(value,proto.daml_lf_0.Obligables.deserializeBinaryFromReader);
+      msg.setObligables(value);
+      break;
+    case 4:
+      var value = new proto.daml_lf_0.Controllers;
+      reader.readMessage(value,proto.daml_lf_0.Controllers.deserializeBinaryFromReader);
+      msg.setControllers(value);
+      break;
+    case 5:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsDaml1x(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.TemplateStakeholders.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.TemplateStakeholders.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.TemplateStakeholders} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.TemplateStakeholders.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getId();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getParamsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      2,
+      f
+    );
+  }
+  f = message.getObligables();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.daml_lf_0.Obligables.serializeBinaryToWriter
+    );
+  }
+  f = message.getControllers();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.daml_lf_0.Controllers.serializeBinaryToWriter
+    );
+  }
+  f = message.getIsDaml1x();
+  if (f) {
+    writer.writeBool(
+      5,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string id = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.TemplateStakeholders.prototype.getId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.TemplateStakeholders.prototype.setId = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * repeated string params = 2;
+ * @return {!Array<string>}
+ */
+proto.daml_lf_0.TemplateStakeholders.prototype.getParamsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
+};
+
+
+/** @param {!Array<string>} value */
+proto.daml_lf_0.TemplateStakeholders.prototype.setParamsList = function(value) {
+  jspb.Message.setField(this, 2, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ */
+proto.daml_lf_0.TemplateStakeholders.prototype.addParams = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 2, value, opt_index);
+};
+
+
+proto.daml_lf_0.TemplateStakeholders.prototype.clearParamsList = function() {
+  this.setParamsList([]);
+};
+
+
+/**
+ * optional Obligables obligables = 3;
+ * @return {?proto.daml_lf_0.Obligables}
+ */
+proto.daml_lf_0.TemplateStakeholders.prototype.getObligables = function() {
+  return /** @type{?proto.daml_lf_0.Obligables} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Obligables, 3));
+};
+
+
+/** @param {?proto.daml_lf_0.Obligables|undefined} value */
+proto.daml_lf_0.TemplateStakeholders.prototype.setObligables = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+proto.daml_lf_0.TemplateStakeholders.prototype.clearObligables = function() {
+  this.setObligables(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.TemplateStakeholders.prototype.hasObligables = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional Controllers controllers = 4;
+ * @return {?proto.daml_lf_0.Controllers}
+ */
+proto.daml_lf_0.TemplateStakeholders.prototype.getControllers = function() {
+  return /** @type{?proto.daml_lf_0.Controllers} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Controllers, 4));
+};
+
+
+/** @param {?proto.daml_lf_0.Controllers|undefined} value */
+proto.daml_lf_0.TemplateStakeholders.prototype.setControllers = function(value) {
+  jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+proto.daml_lf_0.TemplateStakeholders.prototype.clearControllers = function() {
+  this.setControllers(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.TemplateStakeholders.prototype.hasControllers = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional bool is_daml1x = 5;
+ * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
+ * You should avoid comparisons like {@code val === true/false} in those cases.
+ * @return {boolean}
+ */
+proto.daml_lf_0.TemplateStakeholders.prototype.getIsDaml1x = function() {
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 5, false));
+};
+
+
+/** @param {boolean} value */
+proto.daml_lf_0.TemplateStakeholders.prototype.setIsDaml1x = function(value) {
+  jspb.Message.setProto3BooleanField(this, 5, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Controllers = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.daml_lf_0.Controllers.oneofGroups_);
+};
+goog.inherits(proto.daml_lf_0.Controllers, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Controllers.displayName = 'proto.daml_lf_0.Controllers';
+}
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.daml_lf_0.Controllers.oneofGroups_ = [[1,2]];
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.Controllers.SumCase = {
+  SUM_NOT_SET: 0,
+  DETERMINED: 1,
+  NOT_DETERMINED: 2
+};
+
+/**
+ * @return {proto.daml_lf_0.Controllers.SumCase}
+ */
+proto.daml_lf_0.Controllers.prototype.getSumCase = function() {
+  return /** @type {proto.daml_lf_0.Controllers.SumCase} */(jspb.Message.computeOneofCase(this, proto.daml_lf_0.Controllers.oneofGroups_[0]));
+};
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Controllers.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Controllers.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Controllers} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Controllers.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    determined: (f = msg.getDetermined()) && proto.daml_lf_0.Controllers.DeterminedControllers.toObject(includeInstance, f),
+    notDetermined: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Controllers}
+ */
+proto.daml_lf_0.Controllers.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Controllers;
+  return proto.daml_lf_0.Controllers.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Controllers} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Controllers}
+ */
+proto.daml_lf_0.Controllers.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Controllers.DeterminedControllers;
+      reader.readMessage(value,proto.daml_lf_0.Controllers.DeterminedControllers.deserializeBinaryFromReader);
+      msg.setDetermined(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setNotDetermined(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Controllers.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Controllers.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Controllers} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Controllers.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDetermined();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.Controllers.DeterminedControllers.serializeBinaryToWriter
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 2));
+  if (f != null) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Controllers.Controller = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Controllers.Controller.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Controllers.Controller, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Controllers.Controller.displayName = 'proto.daml_lf_0.Controllers.Controller';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Controllers.Controller.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Controllers.Controller.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Controllers.Controller.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Controllers.Controller} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Controllers.Controller.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    choice: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    partiesList: jspb.Message.toObjectList(msg.getPartiesList(),
+    proto.daml_lf_0.AbstractParty.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Controllers.Controller}
+ */
+proto.daml_lf_0.Controllers.Controller.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Controllers.Controller;
+  return proto.daml_lf_0.Controllers.Controller.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Controllers.Controller} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Controllers.Controller}
+ */
+proto.daml_lf_0.Controllers.Controller.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChoice(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.AbstractParty;
+      reader.readMessage(value,proto.daml_lf_0.AbstractParty.deserializeBinaryFromReader);
+      msg.addParties(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Controllers.Controller.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Controllers.Controller.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Controllers.Controller} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Controllers.Controller.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getChoice();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getPartiesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.daml_lf_0.AbstractParty.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string choice = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.Controllers.Controller.prototype.getChoice = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.Controllers.Controller.prototype.setChoice = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * repeated AbstractParty parties = 2;
+ * @return {!Array<!proto.daml_lf_0.AbstractParty>}
+ */
+proto.daml_lf_0.Controllers.Controller.prototype.getPartiesList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.AbstractParty>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.AbstractParty, 2));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.AbstractParty>} value */
+proto.daml_lf_0.Controllers.Controller.prototype.setPartiesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.AbstractParty=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.AbstractParty}
+ */
+proto.daml_lf_0.Controllers.Controller.prototype.addParties = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.daml_lf_0.AbstractParty, opt_index);
+};
+
+
+proto.daml_lf_0.Controllers.Controller.prototype.clearPartiesList = function() {
+  this.setPartiesList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Controllers.DeterminedControllers = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Controllers.DeterminedControllers.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Controllers.DeterminedControllers, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Controllers.DeterminedControllers.displayName = 'proto.daml_lf_0.Controllers.DeterminedControllers';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Controllers.DeterminedControllers.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Controllers.DeterminedControllers.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Controllers.DeterminedControllers.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Controllers.DeterminedControllers} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Controllers.DeterminedControllers.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    controllersList: jspb.Message.toObjectList(msg.getControllersList(),
+    proto.daml_lf_0.Controllers.Controller.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Controllers.DeterminedControllers}
+ */
+proto.daml_lf_0.Controllers.DeterminedControllers.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Controllers.DeterminedControllers;
+  return proto.daml_lf_0.Controllers.DeterminedControllers.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Controllers.DeterminedControllers} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Controllers.DeterminedControllers}
+ */
+proto.daml_lf_0.Controllers.DeterminedControllers.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Controllers.Controller;
+      reader.readMessage(value,proto.daml_lf_0.Controllers.Controller.deserializeBinaryFromReader);
+      msg.addControllers(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Controllers.DeterminedControllers.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Controllers.DeterminedControllers.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Controllers.DeterminedControllers} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Controllers.DeterminedControllers.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getControllersList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.Controllers.Controller.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated Controller controllers = 1;
+ * @return {!Array<!proto.daml_lf_0.Controllers.Controller>}
+ */
+proto.daml_lf_0.Controllers.DeterminedControllers.prototype.getControllersList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Controllers.Controller>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Controllers.Controller, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Controllers.Controller>} value */
+proto.daml_lf_0.Controllers.DeterminedControllers.prototype.setControllersList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Controllers.Controller=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Controllers.Controller}
+ */
+proto.daml_lf_0.Controllers.DeterminedControllers.prototype.addControllers = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.Controllers.Controller, opt_index);
+};
+
+
+proto.daml_lf_0.Controllers.DeterminedControllers.prototype.clearControllersList = function() {
+  this.setControllersList([]);
+};
+
+
+/**
+ * optional DeterminedControllers determined = 1;
+ * @return {?proto.daml_lf_0.Controllers.DeterminedControllers}
+ */
+proto.daml_lf_0.Controllers.prototype.getDetermined = function() {
+  return /** @type{?proto.daml_lf_0.Controllers.DeterminedControllers} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Controllers.DeterminedControllers, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.Controllers.DeterminedControllers|undefined} value */
+proto.daml_lf_0.Controllers.prototype.setDetermined = function(value) {
+  jspb.Message.setOneofWrapperField(this, 1, proto.daml_lf_0.Controllers.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Controllers.prototype.clearDetermined = function() {
+  this.setDetermined(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Controllers.prototype.hasDetermined = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional string not_determined = 2;
+ * @return {string}
+ */
+proto.daml_lf_0.Controllers.prototype.getNotDetermined = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.Controllers.prototype.setNotDetermined = function(value) {
+  jspb.Message.setOneofField(this, 2, proto.daml_lf_0.Controllers.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Controllers.prototype.clearNotDetermined = function() {
+  jspb.Message.setOneofField(this, 2, proto.daml_lf_0.Controllers.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Controllers.prototype.hasNotDetermined = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.AbstractParty = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.daml_lf_0.AbstractParty.oneofGroups_);
+};
+goog.inherits(proto.daml_lf_0.AbstractParty, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.AbstractParty.displayName = 'proto.daml_lf_0.AbstractParty';
+}
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.daml_lf_0.AbstractParty.oneofGroups_ = [[1,2]];
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.AbstractParty.SumCase = {
+  SUM_NOT_SET: 0,
+  LITERAL: 1,
+  NEUTRAL: 2
+};
+
+/**
+ * @return {proto.daml_lf_0.AbstractParty.SumCase}
+ */
+proto.daml_lf_0.AbstractParty.prototype.getSumCase = function() {
+  return /** @type {proto.daml_lf_0.AbstractParty.SumCase} */(jspb.Message.computeOneofCase(this, proto.daml_lf_0.AbstractParty.oneofGroups_[0]));
+};
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.AbstractParty.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.AbstractParty.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.AbstractParty} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.AbstractParty.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    literal: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    neutral: (f = msg.getNeutral()) && proto.daml_lf_0.AbstractParty.Neutral.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.AbstractParty}
+ */
+proto.daml_lf_0.AbstractParty.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.AbstractParty;
+  return proto.daml_lf_0.AbstractParty.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.AbstractParty} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.AbstractParty}
+ */
+proto.daml_lf_0.AbstractParty.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setLiteral(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.AbstractParty.Neutral;
+      reader.readMessage(value,proto.daml_lf_0.AbstractParty.Neutral.deserializeBinaryFromReader);
+      msg.setNeutral(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.AbstractParty.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.AbstractParty.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.AbstractParty} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.AbstractParty.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = /** @type {string} */ (jspb.Message.getField(message, 1));
+  if (f != null) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getNeutral();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.AbstractParty.Neutral.serializeBinaryToWriter
+    );
+  }
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.AbstractParty.Elim = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.daml_lf_0.AbstractParty.Elim.oneofGroups_);
+};
+goog.inherits(proto.daml_lf_0.AbstractParty.Elim, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.AbstractParty.Elim.displayName = 'proto.daml_lf_0.AbstractParty.Elim';
+}
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.daml_lf_0.AbstractParty.Elim.oneofGroups_ = [[1,2,3,4]];
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.AbstractParty.Elim.SumCase = {
+  SUM_NOT_SET: 0,
+  PROJECTION: 1,
+  VARIANT: 2,
+  HEAD: 3,
+  TAIL: 4
+};
+
+/**
+ * @return {proto.daml_lf_0.AbstractParty.Elim.SumCase}
+ */
+proto.daml_lf_0.AbstractParty.Elim.prototype.getSumCase = function() {
+  return /** @type {proto.daml_lf_0.AbstractParty.Elim.SumCase} */(jspb.Message.computeOneofCase(this, proto.daml_lf_0.AbstractParty.Elim.oneofGroups_[0]));
+};
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.AbstractParty.Elim.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.AbstractParty.Elim.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.AbstractParty.Elim} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.AbstractParty.Elim.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    projection: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    variant: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    head: (f = msg.getHead()) && proto.daml_lf_0.Unit.toObject(includeInstance, f),
+    tail: (f = msg.getTail()) && proto.daml_lf_0.Unit.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.AbstractParty.Elim}
+ */
+proto.daml_lf_0.AbstractParty.Elim.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.AbstractParty.Elim;
+  return proto.daml_lf_0.AbstractParty.Elim.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.AbstractParty.Elim} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.AbstractParty.Elim}
+ */
+proto.daml_lf_0.AbstractParty.Elim.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setProjection(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setVariant(value);
+      break;
+    case 3:
+      var value = new proto.daml_lf_0.Unit;
+      reader.readMessage(value,proto.daml_lf_0.Unit.deserializeBinaryFromReader);
+      msg.setHead(value);
+      break;
+    case 4:
+      var value = new proto.daml_lf_0.Unit;
+      reader.readMessage(value,proto.daml_lf_0.Unit.deserializeBinaryFromReader);
+      msg.setTail(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.AbstractParty.Elim.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.AbstractParty.Elim.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.AbstractParty.Elim} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.AbstractParty.Elim.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = /** @type {string} */ (jspb.Message.getField(message, 1));
+  if (f != null) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 2));
+  if (f != null) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = message.getHead();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.daml_lf_0.Unit.serializeBinaryToWriter
+    );
+  }
+  f = message.getTail();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.daml_lf_0.Unit.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string projection = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.AbstractParty.Elim.prototype.getProjection = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.AbstractParty.Elim.prototype.setProjection = function(value) {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.AbstractParty.Elim.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.AbstractParty.Elim.prototype.clearProjection = function() {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.AbstractParty.Elim.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.AbstractParty.Elim.prototype.hasProjection = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional string variant = 2;
+ * @return {string}
+ */
+proto.daml_lf_0.AbstractParty.Elim.prototype.getVariant = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.AbstractParty.Elim.prototype.setVariant = function(value) {
+  jspb.Message.setOneofField(this, 2, proto.daml_lf_0.AbstractParty.Elim.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.AbstractParty.Elim.prototype.clearVariant = function() {
+  jspb.Message.setOneofField(this, 2, proto.daml_lf_0.AbstractParty.Elim.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.AbstractParty.Elim.prototype.hasVariant = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional Unit head = 3;
+ * @return {?proto.daml_lf_0.Unit}
+ */
+proto.daml_lf_0.AbstractParty.Elim.prototype.getHead = function() {
+  return /** @type{?proto.daml_lf_0.Unit} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Unit, 3));
+};
+
+
+/** @param {?proto.daml_lf_0.Unit|undefined} value */
+proto.daml_lf_0.AbstractParty.Elim.prototype.setHead = function(value) {
+  jspb.Message.setOneofWrapperField(this, 3, proto.daml_lf_0.AbstractParty.Elim.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.AbstractParty.Elim.prototype.clearHead = function() {
+  this.setHead(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.AbstractParty.Elim.prototype.hasHead = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional Unit tail = 4;
+ * @return {?proto.daml_lf_0.Unit}
+ */
+proto.daml_lf_0.AbstractParty.Elim.prototype.getTail = function() {
+  return /** @type{?proto.daml_lf_0.Unit} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Unit, 4));
+};
+
+
+/** @param {?proto.daml_lf_0.Unit|undefined} value */
+proto.daml_lf_0.AbstractParty.Elim.prototype.setTail = function(value) {
+  jspb.Message.setOneofWrapperField(this, 4, proto.daml_lf_0.AbstractParty.Elim.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.AbstractParty.Elim.prototype.clearTail = function() {
+  this.setTail(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.AbstractParty.Elim.prototype.hasTail = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.AbstractParty.Neutral = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.AbstractParty.Neutral.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.AbstractParty.Neutral, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.AbstractParty.Neutral.displayName = 'proto.daml_lf_0.AbstractParty.Neutral';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.AbstractParty.Neutral.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.AbstractParty.Neutral.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.AbstractParty.Neutral.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.AbstractParty.Neutral} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.AbstractParty.Neutral.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    head: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    elimsList: jspb.Message.toObjectList(msg.getElimsList(),
+    proto.daml_lf_0.AbstractParty.Elim.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.AbstractParty.Neutral}
+ */
+proto.daml_lf_0.AbstractParty.Neutral.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.AbstractParty.Neutral;
+  return proto.daml_lf_0.AbstractParty.Neutral.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.AbstractParty.Neutral} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.AbstractParty.Neutral}
+ */
+proto.daml_lf_0.AbstractParty.Neutral.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setHead(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.AbstractParty.Elim;
+      reader.readMessage(value,proto.daml_lf_0.AbstractParty.Elim.deserializeBinaryFromReader);
+      msg.addElims(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.AbstractParty.Neutral.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.AbstractParty.Neutral.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.AbstractParty.Neutral} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.AbstractParty.Neutral.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getHead();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getElimsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.daml_lf_0.AbstractParty.Elim.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string head = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.AbstractParty.Neutral.prototype.getHead = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.AbstractParty.Neutral.prototype.setHead = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * repeated Elim elims = 2;
+ * @return {!Array<!proto.daml_lf_0.AbstractParty.Elim>}
+ */
+proto.daml_lf_0.AbstractParty.Neutral.prototype.getElimsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.AbstractParty.Elim>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.AbstractParty.Elim, 2));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.AbstractParty.Elim>} value */
+proto.daml_lf_0.AbstractParty.Neutral.prototype.setElimsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.AbstractParty.Elim=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.AbstractParty.Elim}
+ */
+proto.daml_lf_0.AbstractParty.Neutral.prototype.addElims = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.daml_lf_0.AbstractParty.Elim, opt_index);
+};
+
+
+proto.daml_lf_0.AbstractParty.Neutral.prototype.clearElimsList = function() {
+  this.setElimsList([]);
+};
+
+
+/**
+ * optional string literal = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.AbstractParty.prototype.getLiteral = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.AbstractParty.prototype.setLiteral = function(value) {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.AbstractParty.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.AbstractParty.prototype.clearLiteral = function() {
+  jspb.Message.setOneofField(this, 1, proto.daml_lf_0.AbstractParty.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.AbstractParty.prototype.hasLiteral = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional Neutral neutral = 2;
+ * @return {?proto.daml_lf_0.AbstractParty.Neutral}
+ */
+proto.daml_lf_0.AbstractParty.prototype.getNeutral = function() {
+  return /** @type{?proto.daml_lf_0.AbstractParty.Neutral} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.AbstractParty.Neutral, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.AbstractParty.Neutral|undefined} value */
+proto.daml_lf_0.AbstractParty.prototype.setNeutral = function(value) {
+  jspb.Message.setOneofWrapperField(this, 2, proto.daml_lf_0.AbstractParty.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.AbstractParty.prototype.clearNeutral = function() {
+  this.setNeutral(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.AbstractParty.prototype.hasNeutral = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Obligables = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.daml_lf_0.Obligables.oneofGroups_);
+};
+goog.inherits(proto.daml_lf_0.Obligables, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Obligables.displayName = 'proto.daml_lf_0.Obligables';
+}
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.daml_lf_0.Obligables.oneofGroups_ = [[1,2]];
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.Obligables.SumCase = {
+  SUM_NOT_SET: 0,
+  DETERMINED: 1,
+  NOT_DETERMINED: 2
+};
+
+/**
+ * @return {proto.daml_lf_0.Obligables.SumCase}
+ */
+proto.daml_lf_0.Obligables.prototype.getSumCase = function() {
+  return /** @type {proto.daml_lf_0.Obligables.SumCase} */(jspb.Message.computeOneofCase(this, proto.daml_lf_0.Obligables.oneofGroups_[0]));
+};
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Obligables.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Obligables.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Obligables} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Obligables.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    determined: (f = msg.getDetermined()) && proto.daml_lf_0.Obligables.DeterminedObligables.toObject(includeInstance, f),
+    notDetermined: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Obligables}
+ */
+proto.daml_lf_0.Obligables.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Obligables;
+  return proto.daml_lf_0.Obligables.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Obligables} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Obligables}
+ */
+proto.daml_lf_0.Obligables.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Obligables.DeterminedObligables;
+      reader.readMessage(value,proto.daml_lf_0.Obligables.DeterminedObligables.deserializeBinaryFromReader);
+      msg.setDetermined(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setNotDetermined(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Obligables.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Obligables.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Obligables} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Obligables.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDetermined();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.Obligables.DeterminedObligables.serializeBinaryToWriter
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 2));
+  if (f != null) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Obligables.ObligableClause = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Obligables.ObligableClause.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Obligables.ObligableClause, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Obligables.ObligableClause.displayName = 'proto.daml_lf_0.Obligables.ObligableClause';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Obligables.ObligableClause.repeatedFields_ = [1,2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Obligables.ObligableClause.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Obligables.ObligableClause.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Obligables.ObligableClause} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Obligables.ObligableClause.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    controllingList: jspb.Message.toObjectList(msg.getControllingList(),
+    proto.daml_lf_0.AbstractParty.toObject, includeInstance),
+    obligablesList: jspb.Message.toObjectList(msg.getObligablesList(),
+    proto.daml_lf_0.AbstractParty.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Obligables.ObligableClause}
+ */
+proto.daml_lf_0.Obligables.ObligableClause.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Obligables.ObligableClause;
+  return proto.daml_lf_0.Obligables.ObligableClause.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Obligables.ObligableClause} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Obligables.ObligableClause}
+ */
+proto.daml_lf_0.Obligables.ObligableClause.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.AbstractParty;
+      reader.readMessage(value,proto.daml_lf_0.AbstractParty.deserializeBinaryFromReader);
+      msg.addControlling(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.AbstractParty;
+      reader.readMessage(value,proto.daml_lf_0.AbstractParty.deserializeBinaryFromReader);
+      msg.addObligables(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Obligables.ObligableClause.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Obligables.ObligableClause.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Obligables.ObligableClause} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Obligables.ObligableClause.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getControllingList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.AbstractParty.serializeBinaryToWriter
+    );
+  }
+  f = message.getObligablesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.daml_lf_0.AbstractParty.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated AbstractParty controlling = 1;
+ * @return {!Array<!proto.daml_lf_0.AbstractParty>}
+ */
+proto.daml_lf_0.Obligables.ObligableClause.prototype.getControllingList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.AbstractParty>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.AbstractParty, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.AbstractParty>} value */
+proto.daml_lf_0.Obligables.ObligableClause.prototype.setControllingList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.AbstractParty=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.AbstractParty}
+ */
+proto.daml_lf_0.Obligables.ObligableClause.prototype.addControlling = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.AbstractParty, opt_index);
+};
+
+
+proto.daml_lf_0.Obligables.ObligableClause.prototype.clearControllingList = function() {
+  this.setControllingList([]);
+};
+
+
+/**
+ * repeated AbstractParty obligables = 2;
+ * @return {!Array<!proto.daml_lf_0.AbstractParty>}
+ */
+proto.daml_lf_0.Obligables.ObligableClause.prototype.getObligablesList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.AbstractParty>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.AbstractParty, 2));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.AbstractParty>} value */
+proto.daml_lf_0.Obligables.ObligableClause.prototype.setObligablesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.AbstractParty=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.AbstractParty}
+ */
+proto.daml_lf_0.Obligables.ObligableClause.prototype.addObligables = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.daml_lf_0.AbstractParty, opt_index);
+};
+
+
+proto.daml_lf_0.Obligables.ObligableClause.prototype.clearObligablesList = function() {
+  this.setObligablesList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Obligables.DeterminedObligables = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Obligables.DeterminedObligables.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Obligables.DeterminedObligables, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Obligables.DeterminedObligables.displayName = 'proto.daml_lf_0.Obligables.DeterminedObligables';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Obligables.DeterminedObligables.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Obligables.DeterminedObligables.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Obligables.DeterminedObligables.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Obligables.DeterminedObligables} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Obligables.DeterminedObligables.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    clausesList: jspb.Message.toObjectList(msg.getClausesList(),
+    proto.daml_lf_0.Obligables.ObligableClause.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Obligables.DeterminedObligables}
+ */
+proto.daml_lf_0.Obligables.DeterminedObligables.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Obligables.DeterminedObligables;
+  return proto.daml_lf_0.Obligables.DeterminedObligables.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Obligables.DeterminedObligables} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Obligables.DeterminedObligables}
+ */
+proto.daml_lf_0.Obligables.DeterminedObligables.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Obligables.ObligableClause;
+      reader.readMessage(value,proto.daml_lf_0.Obligables.ObligableClause.deserializeBinaryFromReader);
+      msg.addClauses(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Obligables.DeterminedObligables.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Obligables.DeterminedObligables.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Obligables.DeterminedObligables} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Obligables.DeterminedObligables.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getClausesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.Obligables.ObligableClause.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated ObligableClause clauses = 1;
+ * @return {!Array<!proto.daml_lf_0.Obligables.ObligableClause>}
+ */
+proto.daml_lf_0.Obligables.DeterminedObligables.prototype.getClausesList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Obligables.ObligableClause>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Obligables.ObligableClause, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Obligables.ObligableClause>} value */
+proto.daml_lf_0.Obligables.DeterminedObligables.prototype.setClausesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Obligables.ObligableClause=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Obligables.ObligableClause}
+ */
+proto.daml_lf_0.Obligables.DeterminedObligables.prototype.addClauses = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.Obligables.ObligableClause, opt_index);
+};
+
+
+proto.daml_lf_0.Obligables.DeterminedObligables.prototype.clearClausesList = function() {
+  this.setClausesList([]);
+};
+
+
+/**
+ * optional DeterminedObligables determined = 1;
+ * @return {?proto.daml_lf_0.Obligables.DeterminedObligables}
+ */
+proto.daml_lf_0.Obligables.prototype.getDetermined = function() {
+  return /** @type{?proto.daml_lf_0.Obligables.DeterminedObligables} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Obligables.DeterminedObligables, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.Obligables.DeterminedObligables|undefined} value */
+proto.daml_lf_0.Obligables.prototype.setDetermined = function(value) {
+  jspb.Message.setOneofWrapperField(this, 1, proto.daml_lf_0.Obligables.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Obligables.prototype.clearDetermined = function() {
+  this.setDetermined(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Obligables.prototype.hasDetermined = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional string not_determined = 2;
+ * @return {string}
+ */
+proto.daml_lf_0.Obligables.prototype.getNotDetermined = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.Obligables.prototype.setNotDetermined = function(value) {
+  jspb.Message.setOneofField(this, 2, proto.daml_lf_0.Obligables.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Obligables.prototype.clearNotDetermined = function() {
+  jspb.Message.setOneofField(this, 2, proto.daml_lf_0.Obligables.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Obligables.prototype.hasNotDetermined = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.PatternMatch = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.PatternMatch, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.PatternMatch.displayName = 'proto.daml_lf_0.PatternMatch';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.PatternMatch.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.PatternMatch.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.PatternMatch} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.PatternMatch.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    contractId: (f = msg.getContractId()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    pattern: (f = msg.getPattern()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    body: (f = msg.getBody()) && proto.daml_lf_0.Expr.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.PatternMatch}
+ */
+proto.daml_lf_0.PatternMatch.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.PatternMatch;
+  return proto.daml_lf_0.PatternMatch.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.PatternMatch} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.PatternMatch}
+ */
+proto.daml_lf_0.PatternMatch.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setContractId(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setPattern(value);
+      break;
+    case 3:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setBody(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.PatternMatch.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.PatternMatch.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.PatternMatch} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.PatternMatch.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getContractId();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getPattern();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getBody();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Expr contract_id = 1;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.PatternMatch.prototype.getContractId = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.PatternMatch.prototype.setContractId = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.daml_lf_0.PatternMatch.prototype.clearContractId = function() {
+  this.setContractId(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.PatternMatch.prototype.hasContractId = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional Expr pattern = 2;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.PatternMatch.prototype.getPattern = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.PatternMatch.prototype.setPattern = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.PatternMatch.prototype.clearPattern = function() {
+  this.setPattern(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.PatternMatch.prototype.hasPattern = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional Expr body = 3;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.PatternMatch.prototype.getBody = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 3));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.PatternMatch.prototype.setBody = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+proto.daml_lf_0.PatternMatch.prototype.clearBody = function() {
+  this.setBody(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.PatternMatch.prototype.hasBody = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Scenario = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.Scenario.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.Scenario, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Scenario.displayName = 'proto.daml_lf_0.Scenario';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.Scenario.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Scenario.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Scenario.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Scenario} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Scenario.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    stepsList: jspb.Message.toObjectList(msg.getStepsList(),
+    proto.daml_lf_0.Scenario.ScenarioStep.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Scenario}
+ */
+proto.daml_lf_0.Scenario.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Scenario;
+  return proto.daml_lf_0.Scenario.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Scenario} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Scenario}
+ */
+proto.daml_lf_0.Scenario.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Scenario.ScenarioStep;
+      reader.readMessage(value,proto.daml_lf_0.Scenario.ScenarioStep.deserializeBinaryFromReader);
+      msg.addSteps(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Scenario.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Scenario.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Scenario} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Scenario.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getStepsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.daml_lf_0.Scenario.ScenarioStep.serializeBinaryToWriter
+    );
+  }
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Scenario.ScenarioStep = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.daml_lf_0.Scenario.ScenarioStep, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Scenario.ScenarioStep.displayName = 'proto.daml_lf_0.Scenario.ScenarioStep';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Scenario.ScenarioStep.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Scenario.ScenarioStep.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Scenario.ScenarioStep} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Scenario.ScenarioStep.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    expr: (f = msg.getExpr()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    pat: (f = msg.getPat()) && proto.daml_lf_0.RecordPattern.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Scenario.ScenarioStep}
+ */
+proto.daml_lf_0.Scenario.ScenarioStep.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Scenario.ScenarioStep;
+  return proto.daml_lf_0.Scenario.ScenarioStep.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Scenario.ScenarioStep} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Scenario.ScenarioStep}
+ */
+proto.daml_lf_0.Scenario.ScenarioStep.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setExpr(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.RecordPattern;
+      reader.readMessage(value,proto.daml_lf_0.RecordPattern.deserializeBinaryFromReader);
+      msg.setPat(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Scenario.ScenarioStep.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Scenario.ScenarioStep.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Scenario.ScenarioStep} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Scenario.ScenarioStep.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getExpr();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getPat();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.RecordPattern.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Expr expr = 1;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.Scenario.ScenarioStep.prototype.getExpr = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.Scenario.ScenarioStep.prototype.setExpr = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.daml_lf_0.Scenario.ScenarioStep.prototype.clearExpr = function() {
+  this.setExpr(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Scenario.ScenarioStep.prototype.hasExpr = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional RecordPattern pat = 2;
+ * @return {?proto.daml_lf_0.RecordPattern}
+ */
+proto.daml_lf_0.Scenario.ScenarioStep.prototype.getPat = function() {
+  return /** @type{?proto.daml_lf_0.RecordPattern} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.RecordPattern, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.RecordPattern|undefined} value */
+proto.daml_lf_0.Scenario.ScenarioStep.prototype.setPat = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.daml_lf_0.Scenario.ScenarioStep.prototype.clearPat = function() {
+  this.setPat(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Scenario.ScenarioStep.prototype.hasPat = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * repeated ScenarioStep steps = 1;
+ * @return {!Array<!proto.daml_lf_0.Scenario.ScenarioStep>}
+ */
+proto.daml_lf_0.Scenario.prototype.getStepsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Scenario.ScenarioStep>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Scenario.ScenarioStep, 1));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Scenario.ScenarioStep>} value */
+proto.daml_lf_0.Scenario.prototype.setStepsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Scenario.ScenarioStep=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Scenario.ScenarioStep}
+ */
+proto.daml_lf_0.Scenario.prototype.addSteps = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.daml_lf_0.Scenario.ScenarioStep, opt_index);
+};
+
+
+proto.daml_lf_0.Scenario.prototype.clearStepsList = function() {
+  this.setStepsList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.Decl = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.daml_lf_0.Decl.oneofGroups_);
+};
+goog.inherits(proto.daml_lf_0.Decl, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.Decl.displayName = 'proto.daml_lf_0.Decl';
+}
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.daml_lf_0.Decl.oneofGroups_ = [[1,2]];
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.Decl.SumCase = {
+  SUM_NOT_SET: 0,
+  TYPE: 1,
+  TERM: 2
+};
+
+/**
+ * @return {proto.daml_lf_0.Decl.SumCase}
+ */
+proto.daml_lf_0.Decl.prototype.getSumCase = function() {
+  return /** @type {proto.daml_lf_0.Decl.SumCase} */(jspb.Message.computeOneofCase(this, proto.daml_lf_0.Decl.oneofGroups_[0]));
+};
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.Decl.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.Decl.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.Decl} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Decl.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    type: (f = msg.getType()) && proto.daml_lf_0.DeclType.toObject(includeInstance, f),
+    term: (f = msg.getTerm()) && proto.daml_lf_0.DeclTerm.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.Decl}
+ */
+proto.daml_lf_0.Decl.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.Decl;
+  return proto.daml_lf_0.Decl.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.Decl} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.Decl}
+ */
+proto.daml_lf_0.Decl.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.DeclType;
+      reader.readMessage(value,proto.daml_lf_0.DeclType.deserializeBinaryFromReader);
+      msg.setType(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.DeclTerm;
+      reader.readMessage(value,proto.daml_lf_0.DeclTerm.deserializeBinaryFromReader);
+      msg.setTerm(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.Decl.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.Decl.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.Decl} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.Decl.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getType();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.DeclType.serializeBinaryToWriter
+    );
+  }
+  f = message.getTerm();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.daml_lf_0.DeclTerm.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional DeclType type = 1;
+ * @return {?proto.daml_lf_0.DeclType}
+ */
+proto.daml_lf_0.Decl.prototype.getType = function() {
+  return /** @type{?proto.daml_lf_0.DeclType} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.DeclType, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.DeclType|undefined} value */
+proto.daml_lf_0.Decl.prototype.setType = function(value) {
+  jspb.Message.setOneofWrapperField(this, 1, proto.daml_lf_0.Decl.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Decl.prototype.clearType = function() {
+  this.setType(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Decl.prototype.hasType = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional DeclTerm term = 2;
+ * @return {?proto.daml_lf_0.DeclTerm}
+ */
+proto.daml_lf_0.Decl.prototype.getTerm = function() {
+  return /** @type{?proto.daml_lf_0.DeclTerm} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.DeclTerm, 2));
+};
+
+
+/** @param {?proto.daml_lf_0.DeclTerm|undefined} value */
+proto.daml_lf_0.Decl.prototype.setTerm = function(value) {
+  jspb.Message.setOneofWrapperField(this, 2, proto.daml_lf_0.Decl.oneofGroups_[0], value);
+};
+
+
+proto.daml_lf_0.Decl.prototype.clearTerm = function() {
+  this.setTerm(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.Decl.prototype.hasTerm = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.DeclType = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.DeclType.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.DeclType, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.DeclType.displayName = 'proto.daml_lf_0.DeclType';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.DeclType.repeatedFields_ = [3];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.DeclType.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.DeclType.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.DeclType} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.DeclType.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    paramsList: jspb.Message.getRepeatedField(msg, 3),
+    body: (f = msg.getBody()) && proto.daml_lf_0.Type.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.DeclType}
+ */
+proto.daml_lf_0.DeclType.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.DeclType;
+  return proto.daml_lf_0.DeclType.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.DeclType} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.DeclType}
+ */
+proto.daml_lf_0.DeclType.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addParams(value);
+      break;
+    case 4:
+      var value = new proto.daml_lf_0.Type;
+      reader.readMessage(value,proto.daml_lf_0.Type.deserializeBinaryFromReader);
+      msg.setBody(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.DeclType.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.DeclType.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.DeclType} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.DeclType.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getParamsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      3,
+      f
+    );
+  }
+  f = message.getBody();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.daml_lf_0.Type.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string name = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.DeclType.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.DeclType.prototype.setName = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * repeated string params = 3;
+ * @return {!Array<string>}
+ */
+proto.daml_lf_0.DeclType.prototype.getParamsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 3));
+};
+
+
+/** @param {!Array<string>} value */
+proto.daml_lf_0.DeclType.prototype.setParamsList = function(value) {
+  jspb.Message.setField(this, 3, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ */
+proto.daml_lf_0.DeclType.prototype.addParams = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 3, value, opt_index);
+};
+
+
+proto.daml_lf_0.DeclType.prototype.clearParamsList = function() {
+  this.setParamsList([]);
+};
+
+
+/**
+ * optional Type body = 4;
+ * @return {?proto.daml_lf_0.Type}
+ */
+proto.daml_lf_0.DeclType.prototype.getBody = function() {
+  return /** @type{?proto.daml_lf_0.Type} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type, 4));
+};
+
+
+/** @param {?proto.daml_lf_0.Type|undefined} value */
+proto.daml_lf_0.DeclType.prototype.setBody = function(value) {
+  jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+proto.daml_lf_0.DeclType.prototype.clearBody = function() {
+  this.setBody(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.DeclType.prototype.hasBody = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.DeclTerm = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.DeclTerm.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.DeclTerm, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.DeclTerm.displayName = 'proto.daml_lf_0.DeclTerm';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.DeclTerm.repeatedFields_ = [3];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.DeclTerm.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.DeclTerm.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.DeclTerm} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.DeclTerm.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    kind: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    paramsList: jspb.Message.toObjectList(msg.getParamsList(),
+    proto.daml_lf_0.TypedBinder.toObject, includeInstance),
+    resultType: (f = msg.getResultType()) && proto.daml_lf_0.Type.toObject(includeInstance, f),
+    body: (f = msg.getBody()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    topology: (f = msg.getTopology()) && proto.daml_lf_0.ScenarioTopology.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.DeclTerm}
+ */
+proto.daml_lf_0.DeclTerm.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.DeclTerm;
+  return proto.daml_lf_0.DeclTerm.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.DeclTerm} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.DeclTerm}
+ */
+proto.daml_lf_0.DeclTerm.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 2:
+      var value = /** @type {!proto.daml_lf_0.DeclTermKind} */ (reader.readEnum());
+      msg.setKind(value);
+      break;
+    case 3:
+      var value = new proto.daml_lf_0.TypedBinder;
+      reader.readMessage(value,proto.daml_lf_0.TypedBinder.deserializeBinaryFromReader);
+      msg.addParams(value);
+      break;
+    case 4:
+      var value = new proto.daml_lf_0.Type;
+      reader.readMessage(value,proto.daml_lf_0.Type.deserializeBinaryFromReader);
+      msg.setResultType(value);
+      break;
+    case 5:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setBody(value);
+      break;
+    case 6:
+      var value = new proto.daml_lf_0.ScenarioTopology;
+      reader.readMessage(value,proto.daml_lf_0.ScenarioTopology.deserializeBinaryFromReader);
+      msg.setTopology(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.DeclTerm.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.DeclTerm.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.DeclTerm} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.DeclTerm.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getKind();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      2,
+      f
+    );
+  }
+  f = message.getParamsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      3,
+      f,
+      proto.daml_lf_0.TypedBinder.serializeBinaryToWriter
+    );
+  }
+  f = message.getResultType();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.daml_lf_0.Type.serializeBinaryToWriter
+    );
+  }
+  f = message.getBody();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getTopology();
+  if (f != null) {
+    writer.writeMessage(
+      6,
+      f,
+      proto.daml_lf_0.ScenarioTopology.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string name = 1;
+ * @return {string}
+ */
+proto.daml_lf_0.DeclTerm.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.daml_lf_0.DeclTerm.prototype.setName = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional DeclTermKind kind = 2;
+ * @return {!proto.daml_lf_0.DeclTermKind}
+ */
+proto.daml_lf_0.DeclTerm.prototype.getKind = function() {
+  return /** @type {!proto.daml_lf_0.DeclTermKind} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/** @param {!proto.daml_lf_0.DeclTermKind} value */
+proto.daml_lf_0.DeclTerm.prototype.setKind = function(value) {
+  jspb.Message.setProto3EnumField(this, 2, value);
+};
+
+
+/**
+ * repeated TypedBinder params = 3;
+ * @return {!Array<!proto.daml_lf_0.TypedBinder>}
+ */
+proto.daml_lf_0.DeclTerm.prototype.getParamsList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.TypedBinder>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.TypedBinder, 3));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.TypedBinder>} value */
+proto.daml_lf_0.DeclTerm.prototype.setParamsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 3, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.TypedBinder=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.TypedBinder}
+ */
+proto.daml_lf_0.DeclTerm.prototype.addParams = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.daml_lf_0.TypedBinder, opt_index);
+};
+
+
+proto.daml_lf_0.DeclTerm.prototype.clearParamsList = function() {
+  this.setParamsList([]);
+};
+
+
+/**
+ * optional Type result_type = 4;
+ * @return {?proto.daml_lf_0.Type}
+ */
+proto.daml_lf_0.DeclTerm.prototype.getResultType = function() {
+  return /** @type{?proto.daml_lf_0.Type} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Type, 4));
+};
+
+
+/** @param {?proto.daml_lf_0.Type|undefined} value */
+proto.daml_lf_0.DeclTerm.prototype.setResultType = function(value) {
+  jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+proto.daml_lf_0.DeclTerm.prototype.clearResultType = function() {
+  this.setResultType(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.DeclTerm.prototype.hasResultType = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional Expr body = 5;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.DeclTerm.prototype.getBody = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 5));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.DeclTerm.prototype.setBody = function(value) {
+  jspb.Message.setWrapperField(this, 5, value);
+};
+
+
+proto.daml_lf_0.DeclTerm.prototype.clearBody = function() {
+  this.setBody(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.DeclTerm.prototype.hasBody = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional ScenarioTopology topology = 6;
+ * @return {?proto.daml_lf_0.ScenarioTopology}
+ */
+proto.daml_lf_0.DeclTerm.prototype.getTopology = function() {
+  return /** @type{?proto.daml_lf_0.ScenarioTopology} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.ScenarioTopology, 6));
+};
+
+
+/** @param {?proto.daml_lf_0.ScenarioTopology|undefined} value */
+proto.daml_lf_0.DeclTerm.prototype.setTopology = function(value) {
+  jspb.Message.setWrapperField(this, 6, value);
+};
+
+
+proto.daml_lf_0.DeclTerm.prototype.clearTopology = function() {
+  this.setTopology(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.DeclTerm.prototype.hasTopology = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.daml_lf_0.ScenarioTopology = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.daml_lf_0.ScenarioTopology.repeatedFields_, null);
+};
+goog.inherits(proto.daml_lf_0.ScenarioTopology, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.daml_lf_0.ScenarioTopology.displayName = 'proto.daml_lf_0.ScenarioTopology';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.daml_lf_0.ScenarioTopology.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.daml_lf_0.ScenarioTopology.prototype.toObject = function(opt_includeInstance) {
+  return proto.daml_lf_0.ScenarioTopology.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.daml_lf_0.ScenarioTopology} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.ScenarioTopology.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    writer: (f = msg.getWriter()) && proto.daml_lf_0.Expr.toObject(includeInstance, f),
+    readerList: jspb.Message.toObjectList(msg.getReaderList(),
+    proto.daml_lf_0.Expr.toObject, includeInstance)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.daml_lf_0.ScenarioTopology}
+ */
+proto.daml_lf_0.ScenarioTopology.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.daml_lf_0.ScenarioTopology;
+  return proto.daml_lf_0.ScenarioTopology.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.daml_lf_0.ScenarioTopology} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.daml_lf_0.ScenarioTopology}
+ */
+proto.daml_lf_0.ScenarioTopology.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.setWriter(value);
+      break;
+    case 2:
+      var value = new proto.daml_lf_0.Expr;
+      reader.readMessage(value,proto.daml_lf_0.Expr.deserializeBinaryFromReader);
+      msg.addReader(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.daml_lf_0.ScenarioTopology.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.daml_lf_0.ScenarioTopology.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.daml_lf_0.ScenarioTopology} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.daml_lf_0.ScenarioTopology.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getWriter();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+  f = message.getReaderList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      proto.daml_lf_0.Expr.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Expr writer = 1;
+ * @return {?proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.ScenarioTopology.prototype.getWriter = function() {
+  return /** @type{?proto.daml_lf_0.Expr} */ (
+    jspb.Message.getWrapperField(this, proto.daml_lf_0.Expr, 1));
+};
+
+
+/** @param {?proto.daml_lf_0.Expr|undefined} value */
+proto.daml_lf_0.ScenarioTopology.prototype.setWriter = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.daml_lf_0.ScenarioTopology.prototype.clearWriter = function() {
+  this.setWriter(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.daml_lf_0.ScenarioTopology.prototype.hasWriter = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * repeated Expr reader = 2;
+ * @return {!Array<!proto.daml_lf_0.Expr>}
+ */
+proto.daml_lf_0.ScenarioTopology.prototype.getReaderList = function() {
+  return /** @type{!Array<!proto.daml_lf_0.Expr>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.daml_lf_0.Expr, 2));
+};
+
+
+/** @param {!Array<!proto.daml_lf_0.Expr>} value */
+proto.daml_lf_0.ScenarioTopology.prototype.setReaderList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.daml_lf_0.Expr=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.daml_lf_0.Expr}
+ */
+proto.daml_lf_0.ScenarioTopology.prototype.addReader = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.daml_lf_0.Expr, opt_index);
+};
+
+
+proto.daml_lf_0.ScenarioTopology.prototype.clearReaderList = function() {
+  this.setReaderList([]);
+};
+
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.ChoiceKind = {
+  MAY_CHOOSE_CONSUMING: 0,
+  MAY_CHOOSE_NONCONSUMING: 1,
+  MUST_CHOOSE: 2
+};
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.Op = {
+  OP_ADD: 0,
+  OP_SUB: 1,
+  OP_MULT: 2,
+  OP_DIV: 3,
+  OP_INTMOD: 4,
+  OP_EXP: 5,
+  OP_LESS: 6,
+  OP_LEQ: 7,
+  OP_GREATER: 8,
+  OP_GEQ: 9,
+  OP_EQ: 10,
+  OP_NEQ: 11,
+  OP_AND: 12,
+  OP_OR: 13,
+  OP_APPEND: 14,
+  OP_OVERLAY: 15
+};
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.BuiltinType = {
+  BT_DATA: 0,
+  BT_ANY: 1,
+  BT_VOID: 2,
+  BT_BOOL: 3,
+  BT_INTEGER: 4,
+  BT_DECIMAL: 5,
+  BT_CHAR: 6,
+  BT_TEXT: 7,
+  BT_TIME: 8,
+  BT_RELTIME: 9,
+  BT_LIST: 10,
+  BT_PARTY: 11,
+  BT_CONTRACTID: 12,
+  BT_UPDATE: 13,
+  BT_SCENARIO: 14,
+  BT_CHOICE: 15,
+  BT_CONTRACT: 16,
+  BT_RECORD: 17,
+  BT_PUREVALUE: 18,
+  BT_ASSERTION: 19,
+  BT_TEMPLATE: 20,
+  BT_UNIT: 21
+};
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.Builtin = {
+  B_TOTEXT: 0,
+  B_SINGLETON: 1,
+  B_UNPACK: 2,
+  B_FROMRELTIME: 3,
+  B_TORELTIME: 4,
+  B_SUBTIME: 5,
+  B_FROMINTEGER: 6,
+  B_TOINTEGER: 7,
+  B_PURE: 8,
+  B_PASS: 9,
+  B_CREATE: 10,
+  B_CREATETRANSIENT: 11,
+  B_DELETE: 12,
+  B_ASSERT: 13,
+  B_ASSERTISACTIVEAT: 14,
+  B_MUSTFAILAT: 15,
+  B_ROUND: 16,
+  B_DIVD: 17,
+  B_REMD: 18,
+  B_NOT: 19,
+  B_OR: 20,
+  B_AND: 21,
+  B_NIL: 22,
+  B_CONS: 23,
+  B_FOLDL: 24,
+  B_FOLDR: 25,
+  B_LOOKUP: 26,
+  B_EXTEND: 27,
+  B_TAG: 28,
+  B_EXERCISES: 29,
+  B_COMMIT: 30,
+  B_FIX: 31,
+  B_FETCH: 32,
+  B_GETTIME: 33,
+  B_ABORT: 34,
+  B_ADDRELTIME: 35,
+  B_EXPLODE_TEXT: 36,
+  B_TIME_TO_UNIX_MICROSECONDS: 37,
+  B_UNIX_MICROSECONDS_TO_TIME: 38,
+  B_IMPLODE_TEXT: 39
+};
+
+/**
+ * @enum {number}
+ */
+proto.daml_lf_0.DeclTermKind = {
+  TEMPLATE: 0,
+  FUNCTION: 1,
+  TEST: 2,
+  LET: 3
+};
+
+goog.object.extend(exports, proto.daml_lf_0);
