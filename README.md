@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/digital-asset/ex-mortgage-repackaging.svg?style=svg)](https://circleci.com/gh/digital-asset/ex-mortgage-repackaging)
 # Reference Application: Mortgage Repackaging
 
 ## Introduction
