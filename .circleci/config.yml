@@ -9,6 +9,9 @@ executors:
   daml-executor:
     docker:
       - image: digitalasset/daml-sdk:0.12.15-circleci-master
+  node-executor:
+    docker:
+      - image: node:8.12
 
 
 jobs:
@@ -27,15 +30,13 @@ jobs:
           path: target/daml-test-reports
           
   npm_test:       
-    executor: daml-executor
+    executor: node-executor
     steps:
       - checkout
       - run:
           command: |
-            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-            nvm install v8.12.0
-            nvm use v8.12.0
             npm install -g yarn
+            make build
       - run:
           name: Run Blackduck Detect
           command: |
