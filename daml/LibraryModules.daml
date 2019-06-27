@@ -1,18 +1,19 @@
 daml 1.2
 module LibraryModules where
 
-import Main.AvailableCusip
-import Main.CustomTypes
-import Main.Delegation
-import Main.MortgagePoolAgreement
-import Main.MortgagePoolAgreementDraft
-import Main.MortgagePoolAgreementProposal
-import Main.MortgagePool
-import Main.Roles
+import Main.AvailableCusip()
+import Main.CustomTypes()
+import Main.Delegation()
+import Main.MortgagePoolAgreement()
+import Main.MortgagePoolAgreementDraft()
+import Main.MortgagePoolAgreementProposal()
+import Main.MortgagePool()
+import Main.Roles()
+import Main.Main()
 
-import Tests.AvailableCusipTests
-import Tests.Factories
-import Tests.MortgagePoolAgreementDraftTests
-import Tests.MortgagePoolAgreementProposalTests
-import Tests.MortgagePoolAgreementTests
-import Tests.RolesTests
+import Tests.AvailableCusipTests()
+import Tests.Factories()
+import Tests.MortgagePoolAgreementDraftTests()
+import Tests.MortgagePoolAgreementProposalTests()
+import Tests.MortgagePoolAgreementTests()
+import Tests.RolesTests()
