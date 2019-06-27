@@ -27,9 +27,10 @@ export function theme(userId, party, role) {
 
 const getPools =
     r => {
-        if (r.underlyingPools != null && r.underlyingPools != 0) {
-            const arr = Object.values(r.underlyingPools);
-            return arr.map(pool => String(pool.cusip.text)).join(", ");
+        if (r.underlyingPools) {
+            return Object.values(r.underlyingPools)
+                         .map(pool => pool.cusip.text)
+                         .join(", ");
         } else {
             return "-";
         }
@@ -39,7 +40,7 @@ const mgpoolAgrDrafts = createTab("Mortg.Pool Agr. Drafts", ":MortgagePoolAgreem
     createIdCol(),
     createCol("mortgagePoolHolder"),
     createCol("operator"),
-    createCol("underlyingPools", "underlyingPools", null, getPools)
+    createCol("underlyingPools", "Underlying Pools", null, getPools, false)
 ]);
 
 const mgpoolAgrProps = createTab("Mortg.Pool Agr. Props.", ":MortgagePoolAgreementProposal@", [
@@ -47,7 +48,7 @@ const mgpoolAgrProps = createTab("Mortg.Pool Agr. Props.", ":MortgagePoolAgreeme
     createCol("mortgagePoolHolder"),
     createCol("securitizer"),
     createCol("operator"),
-    createCol("passThroughRate", "passThroughRate", null, r => r.agreementFields.passThroughRate),
+    createCol("passThroughRate", "PassThrough Rate", null, r => r.agreementFields.passThroughRate),
     createCol("poolType", "poolType", null, r => getObjectProp1(r.agreementFields.poolType)),
 ]);
 
@@ -56,7 +57,7 @@ const mgpoolAgrs = createTab("Mortg.Pool Agreements", ":MortgagePoolAgreement@",
     createCol("mortgagePoolHolder"),
     createCol("securitizer"),
     createCol("operator"),
-    createCol("passThroughRate", "passThroughRate", null, r => r.agreementFields.passThroughRate),
+    createCol("passThroughRate", "PassThrough Rate", null, r => r.agreementFields.passThroughRate),
     createCol("poolType", "poolType", null, r => getObjectProp1(r.agreementFields.poolType)),
 ]);
 
@@ -64,7 +65,7 @@ const mgpool = createTab("Mortgage Pool", ":MortgagePool@", [
     createIdCol(),
     createCol("owner"),
     createCol("operator"),
-    createCol("passThroughRate", "passThroughRate", null, r => r.mortgagePoolFields.passThroughRate),
+    createCol("passThroughRate", "PassThrough Rate", null, r => r.mortgagePoolFields.passThroughRate),
     createCol("poolType", "poolType", null, r => getObjectProp1(r.mortgagePoolFields.poolType)),
 ]);
 
@@ -95,7 +96,7 @@ const availableCusips = createTab("Available CUSIPs", ":AvailableCUSIP@", [
     createIdCol(),
     createCol("securitizer"),
     createCol("registry"),
-    createCol("cusip", "cusip", null, r => r.cusip.text)
+    createCol("cusip", "CUSIP", null, r => r.cusip.text)
 ]);
 
 // --- Assigning views to parties --------------------------------------------------------------------
@@ -155,13 +156,13 @@ export const customViews = (userId, party, role) => {
  if proj is null and key is "id" then it will default to the contract id
  if proj is null and key is not "id" then it will default to stringified single or array value of rowData.key
 */
-function createCol(key, title = toTitle(key), width = 80, proj) {
+function createCol(key, title = toTitle(key), width = 80, proj, format=true) {
     return {
         key: key,
         title: title,
         createCell: ({ rowData }) => ({
             type: "text",
-            value: valueFunction(rowData, key, proj)
+            value: valueFunction(rowData, key, proj, format)
         }),
         sortable: true,
         width: width,
@@ -219,7 +220,7 @@ function formatIfNum(val) {
     else return n.toLocaleString();
 }
 
-function valueFunction(rowData, key, proj) {
+function valueFunction(rowData, key, proj, format=true) {
     return (
         proj == null
         ?
@@ -233,11 +234,11 @@ function valueFunction(rowData, key, proj) {
                 ?
                 rowData.id
                 :
-                formatIfNum(DamlLfValue.toJSON(rowData.argument)[key])
+                format ? formatIfNum(DamlLfValue.toJSON(rowData.argument)[key]) : DamlLfValue.toJSON(rowData.argument)[key]
             )
         )
         :
-        formatIfNum(proj(DamlLfValue.toJSON(rowData.argument))));
+        format ? formatIfNum(proj(DamlLfValue.toJSON(rowData.argument))) : proj(DamlLfValue.toJSON(rowData.argument)));
 }
 
 // inserts spaces into the usually camel-case key
