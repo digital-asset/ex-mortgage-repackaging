@@ -22,42 +22,65 @@ several pools of loans into a single security.
 Be sure you have the following installed:
 * DAML SDK
 * Docker
-* Make
-* node v8.12.0
-* yarn
 
-Shortcut for `nvm`[^1] users:
-```bash
-nvm install v8.12.0
-nvm use v8.12.0
-npm install -g yarn
+#### Build with Daml Assistant
+
+Type:
+
 ```
-[^1]: nvm https://github.com/creationix/nvm
+daml build
+```
+**Note:** If you change the DAML models locally, you need to re-run this command before starting the application.
+
 
 ## Running the Application
 
 ### Starting the App
+There are two options:
 
-**1.** Run da sandbox in docker and envoy proxy with `make start`.
+#### Option 1: Starting the App with Docker
 
-**2.** Populate initial data with `make populate`.
+1.  Make sure you have built the application with Daml Assistant (see Build with Daml Assistant step).
 
-**3.** Run react app with `make devstart`.
+2.  Type:
+
+```
+docker-compose up --build
+```
+
+3.  Open UI in a new browser tab with http://localhost:7500 in a browser.
+
+#### Option 2: Starting App in Stand-Alone Mode
+
+1.  Make sure you have built the application with Maven (see Build with Maven step).
+
+2.  Start the DA Sandbox and the Navigator.
+Type:
+
+```
+daml start
+```
+   The Navigator automatically opens in a new browser tab.
 
 ### Stopping the App
 
-**1.** From the react app (run by a yarn server), one can exist by pressing CTRL+C
+#### Stopping Dockerized Run
+1.  Close the browser tab.
 
-**2.** The application can be stopped by executing `make stop`.
+2.  Stop the Docker containers by pressing **Ctrl+C**.
+
+#### Stopping Stand-Alone Run
+1.  Close the browser tab.
+
+2.  Stop `daml start` by pressing **Ctrl+C**.
 
 ### Resetting the Prototype
 
 Reset the application by following these steps:
 
-**1.** Stop the App by following the steps in Stopping the App section.
+1.  Stop the App by following the steps in Stopping the App section.
 
-**2.** Start the App by following the steps in Starting the App section.
-
+2.  Start the App in Docker or stand-alone by following the steps in the relevant section.
 
 This application has a full browser-based user interface. Refer to the included .pdf file for instructions on how to use that interface to run the application.
 
