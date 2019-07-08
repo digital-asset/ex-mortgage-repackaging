@@ -1,0 +1,14 @@
+sdk-version: 0.13.10
+scenario: Tests.MortgagePoolAgreementDraftTests.addPoolToUnderlyingAllosUsToAddMultiplePools
+name: mortgage-repackaging
+source: daml/LibraryModules.daml
+parties:
+  - Operator
+  - Securitizer
+  - MortgagePoolHolder
+  - Registry
+version: 2.0.0
+exposed-modules: []
+dependencies:
+  - daml-prim
+  - daml-stdlib

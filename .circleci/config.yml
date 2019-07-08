@@ -8,19 +8,41 @@ version: 2.1
 executors:
   daml-executor:
     docker:
-      - image: digitalasset/daml-sdk:0.12.15-circleci-master
+      - image: circleci/openjdk:11.0-jdk
 
+commands:
+  install_sdk:
+    description: "Install the DAML SDK"
+    parameters:
+      version:
+        type: string
+    steps:
+      - run:
+          command: |
+            ./scripts/install-daml.sh << parameters.version >>
 
 jobs:
   daml_test:
+    parameters:
+      daml_sdk_version:
+        type: string
     executor: daml-executor
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - daml-{{ checksum "daml.yaml" }}
+      - install_sdk:
+          version: << parameters.daml_sdk_version >>
       - run:
           command: |
-            mkdir -p target/daml-test-reports
-            da compile
-            da run -- damlc test --junit target/daml-test-reports/daml-test.xml daml/LibraryModules.daml
+            export PATH=${HOME}/.daml/bin:${PATH}
+            daml build -o target/mortgage-repackaging.dar
+            daml test --junit target/daml-test-reports/daml-test.xml --files daml/LibraryModules.daml
+      - save_cache:
+          paths:
+            - ~/.daml
+          key: daml-{{ checksum "daml.yaml" }}
       - store_test_results:
           path: target/daml-test-reports
       - store_artifacts:
@@ -30,4 +52,5 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - daml_test
+      - daml_test:
+          daml_sdk_version: "0.13.10"
