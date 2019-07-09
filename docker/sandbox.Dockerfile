@@ -1,4 +1,4 @@
-FROM digitalasset/daml-sdk:0.12.15-master
+FROM digitalasset/daml-sdk:0.13.10-master
 
 COPY ./target/mortgage-repackaging.dar /home/sdk/
 

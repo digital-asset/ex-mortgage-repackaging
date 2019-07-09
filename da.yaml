@@ -1,5 +1,5 @@
 project:
-  sdk-version: 0.12.15
+  sdk-version: 0.13.10
   #scenario: Tests.MortgagePoolAgreementDraftTests.addPoolToUnderlyingAllosUsToAddMultiplePools
   name: mortgage-repackaging
   source: daml/LibraryModules.daml
