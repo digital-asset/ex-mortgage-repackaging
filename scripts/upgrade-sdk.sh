@@ -20,11 +20,11 @@ else
 fi
 
 echo "SDK version is $SDK_VERSION"
-echo "modifying ${PROJECT_DIR}/da.yaml"
-sed -e "s/sdk-version: .*$/sdk-version: $SDK_VERSION/" -i "${PROJECT_DIR}/da.yaml"
+echo "modifying ${PROJECT_DIR}/daml.yaml"
+sed -e "s/sdk-version: .*$/sdk-version: $SDK_VERSION/" -i "${PROJECT_DIR}/daml.yaml"
 
 echo "modifying ${PROJECT_DIR}/docker/sandbox.Dockerfile"
-sed -e "s/FROM digitalasset\/daml-sdk:.*$/FROM digitalasset\/daml-sdk:$SDK_VERSION-master/" -i "${PROJECT_DIR}/docker/sandbox.Dockerfile"
+sed -e "s/ARG sdk_version=.*/ARG sdk_version=$SDK_VERSION/" -i "${PROJECT_DIR}/docker/sandbox.Dockerfile"
 
 echo "modifying ${PROJECT_DIR}/.circleci/config.yml"
-sed -e "s/image: digitalasset\/daml-sdk:.*$/image: digitalasset\/daml-sdk:$SDK_VERSION-circleci-master/" -i "${PROJECT_DIR}/.circleci/config.yml"
+sed -e "s/_version: \".*\"$/_version: \"$SDK_VERSION\"/" -i "${PROJECT_DIR}/.circleci/config.yml"
