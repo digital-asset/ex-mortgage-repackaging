@@ -1,0 +1,26 @@
+#
+# Copyright (c) 2019, Digital Asset (Switzerland) GmbH and/or its affiliates. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+#
+
+version: '2'
+services:
+  mortrep-sandbox:
+    image: digitalasset/mortgage-repackaging-sandbox:0.0.1
+    build:
+      context: .
+      dockerfile: Dockerfile-sandbox
+    ports:
+      - "7600:7600"
+  mortrep-navigator:
+    image: digitalasset/mortgage-repackaging-navigator:0.0.1
+    build:
+      context: .
+      dockerfile: Dockerfile-navigator
+    depends_on:
+      - "mortrep-sandbox"
+    ports:
+      - "7500:7500"
+    environment:
+      - SANDBOX_HOST=mortrep-sandbox
+      - SANDBOX_PORT=7600
