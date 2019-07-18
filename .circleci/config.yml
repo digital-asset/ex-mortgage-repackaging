@@ -58,7 +58,7 @@ jobs:
       - store_artifacts:
           path: target/daml-test-reports
       - persist_to_workspace:
-          root: .daml/dist
+          root: target
           paths:
             - "*.dar"
 
