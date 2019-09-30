@@ -9,8 +9,8 @@ FROM digitalasset/daml-sdk:${sdk_vsn}
 
 WORKDIR /home/sdk
 
-COPY .daml/dist/mortgage-repackaging.dar /home/sdk/
+COPY .daml/dist/mortgage-repackaging-2.0.0.dar /home/sdk/
 
 EXPOSE 7600
 
-CMD ~/.daml/bin/daml sandbox -- --port 7600 --scenario Main.Main:populate mortgage-repackaging.dar
+CMD ~/.daml/bin/daml sandbox -- --port 7600 --scenario Main.Main:populate mortgage-repackaging-2.0.0.dar
