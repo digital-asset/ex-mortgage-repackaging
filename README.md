@@ -17,6 +17,8 @@ several pools of loans into a single security.
 
 ### Installing
 
+**Disclaimer:** This reference application is intended to demonstrate the capabilities of the DAML. You are recommended to consider other non-functional aspects, like security, resiliency, recoverability, etc prior to production use.
+
 #### Prerequisites
 
 Be sure you have the following installed:
