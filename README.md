@@ -1,4 +1,3 @@
-[![CircleCI](https://circleci.com/gh/digital-asset/ex-mortgage-repackaging.svg?style=svg)](https://circleci.com/gh/digital-asset/ex-mortgage-repackaging)
 # Reference Application: Mortgage Repackaging
 
 ## Introduction
@@ -22,67 +21,58 @@ several pools of loans into a single security.
 #### Prerequisites
 
 Be sure you have the following installed:
-* DAML SDK
-* Docker
+- [DAML SDK](https://docs.daml.com/)
+- Docker
 
-#### Build with Daml Assistant
+#### Build
 
 Type:
-
-```
+```shell
 daml build
 ```
+
 **Note:** If you change the DAML models locally, you need to re-run this command before starting the application.
 
-
-## Running the Application
-
 ### Starting the App
+
+**Note:** Make sure you have built the application (see: [Build](#build)).
+
 There are two options:
 
-#### Option 1: Starting the App with Docker
+#### Option 1: Start App with Docker
 
-1.  Make sure you have built the application with Daml Assistant (see Build with Daml Assistant step).
+1. Type:
+    ```shell
+    docker-compose up --build
+    ```
+2. Open UI in a new browser tab with http://localhost:7500
 
-2.  Type:
+**Note:** If you run on Windows or MacOS, you may need to increase the memory limit of the Docker Engine in the preferences if you encounter a `java.lang.OutOfMemoryError: GC overhead limit exceeded` error.
 
-```
-docker-compose up --build
-```
+#### Option 2: Start App in Standalone
 
-3.  Open UI in a new browser tab with http://localhost:7500 in a browser.
-
-#### Option 2: Starting App in Stand-Alone Mode
-
-1.  Make sure you have built the application with Maven (see Build with Maven step).
-
-2.  Start the DA Sandbox and the Navigator.
-Type:
-
-```
-daml start
-```
-   The Navigator automatically opens in a new browser tab.
+1. Start the DAML Sandbox and Navigator. Type:
+    ```shell
+    daml start
+    ```
+    The navigator will automatically open in new browser tab at http://localhost:7500
 
 ### Stopping the App
 
 #### Stopping Dockerized Run
-1.  Close the browser tab.
+1. Stop the Docker containers by pressing **Ctrl+C**. (Alternatively, you can also stop it by typing `docker-compose down`.)
 
-2.  Stop the Docker containers by pressing **Ctrl+C**.
-
-#### Stopping Stand-Alone Run
-1.  Close the browser tab.
-
-2.  Stop `daml start` by pressing **Ctrl+C**.
+#### Stopping Standalone Run
+1. Stop the standalone app by pressing **Ctrl+C**.
 
 ### Resetting the Prototype
 
 Reset the application by following these steps:
+1.  Stop the app by following the steps in [Stopping the App](#stopping-the-app) section.
+2.  Start the app in [Docker](#using-docker) or [Standalone](#standalone-mode) by following the steps in the relevant section.
 
-1.  Stop the App by following the steps in Stopping the App section.
 
-2.  Start the App in Docker or stand-alone by following the steps in the relevant section.
+## User Guide
 
 This application has a full browser-based user interface. Refer to the included .pdf file for instructions on how to use that interface to run the application.
 
