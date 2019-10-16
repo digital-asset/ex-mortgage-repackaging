@@ -63,7 +63,7 @@ There are two options:
 1. Stop the Docker containers by pressing **Ctrl+C**. (Alternatively, you can also stop it by typing `docker-compose down`.)
 
 #### Stopping Standalone Run
-1. Stop the standalone app by pressing **Ctrl+C**.
+1. Stop the Sandbox and the Navigator by pressing **Ctrl+C** in the DAML assistant.
 
 ### Resetting the Prototype
 
