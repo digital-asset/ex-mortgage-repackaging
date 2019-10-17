@@ -6,7 +6,7 @@
 sdk-version: 0.13.29
 scenario: Main.Main:populate
 name: mortgage-repackaging
-source: daml/LibraryModules.daml
+source: daml
 parties:
   - Operator
   - Securitizer
