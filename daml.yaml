@@ -4,9 +4,9 @@
 #
 
 sdk-version: 0.13.29
-scenario: Tests.MortgagePoolAgreementDraftTests:addPoolToUnderlyingAllosUsToAddMultiplePools
+scenario: Main.Main:populate
 name: mortgage-repackaging
-source: daml/LibraryModules.daml
+source: daml
 parties:
   - Operator
   - Securitizer
