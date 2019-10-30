@@ -7,9 +7,14 @@ ARG sdk_vsn=0.13.29
 
 FROM digitalasset/daml-sdk:${sdk_vsn}
 
-WORKDIR /home/sdk
+WORKDIR /home/daml
 
-COPY .daml/dist/mortgage-repackaging-2.0.0.dar /home/sdk/
+COPY .daml/dist/mortgage-repackaging-2.0.0.dar /home/daml/
+
+# Need the root user to set appropriate ownership of the DAR file.
+USER root
+RUN chown daml mortgage-repackaging-2.0.0.dar
+USER daml
 
 EXPOSE 6865
 
