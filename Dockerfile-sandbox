@@ -16,6 +16,6 @@ USER root
 RUN chown daml mortgage-repackaging-2.0.0.dar
 USER daml
 
-EXPOSE 7600
+EXPOSE 6865
 
-CMD ~/.daml/bin/daml sandbox -- --port 7600 --scenario Main.Main:populate mortgage-repackaging-2.0.0.dar
+CMD ~/.daml/bin/daml sandbox -- --port 6865 --scenario Main.Main:populate mortgage-repackaging-2.0.0.dar
