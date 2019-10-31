@@ -7,10 +7,15 @@ ARG sdk_vsn=0.13.30
 
 FROM digitalasset/daml-sdk:${sdk_vsn}
 
-WORKDIR /home/sdk
+WORKDIR /home/daml
 
-COPY .daml/dist/mortgage-repackaging-2.0.0.dar /home/sdk/
+COPY .daml/dist/mortgage-repackaging-2.0.0.dar /home/daml/
 
-EXPOSE 7600
+# Need the root user to set appropriate ownership of the DAR file.
+USER root
+RUN chown daml mortgage-repackaging-2.0.0.dar
+USER daml
 
-CMD ~/.daml/bin/daml sandbox -- --port 7600 --scenario Main.Main:populate mortgage-repackaging-2.0.0.dar
+EXPOSE 6865
+
+CMD ~/.daml/bin/daml sandbox -- --port 6865 --scenario Main.Main:populate mortgage-repackaging-2.0.0.dar
