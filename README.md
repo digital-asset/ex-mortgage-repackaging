@@ -74,7 +74,7 @@ Reset the application by following these steps:
 
 This application has a full browser-based user interface. Refer to the included .pdf file for instructions on how to use that interface to run the application.
 
-[Digital Asset Mortgage Backed Securities - User Guide](https://github.com/DACH-NY/ex-mortgage-repackaging/blob/master/Digital%20Asset%20Mortgage%20Backed%20Securities%20-%20User%20Guide.pdf)
+[Digital Asset Mortgage Backed Securities - User Guide](Digital%20Asset%20Mortgage%20Backed%20Securities%20-%20User%20Guide.pdf)
 
 
 CONFIDENTIAL © 2019 Digital Asset (Switzerland) GmbH and/or its affiliates. All rights reserved.
