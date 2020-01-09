@@ -11,11 +11,10 @@ WORKDIR /home/daml
 
 COPY .daml/dist/mortgage-repackaging-2.0.0.dar /home/daml/
 
-# Need the root user to set appropriate ownership of the DAR file.
 USER root
 RUN chown daml mortgage-repackaging-2.0.0.dar
 USER daml
 
 EXPOSE 6865
 
-CMD ~/.daml/bin/daml sandbox -- --port 6865 --scenario Main.Main:populate mortgage-repackaging-2.0.0.dar
+CMD ~/.daml/bin/daml sandbox -- --address 0.0.0.0 --port 6865 --scenario Main.Main:populate mortgage-repackaging-2.0.0.dar
