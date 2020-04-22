@@ -9,7 +9,9 @@ FROM digitalasset/daml-sdk:${sdk_vsn}
 
 WORKDIR /home/daml
 
-COPY .daml/dist/mortgage-repackaging-2.0.0.dar /home/daml/
+COPY .daml/dist/mortgage-repackaging-2.0.0.dar \
+     scripts/ledger_setup.sh \
+     /home/daml/
 
 USER root
 RUN chown daml mortgage-repackaging-2.0.0.dar
@@ -17,4 +19,5 @@ USER daml
 
 EXPOSE 6865
 
-CMD ~/.daml/bin/daml sandbox -- --address 0.0.0.0 --port 6865 --scenario Main.Main:populate mortgage-repackaging-2.0.0.dar
+CMD ./ledger_setup.sh localhost 6865 ./mortgage-repackaging-2.0.0.dar Main.Main:initialize & \
+    ~/.daml/bin/daml sandbox -- --address 0.0.0.0 --port 6865 mortgage-repackaging-2.0.0.dar

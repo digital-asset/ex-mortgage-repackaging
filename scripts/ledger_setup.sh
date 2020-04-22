@@ -11,7 +11,7 @@ wait_for_sandbox() {
     echo "Waiting for sandbox..."
     sleep 1
   done
-  echo "Sandbox started."
+  echo "Connected sandbox."
 }
 
 sandbox_host="$1"
@@ -28,3 +28,5 @@ daml script \
   --ledger-port "$sandbox_port" \
   --dar "$dar_file" \
   --script-name "$script_name"
+
+echo "DAML Script exited with code: $?"
