@@ -4,7 +4,7 @@
 #
 
 sdk-version: 1.0.0
-scenario: Main.Main:populate
+init-script: Main.Main:initialize
 name: mortgage-repackaging
 source: daml
 parties:
@@ -17,3 +17,4 @@ exposed-modules: []
 dependencies:
   - daml-prim
   - daml-stdlib
+  - daml-script
