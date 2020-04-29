@@ -12,15 +12,4 @@ services:
       dockerfile: Dockerfile-sandbox
     ports:
       - "127.0.0.1:6865:6865"
-  mortrep-navigator:
-    image: digitalasset/mortgage-repackaging-navigator:0.0.1
-    build:
-      context: .
-      dockerfile: Dockerfile-navigator
-    depends_on:
-      - "mortrep-sandbox"
-    ports:
       - "127.0.0.1:7500:7500"
-    environment:
-      - SANDBOX_HOST=mortrep-sandbox
-      - SANDBOX_PORT=6865
