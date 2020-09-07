@@ -5,41 +5,44 @@ daml 1.2
 module Tests.AvailableCusipTests where
 
 import DA.List
+import Daml.Script
 
 import Main.AvailableCusip
 import Main.CustomTypes
+import Tests.Factories
 
 -- test:
 weCanRequestAndFulfillAvailableCUSIPS =
   do
+    parties@Parties{..} <- allocateParties
     let firstCusip = CUSIP{text="ABC123"}
     let secondCusip = CUSIP{text="ABC456"}
     let thirdCusip = CUSIP{text="DEF123"}
     let cusips = [firstCusip, secondCusip, thirdCusip]
 
-    securitizer <- getParty "Securitizer"
-    registry <- getParty "Registry"
+    securitizer <- allocateParty "Securitizer"
+    registry <- allocateParty "Registry"
 
-    request <- securitizer `submit` do create AvailableCUSIPRequest with securitizer; registry; numberRequested=3
+    request <- securitizer `submit` do createCmd AvailableCUSIPRequest with securitizer; registry; numberRequested=3
 
-    registry `submit` do
-      availableCusips <- exercise request Fulfill with cusips
-      assert((length availableCusips) == 3)
+    availableCusips <- registry `submit` do
+      exerciseCmd request Fulfill with cusips
+    assert((length availableCusips) == 3)
 
-      firstResultingCusip <- fetch (availableCusips!!0)
-      assert(firstResultingCusip.securitizer == securitizer)
-      assert(firstResultingCusip.registry == registry)
-      assert(firstResultingCusip.cusip == firstCusip)
+    Some firstResultingCusip <- queryContractId registry (availableCusips!!0)
+    assert(firstResultingCusip.securitizer == securitizer)
+    assert(firstResultingCusip.registry == registry)
+    assert(firstResultingCusip.cusip == firstCusip)
 
-      secondResultingCusip <- fetch (availableCusips!!1)
-      assert(secondResultingCusip.securitizer == securitizer)
-      assert(secondResultingCusip.registry == registry)
-      assert(secondResultingCusip.cusip == secondCusip)
+    Some secondResultingCusip <- queryContractId registry (availableCusips!!1)
+    assert(secondResultingCusip.securitizer == securitizer)
+    assert(secondResultingCusip.registry == registry)
+    assert(secondResultingCusip.cusip == secondCusip)
 
-      thirdResultingCusip <- fetch (availableCusips!!2)
-      assert(thirdResultingCusip.securitizer == securitizer)
-      assert(thirdResultingCusip.registry == registry)
-      assert(thirdResultingCusip.cusip == thirdCusip)
+    Some thirdResultingCusip <- queryContractId registry (availableCusips!!2)
+    assert(thirdResultingCusip.securitizer == securitizer)
+    assert(thirdResultingCusip.registry == registry)
+    assert(thirdResultingCusip.cusip == thirdCusip)
 
 -- test:
 weCannotFulfillRequestWithDifferentNumberThanRequested =
@@ -49,10 +52,10 @@ weCannotFulfillRequestWithDifferentNumberThanRequested =
     let thirdCusip = CUSIP{text="DEF123"}
     let cusips = [firstCusip, secondCusip, thirdCusip]
 
-    securitizer <- getParty "Securitizer"
-    registry <- getParty "Registry"
+    securitizer <- allocateParty "Securitizer"
+    registry <- allocateParty "Registry"
 
-    request <- securitizer `submit` do create AvailableCUSIPRequest with securitizer; registry; numberRequested=4
+    request <- securitizer `submit` do createCmd AvailableCUSIPRequest with securitizer; registry; numberRequested=4
 
     registry `submitMustFail` do
-      exercise request Fulfill with cusips
+      exerciseCmd request Fulfill with cusips

@@ -15,6 +15,8 @@ import Main.AvailableCusip
 import DA.List
 import DA.Date
 
+import Daml.Script
+
 data AgreementDraftWithUnderlyingPools = AgreementDraftWithUnderlyingPools {
     mortgagePoolAgreementDraft: ContractId MortgagePoolAgreementDraft,
     underlyingPools: [(ContractId MortgagePool)]
@@ -37,18 +39,19 @@ def123 = CUSIP with text="DEF123"
 def456 : CUSIP
 def456 = CUSIP with text="DEF456"
 
---buildMortgagePoolHolder : Party
-getMortgagePoolHolder = scenario do
-    getParty "MortgagePoolHolder"
+data Parties = Parties with
+  mortgagePoolHolder : Party
+  securitizer : Party
+  registry : Party
+  operator : Party
 
-getSecuritizer = scenario do
-    getParty "Securitizer"
-
-getRegistry = scenario do
-    getParty "Registry"
-
-getOperator = scenario do
-    getParty "Operator"
+allocateParties : Script Parties
+allocateParties = do
+  mortgagePoolHolder <- allocateParty "MortgagePoolHolder"
+  securitizer <- allocateParty "Securitizer"
+  registry <- allocateParty "Registry"
+  operator <- allocateParty "Operator"
+  pure Parties with ..
 
 buildAgreementDraftFields : MortgagePoolAgreementDraftFields
 buildAgreementDraftFields =
@@ -82,24 +85,15 @@ poolAbc456Fields =
     currentFaceValue=100.0
 
 -- test:
-buildPoolAbc123 = scenario do
-  registry <- getRegistry
-  operator <- getOperator
-  mortgagePoolHolder <- getMortgagePoolHolder
-  registry `submit` do create MortgagePool with owner=mortgagePoolHolder; registry; operator; securitizers=[]; mortgagePoolFields=poolAbc123Fields; underlyingCusips=[CUSIP{text="zzz123"}]; isLocked = False
+buildPoolAbc123 Parties{..}= script do
+  registry `submit` do createCmd MortgagePool with owner=mortgagePoolHolder; registry; operator; securitizers=[]; mortgagePoolFields=poolAbc123Fields; underlyingCusips=[CUSIP{text="zzz123"}]; isLocked = False
 
 -- test:
-buildPoolAbc456 = scenario do
-  registry <- getRegistry
-  operator <- getOperator
-  mortgagePoolHolder <- getMortgagePoolHolder
-  registry `submit` do create MortgagePool with owner=mortgagePoolHolder; registry; operator; securitizers=[]; mortgagePoolFields=poolAbc456Fields; underlyingCusips=[CUSIP{text="zzz456"}]; isLocked = False
+buildPoolAbc456 Parties{..} = script do
+  registry `submit` do createCmd MortgagePool with owner=mortgagePoolHolder; registry; operator; securitizers=[]; mortgagePoolFields=poolAbc456Fields; underlyingCusips=[CUSIP{text="zzz456"}]; isLocked = False
 
 -- test:
-buildPoolDef123 = scenario do
-    registry <- getRegistry
-    mortgagePoolHolder <- getMortgagePoolHolder
-    operator <- getOperator
+buildPoolDef123 Parties{..} = script do
     let mortgagePoolFields = MortgagePoolFields with
                               cusip=def123
                               poolType=Fixed
@@ -108,13 +102,10 @@ buildPoolDef123 = scenario do
                               lastLoanMaturity=datetime 1970 Jan 1 0 0 0
                               originalFaceValue=200.0
                               currentFaceValue=150.0
-    registry `submit` do create MortgagePool with owner=mortgagePoolHolder; registry; operator; securitizers=[]; mortgagePoolFields; underlyingCusips=[CUSIP{text="zzz789"}]; isLocked = False
+    registry `submit` do createCmd MortgagePool with owner=mortgagePoolHolder; registry; operator; securitizers=[]; mortgagePoolFields; underlyingCusips=[CUSIP{text="zzz789"}]; isLocked = False
 
 -- test:
-buildPoolDef456 = scenario do
-    registry <- getRegistry
-    mortgagePoolHolder <- getMortgagePoolHolder
-    operator <- getOperator
+buildPoolDef456 Parties{..} = script do
     let mortgagePoolFields = MortgagePoolFields with
                               cusip=def456
                               poolType=Fixed
@@ -123,41 +114,34 @@ buildPoolDef456 = scenario do
                               lastLoanMaturity=datetime 1970 Jan 1 0 0 0
                               originalFaceValue=200.0
                               currentFaceValue=150.0
-    registry `submit` do create MortgagePool with owner=mortgagePoolHolder; registry; operator; securitizers=[]; mortgagePoolFields; underlyingCusips=[CUSIP{text="zzz101"}]; isLocked = False
+    registry `submit` do createCmd MortgagePool with owner=mortgagePoolHolder; registry; operator; securitizers=[]; mortgagePoolFields; underlyingCusips=[CUSIP{text="zzz101"}]; isLocked = False
 
 -- test:
-buildAvailableCusip = scenario do
-    securitizer <- getSecuritizer
-    registry <- getRegistry
-    requestCid <- securitizer `submit` do create AvailableCUSIPRequest with securitizer; registry; numberRequested=1
-    availableCusips <- registry `submit` do exercise requestCid Fulfill with cusips=[abc123]
+buildAvailableCusip Parties{securitizer, registry} = script do
+    requestCid <- securitizer `submit` do createCmd AvailableCUSIPRequest with securitizer; registry; numberRequested=1
+    availableCusips <- registry `submit` do exerciseCmd requestCid Fulfill with cusips=[abc123]
     let availableCusip = availableCusips!!0
     return availableCusip
 
 -- test:
-buildMortgagePoolAgreementDraft = scenario do
-    mortgagePoolHolder <- getMortgagePoolHolder
-    operator <- getOperator
-    agreementProposal <- mortgagePoolHolder `submit` do create MortgagePoolAgreementDraft with mortgagePoolHolder; operator; agreementDraftFields=buildAgreementDraftFields; underlyingPools=[]
+buildMortgagePoolAgreementDraft parties@Parties{operator, mortgagePoolHolder} = script do
+    agreementProposal <- mortgagePoolHolder `submit` do createCmd MortgagePoolAgreementDraft with mortgagePoolHolder; operator; agreementDraftFields=buildAgreementDraftFields; underlyingPools=[]
 
-    poolAbc123 <- buildPoolAbc123
-    draftUpdateResult <- mortgagePoolHolder `submit` do exercise agreementProposal AllocateCollateral with mortgagePool=poolAbc123
+    poolAbc123 <- buildPoolAbc123 parties
+    draftUpdateResult <- mortgagePoolHolder `submit` do exerciseCmd agreementProposal AllocateCollateral with mortgagePool=poolAbc123
 
-    poolAbc456 <- buildPoolAbc456
-    secondDraftUpdateResult <- mortgagePoolHolder `submit` do exercise draftUpdateResult.mortgagePoolAgreementDraft AllocateCollateral with mortgagePool=poolAbc456
+    poolAbc456 <- buildPoolAbc456 parties
+    secondDraftUpdateResult <- mortgagePoolHolder `submit` do exerciseCmd draftUpdateResult.mortgagePoolAgreementDraft AllocateCollateral with mortgagePool=poolAbc456
     let underlyingPools = [draftUpdateResult.mortgagePool, secondDraftUpdateResult.mortgagePool]
     return AgreementDraftWithUnderlyingPools with mortgagePoolAgreementDraft=secondDraftUpdateResult.mortgagePoolAgreementDraft; underlyingPools=underlyingPools
 
 -- test:
-buildMortgagePoolAgreement = scenario do
-    draft <- buildMortgagePoolAgreementDraft
-    mortgagePoolHolder <- getMortgagePoolHolder
-    securitizer <- getSecuritizer
-    registry <- getRegistry
+buildMortgagePoolAgreement parties@Parties{..} = script do
+    draft <- buildMortgagePoolAgreementDraft parties
     draftProposalResult <- mortgagePoolHolder `submit` do
-                        exercise draft.mortgagePoolAgreementDraft SubmitProposal with
+                        exerciseCmd draft.mortgagePoolAgreementDraft SubmitProposal with
                                               securitizer; underlyingPoolCids=[(draft.underlyingPools!!0), (draft.underlyingPools!!1)]
-    availableCusip <- buildAvailableCusip
-    poolAgreement <- securitizer `submit` do exercise draftProposalResult.mortgagePoolAgreementProposal Accept with availableCusipCid=availableCusip; registry
+    availableCusip <- buildAvailableCusip parties
+    poolAgreement <- securitizer `submit` do exerciseCmd draftProposalResult.mortgagePoolAgreementProposal Accept with availableCusipCid=availableCusip; registry
 
     return AgreementWithUnderlyingPools with mortgagePoolAgreement=poolAgreement; underlyingPools=draftProposalResult.underlyingPoolCids

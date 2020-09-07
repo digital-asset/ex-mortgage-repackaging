@@ -9,6 +9,7 @@ import Main.MortgagePoolAgreementDraft
 
 import DA.List
 import DA.Date
+import Daml.Script
 
 import Tests.Factories
 
@@ -16,150 +17,144 @@ import Tests.Factories
 -- test:
 addPoolToUnderlyingAllosUsToAddMultiplePools =
   do
-    agreementDraftSetup <- buildMortgagePoolAgreementDraft
+    parties@Parties{..} <- allocateParties
+    agreementDraftSetup <- buildMortgagePoolAgreementDraft parties
     let mortgagePoolAgreementDraft = agreementDraftSetup.mortgagePoolAgreementDraft
-    mortgagePoolHolder <- getMortgagePoolHolder
-    mortgagePoolHolder `submit` do
-      latestProposal <- fetch mortgagePoolAgreementDraft
+    Some latestProposal <- queryContractId mortgagePoolHolder mortgagePoolAgreementDraft
 
-      assert(length latestProposal.underlyingPools == 2)
-      let firstPool = latestProposal.underlyingPools!!0
-      assert(firstPool.cusip == abc456)
-      let secondPool = latestProposal.underlyingPools!!1
-      assert(secondPool.cusip == abc123)
+    assert(length latestProposal.underlyingPools == 2)
+    let firstPool = latestProposal.underlyingPools!!0
+    assert(firstPool.cusip == abc456)
+    let secondPool = latestProposal.underlyingPools!!1
+    assert(secondPool.cusip == abc123)
 
 -- test:
 addPoolToUnderlyingFailsWhenALockedPoolIsUsed =
   do
-    agreementDraftSetup <- buildMortgagePoolAgreementDraft
+    parties@Parties{..} <- allocateParties
+    agreementDraftSetup <- buildMortgagePoolAgreementDraft parties
     let mortgagePoolAgreementDraft = agreementDraftSetup.mortgagePoolAgreementDraft
 
-    poolDef123 <- buildPoolDef123
-    mortgagePoolHolder <- getMortgagePoolHolder
-    lockedPool <- mortgagePoolHolder `submit` do exercise poolDef123 LockMortgagePool
+    poolDef123 <- buildPoolDef123 parties
+    lockedPool <- mortgagePoolHolder `submit` do exerciseCmd poolDef123 LockMortgagePool
 
     mortgagePoolHolder `submitMustFail` do
-      exercise mortgagePoolAgreementDraft AllocateCollateral with mortgagePool=lockedPool
+      exerciseCmd mortgagePoolAgreementDraft AllocateCollateral with mortgagePool=lockedPool
 
 -- test:
 addPoolToUnderlyingFailsWhenAnAlreadyLinkedPoolIsAdded =
   do
-    agreementDraftSetup <- buildMortgagePoolAgreementDraft
+    parties@Parties{..} <- allocateParties
+    agreementDraftSetup <- buildMortgagePoolAgreementDraft parties
     let mortgagePoolAgreementDraft = agreementDraftSetup.mortgagePoolAgreementDraft
 
-    poolDef123 <- buildPoolDef123
-    mortgagePoolHolder <- getMortgagePoolHolder
+    poolDef123 <- buildPoolDef123 parties
     draftAgreementUpdateResult <-
-      mortgagePoolHolder `submit` do exercise mortgagePoolAgreementDraft AllocateCollateral with mortgagePool=poolDef123
+      mortgagePoolHolder `submit` do exerciseCmd mortgagePoolAgreementDraft AllocateCollateral with mortgagePool=poolDef123
 
     mortgagePoolHolder `submitMustFail` do
-      exercise draftAgreementUpdateResult.mortgagePoolAgreementDraft AllocateCollateral with mortgagePool=draftAgreementUpdateResult.mortgagePool
+      exerciseCmd draftAgreementUpdateResult.mortgagePoolAgreementDraft AllocateCollateral with mortgagePool=draftAgreementUpdateResult.mortgagePool
 
 -- test:
 addPoolToUnderlyingProperlyAdjustsTheDraftFields =
   do
-    agreementDraftSetup <- buildMortgagePoolAgreementDraft
+    parties@Parties{..} <- allocateParties
+    agreementDraftSetup <- buildMortgagePoolAgreementDraft parties
     let mortgagePoolAgreementDraft = agreementDraftSetup.mortgagePoolAgreementDraft
-    mortgagePoolHolder <- getMortgagePoolHolder
-    mortgagePoolHolder `submit` do
-      proposalDraftWithTwoPools <- fetch mortgagePoolAgreementDraft
-      assert(proposalDraftWithTwoPools.agreementDraftFields.faceValue == 250.0)
-      case proposalDraftWithTwoPools.agreementDraftFields.lastLoanMaturity of
-        None -> abort "Failure. lastLoanMaturity should exist"
-        Some lastLoanMaturity -> assert(lastLoanMaturity == datetime 1982 Jan 1 0 0 0)
+    Some proposalDraftWithTwoPools <- queryContractId mortgagePoolHolder mortgagePoolAgreementDraft
+    assert(proposalDraftWithTwoPools.agreementDraftFields.faceValue == 250.0)
+    case proposalDraftWithTwoPools.agreementDraftFields.lastLoanMaturity of
+      None -> abort "Failure. lastLoanMaturity should exist"
+      Some lastLoanMaturity -> assert(lastLoanMaturity == datetime 1982 Jan 1 0 0 0)
 
 -- test:
 removePoolFromUnderlyingWorksWhenRemovingOneOfTwoPools =
   do
-    agreementDraftSetup <- buildMortgagePoolAgreementDraft
+    parties@Parties{..} <- allocateParties
+    agreementDraftSetup <- buildMortgagePoolAgreementDraft parties
     let mortgagePoolAgreementDraft = agreementDraftSetup.mortgagePoolAgreementDraft
-    mortgagePoolHolder <- getMortgagePoolHolder
-    poolAbc123 <- buildPoolAbc123
-    mortgagePoolHolder `submit` do
+    poolAbc123 <- buildPoolAbc123 parties
+    latestDraftUpdateResult <- mortgagePoolHolder `submit` do
+      exerciseCmd mortgagePoolAgreementDraft DeallocateCollateral with mortgagePool=poolAbc123
 
-      latestDraftUpdateResult <- exercise mortgagePoolAgreementDraft DeallocateCollateral with mortgagePool=poolAbc123
-
-      singlePoolProposal <- fetch latestDraftUpdateResult.mortgagePoolAgreementDraft
-      --remove one of two
-      assert(length singlePoolProposal.underlyingPools == 1)
-      let pool = singlePoolProposal.underlyingPools!!0
-      assert(pool.cusip == abc456)
+    Some singlePoolProposal <- queryContractId mortgagePoolHolder latestDraftUpdateResult.mortgagePoolAgreementDraft
+    --remove one of two
+    assert(length singlePoolProposal.underlyingPools == 1)
+    let pool = singlePoolProposal.underlyingPools!!0
+    assert(pool.cusip == abc456)
 
 -- test:
 removePoolFromUnderlyingWorksWhenRemovingMiddleOfFour =
-  do
-      agreementDraftSetup <- buildMortgagePoolAgreementDraft
+  do  parties@Parties{..} <- allocateParties
+      agreementDraftSetup <- buildMortgagePoolAgreementDraft parties
       let mortgagePoolAgreementDraft = agreementDraftSetup.mortgagePoolAgreementDraft
-      poolDef123 <- buildPoolDef123
-      poolDef456 <- buildPoolDef456
-      mortgagePoolHolder <- getMortgagePoolHolder
-      draftUpdateResult <- mortgagePoolHolder `submit` do exercise mortgagePoolAgreementDraft AllocateCollateral with mortgagePool=poolDef123
+      poolDef123 <- buildPoolDef123 parties
+      poolDef456 <- buildPoolDef456 parties
+      draftUpdateResult <- mortgagePoolHolder `submit` do exerciseCmd mortgagePoolAgreementDraft AllocateCollateral with mortgagePool=poolDef123
 
-      proposalWithFourPoolsCid <- mortgagePoolHolder `submit` do
+      secondDraftUpdateResult <- mortgagePoolHolder `submit` do
 
-        secondDraftUpdateResult <- exercise draftUpdateResult.mortgagePoolAgreementDraft AllocateCollateral with mortgagePool=poolDef456
+        exerciseCmd draftUpdateResult.mortgagePoolAgreementDraft AllocateCollateral with mortgagePool=poolDef456
 
-        draftWithFourPools <- fetch secondDraftUpdateResult.mortgagePoolAgreementDraft
+      Some draftWithFourPools <- queryContractId mortgagePoolHolder secondDraftUpdateResult.mortgagePoolAgreementDraft
 
-        assert(length draftWithFourPools.underlyingPools == 4)
+      assert(length draftWithFourPools.underlyingPools == 4)
 
-        return secondDraftUpdateResult.mortgagePoolAgreementDraft
+      let proposalWithFourPoolsCid = secondDraftUpdateResult.mortgagePoolAgreementDraft
 
-      mortgagePoolHolder `submit` do
-        draftUpdateResult <- exercise proposalWithFourPoolsCid DeallocateCollateral with mortgagePool=draftUpdateResult.mortgagePool
+      draftUpdateResult <- mortgagePoolHolder `submit` do
+        exerciseCmd proposalWithFourPoolsCid DeallocateCollateral with mortgagePool=draftUpdateResult.mortgagePool
 
-        proposalWithFourthPoolRemoved <- fetch draftUpdateResult.mortgagePoolAgreementDraft
+      Some proposalWithFourthPoolRemoved <- queryContractId mortgagePoolHolder draftUpdateResult.mortgagePoolAgreementDraft
 
-        assert(length proposalWithFourthPoolRemoved.underlyingPools == 3)
-        let firstPool = proposalWithFourthPoolRemoved.underlyingPools!!0
-        assert(firstPool.cusip == def456)
-        let secondPool = proposalWithFourthPoolRemoved.underlyingPools!!1
-        assert(secondPool.cusip == abc456)
-        let thirdPool = proposalWithFourthPoolRemoved.underlyingPools!!2
-        assert(thirdPool.cusip == abc123)
+      assert(length proposalWithFourthPoolRemoved.underlyingPools == 3)
+      let firstPool = proposalWithFourthPoolRemoved.underlyingPools!!0
+      assert(firstPool.cusip == def456)
+      let secondPool = proposalWithFourthPoolRemoved.underlyingPools!!1
+      assert(secondPool.cusip == abc456)
+      let thirdPool = proposalWithFourthPoolRemoved.underlyingPools!!2
+      assert(thirdPool.cusip == abc123)
 
 -- test:
 removePoolFromUnderlyingFailsWhenGivenPoolIsntUnderlying =
   do
-    agreementDraftSetup <- buildMortgagePoolAgreementDraft
+    parties@Parties{..} <- allocateParties
+    agreementDraftSetup <- buildMortgagePoolAgreementDraft parties
     let mortgagePoolAgreementDraft = agreementDraftSetup.mortgagePoolAgreementDraft
-    poolDef123 <- buildPoolDef123
-    mortgagePoolHolder <- getMortgagePoolHolder
+    poolDef123 <- buildPoolDef123 parties
     mortgagePoolHolder `submitMustFail` do
-      exercise mortgagePoolAgreementDraft DeallocateCollateral with mortgagePool=poolDef123
+      exerciseCmd mortgagePoolAgreementDraft DeallocateCollateral with mortgagePool=poolDef123
 
 -- test:
 removePoolFromUnderlyingAdjustsTheDraftFieldsCorrectly =
   do
-    agreementDraftSetup <- buildMortgagePoolAgreementDraft
+    parties@Parties{..} <- allocateParties
+    agreementDraftSetup <- buildMortgagePoolAgreementDraft parties
     let mortgagePoolAgreementDraft = agreementDraftSetup.mortgagePoolAgreementDraft
 
-    poolAbc123 <- buildPoolAbc123
-    mortgagePoolHolder <- getMortgagePoolHolder
+    poolAbc123 <- buildPoolAbc123 parties
     draftUpdateResult <- mortgagePoolHolder `submit` do
-      exercise mortgagePoolAgreementDraft DeallocateCollateral with mortgagePool=poolAbc123
+      exerciseCmd mortgagePoolAgreementDraft DeallocateCollateral with mortgagePool=poolAbc123
 
-    mortgagePoolHolder `submit` do
-      proposalDraftWithOnePool <- fetch draftUpdateResult.mortgagePoolAgreementDraft
-      assert(proposalDraftWithOnePool.agreementDraftFields.faceValue == 100.0)
-      case proposalDraftWithOnePool.agreementDraftFields.lastLoanMaturity of
-        None -> abort "Failure. lastLoanMaturity should exist"
-        Some lastLoanMaturity -> assert(lastLoanMaturity == datetime 1980 Jan 1 0 0 0)
+    Some proposalDraftWithOnePool <- queryContractId mortgagePoolHolder draftUpdateResult.mortgagePoolAgreementDraft
+    assert(proposalDraftWithOnePool.agreementDraftFields.faceValue == 100.0)
+    case proposalDraftWithOnePool.agreementDraftFields.lastLoanMaturity of
+      None -> abort "Failure. lastLoanMaturity should exist"
+      Some lastLoanMaturity -> assert(lastLoanMaturity == datetime 1980 Jan 1 0 0 0)
 
 -- test:
 submitProposalDisclosesUnderlyingPoolsToTheSecuritizer =
   do
-    agreementDraftSetup <- buildMortgagePoolAgreementDraft
+    parties@Parties{..} <- allocateParties
+    agreementDraftSetup <- buildMortgagePoolAgreementDraft parties
     let mortgagePoolAgreementDraft = agreementDraftSetup.mortgagePoolAgreementDraft
     let firstUnderlyingPoolCid = agreementDraftSetup.underlyingPools!!0
     let secondUnderlyingPoolCid = agreementDraftSetup.underlyingPools!!1
-    mortgagePoolHolder <- getMortgagePoolHolder
-    securitizer <- getSecuritizer
 
     draftProposalResult <- mortgagePoolHolder `submit` do
-      exercise mortgagePoolAgreementDraft SubmitProposal with
+      exerciseCmd mortgagePoolAgreementDraft SubmitProposal with
         securitizer; underlyingPoolCids=[firstUnderlyingPoolCid, secondUnderlyingPoolCid]
 
-    securitizer `submit` do
-      fetch (draftProposalResult.underlyingPoolCids!!0)
-      fetch (draftProposalResult.underlyingPoolCids!!1)
+    Some _ <- queryContractId securitizer (draftProposalResult.underlyingPoolCids!!0)
+    Some _ <- queryContractId securitizer (draftProposalResult.underlyingPoolCids!!1)
+    pure ()

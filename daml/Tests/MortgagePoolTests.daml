@@ -5,6 +5,7 @@ daml 1.2
 module Tests.MortgagePoolTests where
 
 import DA.List
+import Daml.Script
 
 import Tests.Factories
 import Main.MortgagePool
@@ -12,27 +13,23 @@ import Main.MortgagePool
 -- test:
 weCanAddSecuritizers =
   do
-    mortgagePoolCid <- buildPoolAbc123
-    mortgagePoolHolder <- getMortgagePoolHolder
-    securitizer <- getSecuritizer
-    mortgagePoolHolder `submit` do
-      mortgagePool <- fetch mortgagePoolCid
-      assert(length mortgagePool.securitizers == 0)
+    parties@Parties{..} <- allocateParties
+    mortgagePoolCid <- buildPoolAbc123 parties
+    Some mortgagePool <- queryContractId mortgagePoolHolder mortgagePoolCid
+    assert (length mortgagePool.securitizers == 0)
 
-    newPoolCid <- mortgagePoolHolder `submit` do exercise mortgagePoolCid AddSecuritizer with securitizer
+    newPoolCid <- mortgagePoolHolder `submit` do exerciseCmd mortgagePoolCid AddSecuritizer with securitizer
 
-    mortgagePoolHolder `submit` do
-      mortgagePool <- fetch newPoolCid
-      assert(length mortgagePool.securitizers == 1)
+    Some mortgagePool <- queryContractId mortgagePoolHolder newPoolCid
+    assert (length mortgagePool.securitizers == 1)
 
-    additionalSecuritizer <- getParty "TheNewSecuritizer"
+    additionalSecuritizer <- allocateParty "TheNewSecuritizer"
 
-    finalPoolCid <- mortgagePoolHolder `submit` do exercise newPoolCid AddSecuritizer with securitizer=additionalSecuritizer
+    finalPoolCid <- mortgagePoolHolder `submit` do exerciseCmd newPoolCid AddSecuritizer with securitizer=additionalSecuritizer
 
-    mortgagePoolHolder `submit` do
-      mortgagePool <- fetch finalPoolCid
-      assert(mortgagePool.securitizers!!0 == securitizer)
-      assert(mortgagePool.securitizers!!1 == additionalSecuritizer)
+    Some mortgagePool <- queryContractId mortgagePoolHolder finalPoolCid
+    assert (mortgagePool.securitizers!!0 == securitizer)
+    assert (mortgagePool.securitizers!!1 == additionalSecuritizer)
 
 
 

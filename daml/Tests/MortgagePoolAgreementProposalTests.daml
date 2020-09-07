@@ -10,58 +10,54 @@ import Main.MortgagePoolAgreementProposal
 import Tests.Factories
 
 import DA.List
+import Daml.Script
 
 -- test:
 withdrawingAProposalUnlocksTheUnderlyingPools =
   do
-    agreementDraftSetup <- buildMortgagePoolAgreementDraft
+    parties@Parties{..} <- allocateParties
+    agreementDraftSetup <- buildMortgagePoolAgreementDraft parties
     let mortgagePoolAgreementDraft = agreementDraftSetup.mortgagePoolAgreementDraft
     let firstUnderlyingPoolCid = agreementDraftSetup.underlyingPools!!0
     let secondUnderlyingPoolCid = agreementDraftSetup.underlyingPools!!1
-    mortgagePoolHolder <- getMortgagePoolHolder
-    securitizer <- getSecuritizer
-    draftProposalResult <- mortgagePoolHolder `submit` do exercise mortgagePoolAgreementDraft SubmitProposal with securitizer; underlyingPoolCids=[firstUnderlyingPoolCid, secondUnderlyingPoolCid]
+    draftProposalResult <- mortgagePoolHolder `submit` do exerciseCmd mortgagePoolAgreementDraft SubmitProposal with securitizer; underlyingPoolCids=[firstUnderlyingPoolCid, secondUnderlyingPoolCid]
 
     let firstUnderlyingPoolCid = draftProposalResult.underlyingPoolCids!!0
     let secondUnderlyingPoolCid = draftProposalResult.underlyingPoolCids!!1
-    mortgagePoolHolder `submit` do
-      firstUnderlyingPool <- fetch firstUnderlyingPoolCid
-      secondUnderlyingPool <- fetch secondUnderlyingPoolCid
-      assert(firstUnderlyingPool.isLocked)
-      assert(secondUnderlyingPool.isLocked)
+    Some firstUnderlyingPool <- queryContractId mortgagePoolHolder firstUnderlyingPoolCid
+    Some secondUnderlyingPool <- queryContractId mortgagePoolHolder secondUnderlyingPoolCid
+    assert(firstUnderlyingPool.isLocked)
+    assert(secondUnderlyingPool.isLocked)
 
-    withdrawnProposalResult <- mortgagePoolHolder `submit` do exercise draftProposalResult.mortgagePoolAgreementProposal Withdraw with underlyingPoolCids=[firstUnderlyingPoolCid, secondUnderlyingPoolCid]
+    withdrawnProposalResult <- mortgagePoolHolder `submit` do exerciseCmd draftProposalResult.mortgagePoolAgreementProposal Withdraw with underlyingPoolCids=[firstUnderlyingPoolCid, secondUnderlyingPoolCid]
 
-    mortgagePoolHolder `submitMustFail` do
-      firstUnderlyingPool <- fetch (withdrawnProposalResult!!0)
-      secondUnderlyingPool <- fetch (withdrawnProposalResult!!1)
-      assert(firstUnderlyingPool.isLocked)
-      assert(secondUnderlyingPool.isLocked)
+    Some firstUnderlyingPool <- queryContractId mortgagePoolHolder (withdrawnProposalResult!!0)
+    Some secondUnderlyingPool <- queryContractId mortgagePoolHolder (withdrawnProposalResult!!1)
+
+    assertMsg "first pool should not be locked" (not firstUnderlyingPool.isLocked)
+    assertMsg "second pool should not be locked" (not secondUnderlyingPool.isLocked)
 
 -- test:
 rejectingAProposalUnlocksTheUnderlyingPools =
   do
-    agreementDraftSetup <- buildMortgagePoolAgreementDraft
+    parties@Parties{..} <- allocateParties
+    agreementDraftSetup <- buildMortgagePoolAgreementDraft parties
     let mortgagePoolAgreementDraft = agreementDraftSetup.mortgagePoolAgreementDraft
     let firstUnderlyingPoolCid = agreementDraftSetup.underlyingPools!!0
     let secondUnderlyingPoolCid = agreementDraftSetup.underlyingPools!!1
-    mortgagePoolHolder <- getMortgagePoolHolder
-    securitizer <- getSecuritizer
-    draftProposalResult <- mortgagePoolHolder `submit` do exercise mortgagePoolAgreementDraft SubmitProposal with securitizer; underlyingPoolCids=[firstUnderlyingPoolCid, secondUnderlyingPoolCid]
+    draftProposalResult <- mortgagePoolHolder `submit` do exerciseCmd mortgagePoolAgreementDraft SubmitProposal with securitizer; underlyingPoolCids=[firstUnderlyingPoolCid, secondUnderlyingPoolCid]
 
     let firstUnderlyingPoolCid = draftProposalResult.underlyingPoolCids!!0
     let secondUnderlyingPoolCid = draftProposalResult.underlyingPoolCids!!1
 
-    mortgagePoolHolder `submit` do
-      firstUnderlyingPool <- fetch firstUnderlyingPoolCid
-      secondUnderlyingPool <- fetch secondUnderlyingPoolCid
-      assert(firstUnderlyingPool.isLocked)
-      assert(secondUnderlyingPool.isLocked)
+    Some firstUnderlyingPool <- queryContractId mortgagePoolHolder firstUnderlyingPoolCid
+    Some secondUnderlyingPool <- queryContractId mortgagePoolHolder secondUnderlyingPoolCid
+    assert (firstUnderlyingPool.isLocked)
+    assert (secondUnderlyingPool.isLocked)
 
-    withdrawnProposalResult <- securitizer `submit` do exercise draftProposalResult.mortgagePoolAgreementProposal Reject with underlyingPoolCids=[firstUnderlyingPoolCid, secondUnderlyingPoolCid]
+    withdrawnProposalResult <- securitizer `submit` do exerciseCmd draftProposalResult.mortgagePoolAgreementProposal Reject with underlyingPoolCids=[firstUnderlyingPoolCid, secondUnderlyingPoolCid]
 
-    mortgagePoolHolder `submitMustFail` do
-      firstUnderlyingPool <- fetch (withdrawnProposalResult!!0)
-      secondUnderlyingPool <- fetch (withdrawnProposalResult!!1)
-      assert(firstUnderlyingPool.isLocked)
-      assert(secondUnderlyingPool.isLocked)
+    Some firstUnderlyingPool <- queryContractId mortgagePoolHolder (withdrawnProposalResult!!0)
+    Some secondUnderlyingPool <- queryContractId mortgagePoolHolder (withdrawnProposalResult!!1)
+    assertMsg "first pool should not be locked" (not firstUnderlyingPool.isLocked)
+    assertMsg "second pool should not be locked" (not secondUnderlyingPool.isLocked)
