@@ -6,52 +6,51 @@ module Tests.MortgagePoolAgreementTests where
 
 import Main.MortgagePoolAgreement
 
+import DA.Assert
 import DA.List
+import Daml.Script
 import Tests.Factories
 
 -- test:
 readyAgreementForIssuanceFailsIfCusipsDontMatch =
   do
-    poolAgreementResult <- buildMortgagePoolAgreement
-    firstUnrelatedPool <- buildPoolDef123
-    secondUnrelatedPool <- buildPoolDef456
-    operator <- getOperator
+    parties@Parties{..} <- allocateParties
+    poolAgreementResult <- buildMortgagePoolAgreement parties
+    firstUnrelatedPool <- buildPoolDef123 parties
+    secondUnrelatedPool <- buildPoolDef456 parties
     operator `submitMustFail` do
-      exercise poolAgreementResult.mortgagePoolAgreement ReadyAgreementForIssuance with
+      exerciseCmd poolAgreementResult.mortgagePoolAgreement ReadyAgreementForIssuance with
           underlyingPools=[firstUnrelatedPool, secondUnrelatedPool]
 
 -- test:
 readyAgreementForIssuanceFailsIfAlreadyReadyForIssuance =
   do
-    poolAgreementResult <- buildMortgagePoolAgreement
+    parties@Parties{..} <- allocateParties
+    poolAgreementResult <- buildMortgagePoolAgreement parties
     let firstPool = poolAgreementResult.underlyingPools!!0
     let secondPool = poolAgreementResult.underlyingPools!!1
 
-    operator <- getOperator
     poolAgreement <- operator `submit` do
-                        exercise poolAgreementResult.mortgagePoolAgreement ReadyAgreementForIssuance with
+                        exerciseCmd poolAgreementResult.mortgagePoolAgreement ReadyAgreementForIssuance with
                             underlyingPools=[firstPool, secondPool]
 
     operator `submitMustFail` do
-      exercise poolAgreement ReadyAgreementForIssuance with underlyingPools=[firstPool, secondPool]
+      exerciseCmd poolAgreement ReadyAgreementForIssuance with underlyingPools=[firstPool, secondPool]
 
 -- test:
 readyAgreementForIssuanceArchivesAllUnderlyingPools =
   do
-    poolAgreementResult <- buildMortgagePoolAgreement
+    parties@Parties{..} <- allocateParties
+    poolAgreementResult <- buildMortgagePoolAgreement parties
     let firstPool = poolAgreementResult.underlyingPools!!0
     let secondPool = poolAgreementResult.underlyingPools!!1
 
-    operator <- getOperator
-    securitizer <- getSecuritizer
     operator `submit` do
-      exercise poolAgreementResult.mortgagePoolAgreement ReadyAgreementForIssuance with
+      exerciseCmd poolAgreementResult.mortgagePoolAgreement ReadyAgreementForIssuance with
           underlyingPools=[firstPool, secondPool]
 
-    securitizer `submitMustFail` do
-      firstPool <- fetch firstPool
-      return firstPool.owner
+    optFirstPool <- queryContractId securitizer firstPool
+    optFirstPool === None
 
-    securitizer `submitMustFail` do
-      secondPool <- fetch secondPool
-      return secondPool.owner
+    optSecondPool <- queryContractId securitizer secondPool
+    optSecondPool === None
