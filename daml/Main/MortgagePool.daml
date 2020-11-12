@@ -1,7 +1,6 @@
 
 {-# LANGUAGE PartialTypeSignatures #-}
 
-daml 1.2
 module Main.MortgagePool where
 
 import Main.CustomTypes
