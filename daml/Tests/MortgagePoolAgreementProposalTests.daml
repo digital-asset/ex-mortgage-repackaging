@@ -1,7 +1,6 @@
 
 {-# LANGUAGE PartialTypeSignatures #-}
 
-daml 1.2
 module Tests.MortgagePoolAgreementProposalTests where
 
 import Main.MortgagePoolAgreementDraft

@@ -1,6 +1,5 @@
 {-# LANGUAGE FlexibleContexts #-}
 
-daml 1.2
 module Main.Main where
 
 import Main.CustomTypes
