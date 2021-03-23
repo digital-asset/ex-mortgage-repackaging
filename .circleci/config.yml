@@ -14,7 +14,7 @@ commands:
     steps:
       - slack/status:
           fail_only: true
-          only_for_branches: master
+          only_for_branches: main
           webhook: '${SLACK_WEBHOOK}'
 
 jobs:
@@ -56,7 +56,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
     jobs:
       - daml_test:
           daml_sdk_version: "1.11.1"
